@@ -4,6 +4,7 @@ from general_functions import go_folder
 import os
 
 temp_path = r'C:\Users\Hernan\Documents\HERNAN\_projects'
+temp_path = r'C:\Users\monei\Documents\HERNAN\_projects'
 go_folder(temp_path)
 
 
@@ -12,7 +13,7 @@ class UiCreation(Ui_ProjectManager, QtWidgets.QMainWindow):
         super(UiCreation, self).__init__()
         self.setupUi(self)
 
-    def newProject(self):
+    #def newProject(self):
 
 
 
