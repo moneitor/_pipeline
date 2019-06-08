@@ -10,7 +10,7 @@ go_folder(temp_path)
 class UiCreation(Ui_OpenProject, QtWidgets.QMainWindow):
     def __init__(self):
         super(UiCreation, self).__init__()
-        self.setupUi(self)
+        self.setupUi_OPEN_PROJECT(self)
 
 
 if __name__ == "__main__":

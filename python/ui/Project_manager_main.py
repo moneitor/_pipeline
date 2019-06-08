@@ -11,7 +11,8 @@
 from PySide2 import QtCore, QtGui, QtWidgets
 
 class Ui_ProjectManager(object):
-    def setupUi(self, ProjectManager):
+
+    def setupUi_MAIN(self, ProjectManager):
         ProjectManager.setObjectName("ProjectManager")
         ProjectManager.resize(276, 354)
         ProjectManager.setMinimumSize(QtCore.QSize(276, 354))
@@ -84,6 +85,7 @@ class Ui_ProjectManager(object):
         self.retranslateUi(ProjectManager)
         QtCore.QMetaObject.connectSlotsByName(ProjectManager)
 
+
     def retranslateUi(self, ProjectManager):
         ProjectManager.setWindowTitle(QtWidgets.QApplication.translate("ProjectManager", "MainWindow", None, -1))
         self.btn_newProject.setText(QtWidgets.QApplication.translate("ProjectManager", "NEW PROJECT", None, -1))
@@ -94,4 +96,3 @@ class Ui_ProjectManager(object):
         self.btn_pftrack.setText(QtWidgets.QApplication.translate("ProjectManager", "Pftrack", None, -1))
         self.btn_illustrator.setText(QtWidgets.QApplication.translate("ProjectManager", "Illustrator", None, -1))
         self.btn_photoshop.setText(QtWidgets.QApplication.translate("ProjectManager", "Photoshop", None, -1))
-

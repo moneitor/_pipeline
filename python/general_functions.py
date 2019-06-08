@@ -1,6 +1,9 @@
 import subprocess as sub
 import os
 
+# temporary path
+path = "C:\\Users\\Hernan\\Documents\\HERNAN\\_projects\\test_project_3"
+
 
 def asset_folders():
     folders = {"01_Asset": {"Models": None,
@@ -71,9 +74,6 @@ def run_app(app_path):
     '''Run the app specified in the app_path'''
     app_path.replace("\\", '/')
     sub.Popen(app_path)
-
-
-path = "C:\\Users\\Hernan\\Documents\\HERNAN\\_projects\\test_project_3"
 
 
 def create_folders(shot_num, path):
