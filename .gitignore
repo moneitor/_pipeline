@@ -6,3 +6,4 @@ rename_files\venv
 rename_files\ui
 rename_files\__pycache__
 rename_files\.idea
+.idea/

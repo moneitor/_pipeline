@@ -15,4 +15,5 @@ go_folder(temp_path, 12, shot_number)
 houdini_env(temp_path)
 run_app(hou_path)
 
+print("test")
 
