@@ -2,7 +2,7 @@ import subprocess as sub
 import os
 
 # temporary path
-path = "C:\\Users\\Hernan\\Documents\\HERNAN\\_projects\\test_project_3"
+path = r"C:\_fxProjects\_projects\test_project_3"
 
 
 def asset_folders():

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>503</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="3" column="1">
+           <widget class="QListWidget" name="listWidget">
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Item</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <column>
+             <property name="text">
+              <string>SOFTWARE</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>FX</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Houdini</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Nuke</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>PfTrack</string>
+              </property>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>ART</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>Photoshop</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Illustrator</string>
+              </property>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>DEV</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>PyCharm</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sublime</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Atom</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Visual Studio</string>
+              </property>
+             </item>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="btn_go_project">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Go Project</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Existing Project</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_set_project">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Set Project</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>New Project</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="2" column="0">
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>503</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
