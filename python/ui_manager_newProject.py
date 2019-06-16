@@ -14,7 +14,7 @@ class UiCreation(Ui_NewProject, QtWidgets.QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication()
+    app = QtWidgets.QDialog()
     qt_app = UiCreation()
 
     qt_app.show()

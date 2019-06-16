@@ -11,12 +11,12 @@
 from PySide2 import QtCore, QtGui, QtWidgets
 
 class Ui_NewProject(object):
-    def setupUi_NEW_PROJECT(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(401, 498)
-        MainWindow.setMinimumSize(QtCore.QSize(401, 498))
-        MainWindow.setMaximumSize(QtCore.QSize(401, 498))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi_NEW_PROJECT(self):
+        #MainWindow.setObjectName("MainWindow")
+        #MainWindow.resize(401, 498)
+        #MainWindow.setMinimumSize(QtCore.QSize(401, 498))
+        #MainWindow.setMaximumSize(QtCore.QSize(401, 498))
+        #self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
@@ -115,13 +115,13 @@ class Ui_NewProject(object):
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_3.addItem(spacerItem5, 1, 0, 1, 1)
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+       # MainWindow.setCentralWidget(self.centralwidget)
+        #self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        #MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+       # self.retranslateUi(MainWindow)
+        #QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "MainWindow", None, -1))
