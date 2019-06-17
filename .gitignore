@@ -1,10 +1,10 @@
 python/venv/
 python/__pycache__/
-python/.idea/
+
 rename_files/venv/
 rename_files/__pycache__/
-rename_files/.idea/
+
 .idea/
 python/venv/
 AppLauncher/venv/
-AppLauncher/.idea/
+
