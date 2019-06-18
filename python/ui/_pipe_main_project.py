@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '_pipe_main_project.ui',
 # licensing of '_pipe_main_project.ui' applies.
 #
-# Created: Mon Jun 17 23:54:39 2019
+# Created: Tue Jun 18 01:00:08 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -111,4 +111,14 @@ class Ui_ui_main_project(object):
         self.label_project_folder.setText(QtWidgets.QApplication.translate("ui_main_project", "project folder", None, -1))
         self.btn_maya.setText(QtWidgets.QApplication.translate("ui_main_project", "Maya", None, -1))
         self.btn_pftrack.setText(QtWidgets.QApplication.translate("ui_main_project", "Pftrack", None, -1))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    ui_main_project = QtWidgets.QMainWindow()
+    ui = Ui_ui_main_project()
+    ui.setupUi(ui_main_project)
+    ui_main_project.show()
+    sys.exit(app.exec_())
 

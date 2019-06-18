@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '_pipe_open_project.ui',
 # licensing of '_pipe_open_project.ui' applies.
 #
-# Created: Mon Jun 17 23:55:01 2019
+# Created: Tue Jun 18 01:00:17 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -54,4 +54,14 @@ class Ui_Dialog(object):
         self.le_projectPath.setPlaceholderText(QtWidgets.QApplication.translate("Dialog", "Project path...", None, -1))
         self.btn_folder_lookup.setText(QtWidgets.QApplication.translate("Dialog", "...", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("Dialog", "Existing files", None, -1))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
 

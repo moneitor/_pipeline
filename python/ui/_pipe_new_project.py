@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '_pipe_new_project.ui',
 # licensing of '_pipe_new_project.ui' applies.
 #
-# Created: Mon Jun 17 23:54:51 2019
+# Created: Tue Jun 18 01:00:14 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -138,4 +138,14 @@ class Ui_ui_new_project_dialog(object):
         self.le_fps_2.setPlaceholderText(QtWidgets.QApplication.translate("ui_new_project_dialog", "25", None, -1))
         self.label_12.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Amount of shots", None, -1))
         self.ui_complete_path_2.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Complete path", None, -1))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    ui_new_project_dialog = QtWidgets.QDialog()
+    ui = Ui_ui_new_project_dialog()
+    ui.setupUi(ui_new_project_dialog)
+    ui_new_project_dialog.show()
+    sys.exit(app.exec_())
 
