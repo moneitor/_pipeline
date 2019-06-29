@@ -15,6 +15,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         self.setupUi(self)
         self.connections()
 
+    
+
     def connections(self):
         self.btn_newProject.clicked.connect(self.new_file_dialog)
 
@@ -23,8 +25,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         dialog = QtWidgets.QDialog()
         ui = Ui_ui_new_project_dialog()
         ui.setupUi(dialog)
-        dialog.show()
-        dialog.exec_()
+        #dialog.show()
+        sys.exit(dialog.exec_())
 
 
 

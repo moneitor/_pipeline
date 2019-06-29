@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file '_pipe_new_project.ui',
 # licensing of '_pipe_new_project.ui' applies.
 #
-# Created: Tue Jun 18 01:00:14 2019
+# Created: Mon Jun 24 23:51:17 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -115,6 +115,9 @@ class Ui_ui_new_project_dialog(object):
         self.ui_complete_path_2 = QtWidgets.QLabel(self.frame_4)
         self.ui_complete_path_2.setObjectName("ui_complete_path_2")
         self.formLayout_2.setWidget(10, QtWidgets.QFormLayout.FieldRole, self.ui_complete_path_2)
+        self.btn_OK = QtWidgets.QPushButton(self.frame_4)
+        self.btn_OK.setObjectName("btn_OK")
+        self.formLayout_2.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.btn_OK)
         self.gridLayout_4.addWidget(self.frame_4, 0, 0, 1, 1)
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_4.addItem(spacerItem5, 1, 0, 1, 1)
@@ -138,6 +141,7 @@ class Ui_ui_new_project_dialog(object):
         self.le_fps_2.setPlaceholderText(QtWidgets.QApplication.translate("ui_new_project_dialog", "25", None, -1))
         self.label_12.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Amount of shots", None, -1))
         self.ui_complete_path_2.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Complete path", None, -1))
+        self.btn_OK.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "OK", None, -1))
 
 
 if __name__ == "__main__":
