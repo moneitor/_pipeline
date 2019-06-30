@@ -10,12 +10,12 @@
 
 from PySide2 import QtCore, QtGui, QtWidgets
 
-class Ui_ui_new_project_dialog(object):
+class Ui_ui_new_project_dialog(QtWidgets.QDialog):
     def setupUi(self, ui_new_project_dialog):
         ui_new_project_dialog.setObjectName("ui_new_project_dialog")
-        ui_new_project_dialog.resize(347, 360)
-        ui_new_project_dialog.setMinimumSize(QtCore.QSize(347, 360))
-        ui_new_project_dialog.setMaximumSize(QtCore.QSize(347, 360))
+        ui_new_project_dialog.resize(347, 460)
+        ui_new_project_dialog.setMinimumSize(QtCore.QSize(347, 460))
+        ui_new_project_dialog.setMaximumSize(QtCore.QSize(347, 460))
         self.gridLayout = QtWidgets.QGridLayout(ui_new_project_dialog)
         self.gridLayout.setObjectName("gridLayout")
         self.frame = QtWidgets.QFrame(ui_new_project_dialog)

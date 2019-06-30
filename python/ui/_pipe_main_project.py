@@ -15,7 +15,7 @@ class Ui_ui_main_project(object):
         ui_main_project.setObjectName("ui_main_project")
         ui_main_project.resize(368, 338)
         ui_main_project.setMinimumSize(QtCore.QSize(368, 338))
-        ui_main_project.setMaximumSize(QtCore.QSize(368, 338))
+        ui_main_project.setMaximumSize(QtCore.QSize(568, 338))
         self.centralwidget = QtWidgets.QWidget(ui_main_project)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)

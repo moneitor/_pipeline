@@ -81,6 +81,7 @@ def create_folders(shot_num, path):
     make_dirs_from_dict(design_folders(), path)
     make_dirs_from_dict(reference(), path)
     make_dirs_from_dict(sandbox(), path)
-    make_dirs_from_dict(shot(shot_num), path)
+    for i in range(0, int(shot_num)):
+        make_dirs_from_dict(shot(i), path)
+        print(i)
 
-pass
