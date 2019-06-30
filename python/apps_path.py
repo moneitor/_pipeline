@@ -3,4 +3,6 @@ def return_app_path():
     sublime_path = r'C:\Program Files\Sublime Text 3\sublime_text.exe'
     visual_path = r'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe'
 
-    return hou_path
+    return hou_path, sublime_path, visual_path
+
+

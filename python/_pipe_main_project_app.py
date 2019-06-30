@@ -50,7 +50,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
     def launch_houdini(self):        
         go_folder(self.path, 1, 0)
         houdini_env(self.path)
-        run_app(return_app_path())
+        run_app(return_app_path()[0])
 
 
 
@@ -90,7 +90,7 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
         self.FPS = self.le_fps_2.text()
         self.shot_number = self.ui_shotNumber_2.text()
         create_folders(self.shot_number, self.path)
-        store_data(self.path, self.shot_number, self.resolution_x, self.FPS, self.client_name, self.project_name)
+        store_data(self.path, self.shot_number, [self.resolution_x, self.resolution_y], self.FPS, self.client_name, self.project_name)
         #TODO Test if a folder was actually created
 
 
