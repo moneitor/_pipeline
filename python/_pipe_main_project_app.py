@@ -2,6 +2,8 @@ from general_functions import run_app , go_folder, create_folders
 from houdini_set_env import houdini_env
 from apps_path import return_app_path
 
+from palette import Palette
+
 from store_shot_data import store_data
 
 from PySide2 import QtWidgets
@@ -36,7 +38,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         new_project = NewProjectWindow()        
         result = new_project.exec_()
       
-        if result == QtWidgets.QDialog.Accepted:            
+        if result == QtWidgets.QDialog.Accepted:                        
             self.label_project_folder.setText(new_project.path)
             self.path = new_project.path
             print("Project {}, has been created".format((new_project.project_name).upper()))
@@ -45,12 +47,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
             print("With resolution {} x {}".format(new_project.resolution_x, new_project.resolution_y))
             print("with FPS {}".format(new_project.FPS))
             print("The amount of shots is: {}".format(new_project.shot_number))
+            
 
-
-    def launch_houdini(self):        
-        go_folder(self.path, 1, 0)
-        houdini_env(self.path)
-        run_app(return_app_path()[0])
+    def launch_houdini(self):    
+        if len(self.path) > 0 :  
+            go_folder(self.path, 1, 0)
+            houdini_env(self.path)
+            run_app(return_app_path()[0])
+        else:
+            msg = QtWidgets.QMessageBox()
+            msg.setText("Please open or create a new project first.")
+            msg.exec_()
 
 
 
@@ -84,14 +91,19 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
 
 
     def Ok_pressed(self):
-        # set values to defaults if not changed        
-        self.resolution_x = self.ui_resolution_x_2.text()
-        self.resolution_y = self.ui_resolution_y_2.text()
-        self.FPS = self.le_fps_2.text()
-        self.shot_number = self.ui_shotNumber_2.text()
-        create_folders(self.shot_number, self.path)
-        store_data(self.path, self.shot_number, [self.resolution_x, self.resolution_y], self.FPS, self.client_name, self.project_name)
-        #TODO Test if a folder was actually created
+        # set values to defaults if not changed     
+        if len(self.path) > 1:   
+            self.resolution_x = self.ui_resolution_x_2.text()
+            self.resolution_y = self.ui_resolution_y_2.text()
+            self.FPS = self.le_fps_2.text()
+            self.shot_number = self.ui_shotNumber_2.text()
+            create_folders(self.shot_number, self.path)
+            store_data(self.path, self.shot_number, [self.resolution_x, self.resolution_y], self.FPS, self.client_name, self.project_name)
+            #TODO Test if a folder was actually created
+        else:
+            msgBox = QtWidgets.QMessageBox()
+            msgBox.setText("Please specify a project folder")
+            msgBox.exec_()
 
 
     def show_folder_select(self):        
@@ -126,21 +138,20 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
     def shot_number(self):
         self.shot_number = int(self.ui_shotNumber_2.text())
         """
-        
+      
 
 
-        
-
-             
-def testNew():
+def Main():
     app = QtWidgets.QApplication(sys.argv)
-    ui = NewProjectWindow()
-    ui.show()
-    app.exec_()
 
+    app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
 
-def testMain():
-    app = QtWidgets.QApplication(sys.argv)
+    dark_palette = QtGui.QPalette()
+    Palette(dark_palette)
+    
+
+    app.setPalette(dark_palette)
+
     ui = MainWindow()
     ui.show()
     sys.exit(app.exec_())
@@ -148,4 +159,4 @@ def testMain():
 
 
 if __name__ == "__main__":
-    testMain()
+    Main()
