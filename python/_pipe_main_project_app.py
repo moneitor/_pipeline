@@ -4,7 +4,7 @@ from apps_path import return_app_path
 
 from palette import Palette
 
-from store_shot_data import store_data
+from store_shot_data import store_data, save_project_info, read_projects_info
 
 from PySide2 import QtWidgets
 from PySide2 import QtCore
@@ -18,35 +18,42 @@ from ui._pipe_open_project import Ui_Dialog
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):    
-
+"""
+    Creates the main window 
+"""
     def __init__(self):
         super(MainWindow, self).__init__()
 
         self.path = ""
 
         self.setupUi(self)
-        self.connections()
-               
+        self.connections()              
     
 
     def connections(self):  
-        self.btn_newProject.clicked.connect(self.new_project_instance)   
+        self.btn_newProject.clicked.connect(self.new_project_instance)  
+        self.btn_goProject.clicked.connect(self.show_folder_select) 
         self.btn_houdini.clicked.connect(self.launch_houdini)          
         
 
     def new_project_instance(self):        
         new_project = NewProjectWindow()        
         result = new_project.exec_()
-      
+        
+        #if the boton ok is pressed then it will change the label text in the main window
         if result == QtWidgets.QDialog.Accepted:                        
             self.label_project_folder.setText(new_project.path)
             self.path = new_project.path
-            print("Project {}, has been created".format((new_project.project_name).upper()))
-            print("In the folder {}".format(os.getcwd()))
-            print("For client {}".format((new_project.client_name).upper()))
-            print("With resolution {} x {}".format(new_project.resolution_x, new_project.resolution_y))
-            print("with FPS {}".format(new_project.FPS))
-            print("The amount of shots is: {}".format(new_project.shot_number))
+            
+
+    def show_folder_select(self):        
+        new_directory = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Folder", os.chdir(r"C:/_fxProjects/_projects"))
+        if new_directory:
+            self.path = new_directory
+            self.label_project_folder.setText(self.path)
+            os.chdir(self.path)           
+
+        return self.path
             
 
     def launch_houdini(self):    
@@ -83,8 +90,7 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
         self.le_projectName_2.textChanged.connect(self.set_project_name)
         self.ui_resolution_x_2.valueChanged.connect(self.store_resolution_x)
         self.ui_resolution_y_2.valueChanged.connect(self.store_resolution_y)
-        #self.ui_shotNumber_2.valueChanged.connect(self.shot_number)
-
+       
 
         self.btn_OK.clicked.connect(self.Ok_pressed)
         self.btn_OK.clicked.connect(self.accept) 
@@ -99,6 +105,7 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
             self.shot_number = self.ui_shotNumber_2.text()
             create_folders(self.shot_number, self.path)
             store_data(self.path, self.shot_number, [self.resolution_x, self.resolution_y], self.FPS, self.client_name, self.project_name)
+            save_project_info(self.project_name, self.path)
             #TODO Test if a folder was actually created
         else:
             msgBox = QtWidgets.QMessageBox()
