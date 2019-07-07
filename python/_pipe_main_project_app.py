@@ -18,9 +18,7 @@ from ui._pipe_open_project import Ui_Dialog
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):    
-"""
-    Creates the main window 
-"""
+
     def __init__(self):
         super(MainWindow, self).__init__()
 
