@@ -9,8 +9,10 @@ from store_shot_data import store_data, save_project_info, read_projects_info
 from PySide2 import QtWidgets
 from PySide2 import QtCore
 from PySide2 import QtGui
+
 import sys
 import os
+import json
 
 from ui._pipe_main_project import Ui_ui_main_project
 from ui._pipe_new_project import Ui_ui_new_project_dialog
@@ -25,14 +27,37 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         self.path = ""
 
         self.setupUi(self)
+        self.update_projects_list()
+        self.update_project_widget()
         self.connections()              
     
 
     def connections(self):  
         self.btn_newProject.clicked.connect(self.new_project_instance)  
         self.btn_goProject.clicked.connect(self.show_folder_select) 
-        self.btn_houdini.clicked.connect(self.launch_houdini)          
-        
+        self.btn_houdini.clicked.connect(self.launch_houdini)  
+
+
+    def update_projects_list(self):
+        info_path = "C:/_fxProjects/_projects/projects_info.json"
+        project_list = []
+        with open(info_path, "r") as projects_info:
+            projects = json.load(projects_info)            
+            for project in projects:
+                project_name = project["folder"]
+                project_list.append(project_name)
+
+        return project_list
+
+    def update_project_widget(self):
+        self.list_project_widget.clear()
+        list_projects = self.update_projects_list()
+        for project in list_projects:
+            print(project)
+            self.list_project_widget.addItem(project)
+
+
+                
 
     def new_project_instance(self):        
         new_project = NewProjectWindow()        
@@ -57,13 +82,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
     def launch_houdini(self):    
         if len(self.path) > 0 :  
             go_folder(self.path, 1, 1)
-            houdini_env(self.path, return_app_path()[1])
+            houdini_env(self.path, return_app_path()[1], return_app_path()[2])
             run_app(return_app_path()[0])
         else:
             msg = QtWidgets.QMessageBox()
             msg.setText("Please open or create a new project first.")
             msg.exec_()
-
 
 
 
@@ -139,10 +163,6 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
     def setFPS(self):
         self.FPS = self.le_fps_2.text()
 
-"""
-    def shot_number(self):
-        self.shot_number = int(self.ui_shotNumber_2.text())
-        """
       
 
 

@@ -15,12 +15,12 @@ def return_app_path():
     hou_path = ""
 
     if os.path.exists(temp_hou_path1):
-        hou_path = temp_hou_path1 + '\houdinifx.exe'
+        hou_path = temp_hou_path1 + r'\houdinifx.exe'
         hou_main_path = temp_hou_main_path1
         hou_doc_path = temp_hou_path1
     else:
         if os.path.exists(temp_hou_path2):
-            hou_path = temp_hou_path2 + '\houdinifx.exe'
+            hou_path = temp_hou_path2 + r'\houdinifx.exe'
             hou_main_path = temp_hou_main_path2
             hou_doc_path = temp_hou_path2
         else:
@@ -29,7 +29,7 @@ def return_app_path():
     sublime_path = r'C:\Program Files\Sublime Text 3\sublime_text.exe'
     visual_path = r'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe'
 
-    return hou_path, hou_main_path, sublime_path, visual_path
+    return hou_path, hou_main_path, hou_doc_path, sublime_path, visual_path
 
 
 
