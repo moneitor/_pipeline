@@ -41,11 +41,13 @@ def shot(shot_number):
                                                         "Lighting": None,
                                                         "Roto": None,
                                                         "RnD": None,
-                                                        "Track": None}}}
+                                                        "Track": None,
+                                                        "Photogrametry": None,
+                                                        "Lens_info": None}}}
 
     return folders
 
-
+# TODO add photogrametry folder
 
 def make_dirs_from_dict(direct, current_dir='./'):
     for key, values in direct.items():
@@ -58,7 +60,7 @@ def make_dirs_from_dict(direct, current_dir='./'):
 
 r = "C:\\Users\\Hernan\\Documents\\HERNAN\\_projects\\test_project_3\\Shot_10\\work\\fx"
 
-def go_folder(project_path, houdini=0, shot_number=0):
+def go_folder(project_path, houdini=0, shot_number=1):
     '''Set the project_path as the current working directory
     if the second argument is 1, then the path will be set to the
     houdini working directory'''
@@ -80,6 +82,6 @@ def create_folders(shot_num, path):
     make_dirs_from_dict(reference(), path)
     make_dirs_from_dict(sandbox(), path)
     for i in range(0, int(shot_num)):
-        make_dirs_from_dict(shot(i), path)
+        make_dirs_from_dict(shot(i+1), path)
         print(i)
 

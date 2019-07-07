@@ -56,8 +56,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
 
     def launch_houdini(self):    
         if len(self.path) > 0 :  
-            go_folder(self.path, 1, 0)
-            houdini_env(self.path)
+            go_folder(self.path, 1, 1)
+            houdini_env(self.path, return_app_path()[1])
             run_app(return_app_path()[0])
         else:
             msg = QtWidgets.QMessageBox()
