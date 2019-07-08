@@ -9,4 +9,10 @@ python/venv/
 AppLauncher/venv/
 
 python/houdini
+python/houdini/__pycache__
+python/ui/__pycache__
+python/ui/ui_qtDesigner
+*/__pycache__*
 
+*.pyc
+*.pyo
