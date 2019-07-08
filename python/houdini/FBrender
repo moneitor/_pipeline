@@ -1,9 +1,0 @@
-# This menu determines the list of output images for output to image
-# files.
-
-ip		"mplay (interactive)"
-md		"mplay (non-interactive)"
-'$HIP/Render/$OS/$OS.$F4.exr'       "In Pipe Sequence of .exr files"
-'$HIP/render/$HIPNAME.$OS.$F4.pic'	"Sequence of .pic files"
-'$HIP/render/$HIPNAME.$OS.$F4.tif'	"Sequence of .tif files"
-'$HIP/render/$HIPNAME.$OS.$F4.exr'	"Sequence of .exr files"
