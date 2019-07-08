@@ -36,27 +36,38 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         self.btn_newProject.clicked.connect(self.new_project_instance)  
         self.btn_goProject.clicked.connect(self.show_folder_select) 
         self.btn_houdini.clicked.connect(self.launch_houdini)  
+        self.list_project_widget.doubleClicked.connect(self.look_for_path_from_list)
 
 
     def update_projects_list(self):
         info_path = "C:/_fxProjects/_projects/projects_info.json"
         project_list = []
+        projects = ""
         with open(info_path, "r") as projects_info:
             projects = json.load(projects_info)            
             for project in projects:
                 project_name = project["folder"]
                 project_list.append(project_name)
 
-        return project_list
+        return project_list, projects
 
     def update_project_widget(self):
         self.list_project_widget.clear()
-        list_projects = self.update_projects_list()
-        for project in list_projects:
-            print(project)
+        list_projects = self.update_projects_list()[0]
+        for project in list_projects:            
             self.list_project_widget.addItem(project)
+            self.list_project_widget
 
 
+    def look_for_path_from_list(self, item_list):
+        list_projects = self.update_projects_list()[1]
+        project_path = ""
+        for project in list_projects:
+            if item_list.data() == project["folder"]:
+                project_path = project["project_path"]
+        
+        self.path = project_path
+        self.label_project_folder.setText(self.path)               
                 
 
     def new_project_instance(self):        
@@ -82,7 +93,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
     def launch_houdini(self):    
         if len(self.path) > 0 :  
             go_folder(self.path, 1, 1)
-            houdini_env(self.path, return_app_path()[1], return_app_path()[2])
+            houdini_env(self.path, return_app_path()[1], return_app_path()[2], self.path)
             run_app(return_app_path()[0])
         else:
             msg = QtWidgets.QMessageBox()
@@ -127,8 +138,7 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
             self.shot_number = self.ui_shotNumber_2.text()
             create_folders(self.shot_number, self.path)
             store_data(self.path, self.shot_number, [self.resolution_x, self.resolution_y], self.FPS, self.client_name, self.project_name)
-            save_project_info(self.project_name, self.path)
-            #TODO Test if a folder was actually created
+            save_project_info(self.project_name, self.path)            
         else:
             msgBox = QtWidgets.QMessageBox()
             msgBox.setText("Please specify a project folder")
