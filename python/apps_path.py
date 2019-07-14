@@ -28,8 +28,9 @@ def return_app_path():
 
     sublime_path = r'C:\Program Files\Sublime Text 3\sublime_text.exe'
     visual_path = r'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe'
+    nuke_path = r'C:\Program Files\Nuke11.3v4\Nuke11.3.exe'
 
-    return hou_path, hou_main_path, hou_doc_path, sublime_path, visual_path
+    return hou_path, hou_main_path, hou_doc_path, sublime_path, visual_path, nuke_path
 
 
 

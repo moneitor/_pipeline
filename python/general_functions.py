@@ -1,7 +1,14 @@
 import subprocess as sub
 import os
+from PySide2 import QtWidgets
+from PySide2 import QtCore
+from PySide2 import QtGui
 
-
+def create_project_message():
+    msg = QtWidgets.QMessageBox()
+    msg.setText("Please open or create a new project first.")
+    msg.exec_()
+    return msg
 
 def asset_folders():
     folders = {"01_Asset": {"Models": None,

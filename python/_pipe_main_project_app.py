@@ -1,4 +1,4 @@
-from general_functions import run_app , go_folder, create_folders
+from general_functions import run_app , go_folder, create_folders, create_project_message
 from houdini_set_env import houdini_env
 from apps_path import return_app_path
 
@@ -36,6 +36,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         self.btn_newProject.clicked.connect(self.new_project_instance)  
         self.btn_goProject.clicked.connect(self.show_folder_select) 
         self.btn_houdini.clicked.connect(self.launch_houdini)  
+        self.btn_Nuke.clicked.connect(self.launch_nuke)
+
         self.list_project_widget.doubleClicked.connect(self.look_for_path_from_list)
 
 
@@ -99,6 +101,14 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
             msg = QtWidgets.QMessageBox()
             msg.setText("Please open or create a new project first.")
             msg.exec_()
+
+
+    def launch_nuke(self):
+        if len(self.path) > 0:
+            go_folder(self.path, 0, 1)
+            run_app(return_app_path()[5])
+        else:
+            create_project_message()
 
 
 
