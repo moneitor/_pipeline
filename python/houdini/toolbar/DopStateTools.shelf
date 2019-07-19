@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="dop_floor" label="Construction Plane" icon="VIEW_display_construction_plane">
+    <helpURL>operator:dop_state/floor</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'floor')]]></script>
+  </tool>
+
+  <tool name="dop_renderregion" label="Render Region" icon="TOOLS_render_region">
+    <helpURL>operator:dop_state/renderregion</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'renderregion')]]></script>
+  </tool>
+
+  <tool name="dop_select" label="Select" icon="TOOLS_select">
+    <helpURL>operator:dop_state/select</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'select')]]></script>
+  </tool>
+
+  <tool name="dop_dopview" label="View" icon="TOOLS_view">
+    <helpURL>operator:dop_state/dopview</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Viewing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'dopview')]]></script>
+  </tool>
+
+  <tool name="dop_dopselect" label="Select" icon="TOOLS_select_component">
+    <helpURL>operator:dop_state/dopselect</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'dopselect')]]></script>
+  </tool>
+
+  <tool name="dop_dophandle" label="Handle" icon="TOOLS_handles">
+    <helpURL>operator:dop_state/dophandle</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'dophandle')]]></script>
+  </tool>
+</shelfDocument>

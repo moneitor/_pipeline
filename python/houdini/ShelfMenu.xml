@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    This file defines the entries in the menu that appears on a mouse
+    right-button click over a shelf or a tab in Houdini's shelving area.
+
+    For scriptItem elements, a 'kwargs' python dictionary is provided with the 
+    flolowing values:
+	'ownername'		:   The name of the shelf that popped up the menu.
+	'ownerparentname'	:   The name of the shelf set that contains the shelf.
+   
+    plus the standard script menu item kwargs:
+	'toolname'  :	The menu item's hotkey id 
+			(ie. the element's id prefixed with h.shelf.menu.)
+	'altclick'  :	True if the Alt key was also pressed, False otherwise
+	'ctrlclick' :	True if the Ctrl key was also pressed, False otherwise
+	'shiftclick':	True if the Shift key was also pressed, False otherwise
+	'cmdclick'  :	True if the Option key was also pressed, False
+			otherwise. Note that this can only be true on OSX.
+
+    For the <context> block, the <ownerMask> refers to the name of the shelf,
+    and the <expression> is given kwargs similar to the script item.
+
+
+    For example:
+    <scriptItem id="my_action">
+      <label>My Action</label>
+      <scriptCode><![CDATA[
+arguments = '\n  '.join(['%s = %s' % (k,w) for (k,w) in kwargs.items()])
+hou.ui.displayMessage('My Action with kwargs:\n  ' + arguments)
+]]></scriptCode>
+    </scriptItem>
+
+-->
+
+<menuDocument>
+  <menu>
+
+    <titleItem id="title_1">
+      <label>SHELF</label>
+    </titleItem>
+
+    <actionItem id="edit_shelf">
+      <label>Edit Shelf Tab...</label>
+    </actionItem>
+
+    <actionItem id="new_tool">
+      <label>New Tool...</label>
+    </actionItem>
+
+    <separatorItem id="separator_1"/>
+
+    <actionItem id="remove_shelf">
+      <label>Remove Shelf Tab from Set</label>
+    </actionItem>
+
+    <actionItem id="delete_shelf">
+      <label>Delete Shelf Tab</label>
+    </actionItem>
+
+  </menu>
+</menuDocument>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="hairbrushes" label="Hair Brushes">
+    <memberTool name="object_drawhairguides"/>
+    <memberTool name="object_groomhairinscreen"/>
+    <memberTool name="object_groomhairalongsurface"/>
+    <memberTool name="object_groomliftbrush"/>
+    <memberTool name="object_groomclumpbrush"/>
+    <memberTool name="object_groompartbrush"/>
+    <memberTool name="object_groomadjustlength"/>
+    <memberTool name="object_groomsmooth"/>
+    <memberTool name="object_groomcuthair"/>
+    <memberTool name="object_groomextendhair"/>
+    <memberTool name="object_groom_recachestrokes"/>
+  </toolshelf>
+</shelfDocument>

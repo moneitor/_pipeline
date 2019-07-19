@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, tolbars, and tools.
+       It should not be hand-edited when it is being used by the application.
+       Note, that two definitions of the same element are not allowed in a
+       single file.
+  -->
+  <tool name="pdg_mantrabake" label="Generate IFD" icon="TOP_ropmantra">
+    <helpURL>tool:pdgmantrabake</helpURL>
+    <toolMenuContext name="network">
+      <contextNetType>TOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python">
+      <![CDATA[import toptoolutils
+n = toptoolutils.genericTool(kwargs, "ropmantra", "generateifd")
+n.parm("soho_outputmode").set(1)
+]]>
+    </script>
+  </tool>
+
+  <tool name="pdg_feedbackloop" label="For-Loop with Feedback" icon="TOP_feedbackloop">
+    <helpURL>tool:topfeedbackloop</helpURL>
+    <toolMenuContext name="network">
+      <contextNetType>TOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+(begin, end) = toptoolutils.buildBlockPair(kwargs, 'feedbackloop', 'feedbackbegin', 'feedbackend')
+]]></script>
+  </tool>
+
+  <tool name="pdg_houdiniserver" label="Houdini Command Chain" icon="TOP_houdiniserver">
+    <helpURL>tool:tophoudiniserver</helpURL>
+    <toolMenuContext name="network">
+      <contextNetType>TOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Command Chain</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+(begin, end) = toptoolutils.buildBlockPair(kwargs, 'houdiniserver', 'houdiniserver', 'commandserverend')
+]]></script>
+  </tool>
+
+  <tool name="pdg_mayaserver" label="Maya Command Chain" icon="TOP_mayaserver">
+    <helpURL>tool:topmayaserver</helpURL>
+    <toolMenuContext name="network">
+      <contextNetType>TOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Command Chain</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+(begin, end) = toptoolutils.buildBlockPair(kwargs, 'mayaserver', 'mayaserver', 'commandserverend')
+]]></script>
+  </tool>
+
+  <tool name="pdg_commandserver" label="Generic Command Chain" icon="TOP_commandserver">
+    <helpURL>tool:topcommandserver</helpURL>
+    <toolMenuContext name="network">
+      <contextNetType>TOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Command Chain</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+(begin, end) = toptoolutils.buildBlockPair(kwargs, 'genericserver', 'commandserver', 'commandserverend')
+]]></script>
+  </tool>
+
+  <tool name="pdg_wedgegeo" label="Wedge Setup" icon="TOP_wedgegeo">
+    <helpURL>tool:pdg_wedgegeo</helpURL>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+toptoolutils.buildWedgeGeo(kwargs)
+]]></script>
+  </tool>
+  <tool name="pdg_rendersetup" label="Render Setup" icon="TOP_rendersetup">
+    <helpURL>tool:pdg_rendersetup</helpURL>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+
+toptoolutils.buildRenderSetup(kwargs)
+]]></script>
+  </tool>
+ 
+  <tool name="pdg_installcheck" label="Installation Check" icon="SHELF_preflight">
+    <helpURL>tool:pdg_installcheck</helpURL>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+toptoolutils.installCheckTool(kwargs)
+]]></script>
+  </tool>
+
+  <tool name="pdg_imageconvert" label="Convert Images" icon="SHELF_convert_images">
+    <helpURL>tool:pdg_imageconvert</helpURL>
+    <script scriptType="python"><![CDATA[
+import toptoolutils
+toptoolutils.convertImagesTool(kwargs)
+]]></script>
+  </tool>
+
+  <toolshelf name="topstools" label="TOPs Tools">
+    <memberTool name="pdg_wedgegeo"/>
+    <memberTool name="pdg_rendersetup"/>
+  </toolshelf>
+  <toolshelf name="topsutils" label="TOPs Utils">
+    <memberTool name="pdg_installcheck"/>
+    <memberTool name="pdg_imageconvert"/>
+  </toolshelf>
+  <shelfSet name="TOPs" label="TOPs">
+    <memberToolshelf name="topstools"/>
+    <memberToolshelf name="topsutils"/>
+  </shelfSet>
+
+</shelfDocument>

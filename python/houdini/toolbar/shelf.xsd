@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<xs:annotation><xs:documentation>  
+  XML Schema for shelf sets, shelves, and tools definitions.
+</xs:documentation></xs:annotation>
+
+
+<xs:complexType name="member_type">
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      The name of a member. This name needs to match the name used in 
+      the actual definition of the member.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="relabel_type">
+  <xs:attribute name="toLabel" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      New label for the element.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="add_member_type">
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      The name of a member. This name needs to match the name used in 
+      the actual definition of the member.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="inPosition" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      The position at which to add the member.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="remove_member_type">
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      The name of a member. This name needs to match the name used in 
+      the actual definition of the member.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="fromPosition" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>
+      The position from which to remove the member.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="emptyElement_type">
+</xs:complexType>
+
+<xs:group name="editOptions_group">
+  <xs:sequence>
+    <xs:element name="readOnly" type="emptyElement_type" minOccurs="0"> 
+      <xs:annotation><xs:documentation>  
+        If this element is present, the parent element (usually a set, a shelf,
+	or a tool) is going to be read-only, and users will not be able to
+	modify or edit it in Houdini.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+</xs:group>
+
+<xs:complexType name="shelfSet_type">
+  <xs:sequence>
+    <xs:group ref="editOptions_group"/>
+    <xs:element name="memberToolshelf" type="member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a shelf tab as part of a set.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the set. 
+      It can be used to reference it in other XML elements and in Houdini scripts.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="label" type="xs:string">
+    <xs:annotation><xs:documentation>  
+      The human-readable label for the set in the user interface.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="shelfSetEdit_type">
+  <xs:sequence>
+    <xs:element name="relabelShelfSet" type="relabel_type" minOccurs="0" maxOccurs="1">
+      <xs:annotation><xs:documentation>  
+        Relabels set.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="addMemberToolshelf" type="add_member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a shelf to be added to the shelf set.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="removeMemberToolshelf" type="remove_member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a shelf to be removed from the shelf set.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the set. 
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="fileLocation" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The path to the original definition of the shelf set.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="toolshelf_type">
+  <xs:sequence>
+    <xs:group ref="editOptions_group"/>
+    <xs:element name="memberTool" type="member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a tool as part of a shelf tab.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the shelf tab.
+      It can be used to reference it in other XML elements and in Houdini scripts.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="label" type="xs:string">
+    <xs:annotation><xs:documentation>  
+      The human-readable label for the tab in the user interface.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+
+<xs:complexType name="toolshelfEdit_type">
+  <xs:sequence>
+    <xs:element name="relabelToolshelf" type="relabel_type" minOccurs="0" maxOccurs="1">
+      <xs:annotation><xs:documentation>  
+        Relabels shelf.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="addMemberTool" type="add_member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a tool to be added to the shelf.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="removeMemberTool" type="remove_member_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies a tool to be removed from the shelf.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the shelf. 
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="fileLocation" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The path to the original definition of the shelf.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+
+<xs:simpleType name="toolMenuContext_netAttribType">
+  <xs:annotation><xs:documentation>  
+    The name of the network type.
+  </xs:documentation></xs:annotation>
+  <xs:restriction base="xs:string">
+    <xs:enumeration value=""/>
+    <xs:enumeration value="CHOP"/>
+    <xs:enumeration value="CHOPNET"/>
+    <xs:enumeration value="COP2"/>
+    <xs:enumeration value="DOP"/>
+    <xs:enumeration value="IMG"/>
+    <xs:enumeration value="LOP"/>
+    <xs:enumeration value="OBJ"/>
+    <xs:enumeration value="PART"/>
+    <xs:enumeration value="POP"/>
+    <xs:enumeration value="ROP"/>
+    <xs:enumeration value="SHOP"/>
+    <xs:enumeration value="SOP"/>
+    <xs:enumeration value="TOP"/>
+    <xs:enumeration value="VOP"/>
+    <xs:enumeration value="VOPNET"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="toolMenuContext_nameAttribType">
+  <xs:annotation><xs:documentation>  
+    The name of place where the Tab menu can apper.
+    In practice, it is the pane or a viewer type name.
+  </xs:documentation></xs:annotation>
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="viewer"/>
+    <xs:enumeration value="pop_viewer"/>
+    <xs:enumeration value="cop_viewer"/>
+    <xs:enumeration value="network"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="toolMenuContext_type">
+  <xs:sequence>
+    <xs:element name="contextOpType" type="xs:string" minOccurs="0">
+      <xs:annotation><xs:documentation>  
+	The node operator type. If you specify this element, the tool will appear
+	in the Tab menu only in networks where it is valid to create a node of this type. 
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="contextNetType" type="toolMenuContext_netAttribType" minOccurs="0" maxOccurs="unbounded"> 
+      <xs:annotation><xs:documentation>  
+        The network type. The tool appears in the Tab menu only in networks of this type.
+	You can specify multiple elements to have the tool appear in multiple network types. 
+	This will be overriden by the contextOpType tag, if it's present.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="toolMenuContext_nameAttribType" use="required">
+    <xs:annotation><xs:documentation>  
+      The pane type where the Tab menu appears. The tool inclusion restrictions 
+      this element defines apply to the Tab menu only within this pane.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+<xs:simpleType name="script_languageAttribType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="hscript"/>
+    <xs:enumeration value="python"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="script_type">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="scriptType" type="script_languageAttribType" use="required">
+        <xs:annotation><xs:documentation>  
+          The language of the script.
+        </xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="keywordList_type">
+  <xs:sequence>
+    <xs:element name="keyword" type="xs:string" minOccurs="0" maxOccurs="unbounded"> 
+      <xs:annotation><xs:documentation>  
+        Specifies the keyword.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tool_type">
+  <xs:sequence>
+    <xs:group ref="editOptions_group"/>
+    <xs:element name="helpText" type="xs:string" minOccurs="0">
+      <xs:annotation><xs:documentation>  
+        Wiki-formatted or HTML help to display in the browser when the user asks 
+	for help for the tool. This will be overridden by the helpURL tag, if
+	it's present.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="helpURL" type="xs:string" minOccurs="0">
+      <xs:annotation><xs:documentation>  
+        A URL to load in the browser when the user asks for help for the tool.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="toolMenuContext" type="toolMenuContext_type" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        Specifies in which contexts this tool should appear in the Tab menu. 
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="toolSubmenu" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation><xs:documentation>  
+        A list of menu labels, separated by / characters, specifying 
+	which sub-menu of the Tab menu the tool will appear in. 
+	For example, "My Tools/Shaping".
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="script" type="script_type" minOccurs="0">
+      <xs:annotation><xs:documentation>  
+        A Python script or HScript to run when the user clicks the tool. 
+      </xs:documentation></xs:annotation>
+    </xs:element>
+    <xs:element name="keywordList" type="keywordList_type" minOccurs="0">
+      <xs:annotation><xs:documentation>  
+        A list of keywords associated with the tool.
+	The keywords are used for categorizing related tools into groups.
+	For example, the shelf palette side panel in the network pane allows
+	narrowing down the displayed tools to a single keyword, 
+	to filter down all the available tools.
+        </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the tool. 
+      It can be used to reference it in other XML elements and in Houdini scripts.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="label" type="xs:string">
+    <xs:annotation><xs:documentation>  
+      The human-readable label for the set in the user interface.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="icon" type="xs:string">
+    <xs:annotation><xs:documentation>  
+      The path to an image file (or an internal Houdini icon reference such as SOP_copy). 
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+
+<xs:complexType name="toolEdit_type">
+  <xs:sequence>
+    <xs:element name="relabelTool" type="relabel_type" minOccurs="0" maxOccurs="1">
+      <xs:annotation><xs:documentation>  
+        Relabels tool.
+      </xs:documentation></xs:annotation>
+    </xs:element>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The internal name of the shelf. 
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="fileLocation" type="xs:string" use="required">
+    <xs:annotation><xs:documentation>  
+      The path to the original definition of the shelf.
+    </xs:documentation></xs:annotation>
+  </xs:attribute>
+</xs:complexType>
+
+
+<xs:complexType name="shelfDocument_type">
+  <xs:sequence>
+    <!-- Permit shelf sets, shelf tabs, and tools definitions to occur in any order -->
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="shelfSet" type="shelfSet_type">
+        <xs:annotation><xs:documentation>  
+          Defines a shelf set. That is, specifies a set of shelf tabs 
+	  the user can display as a group in a shelving area.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="shelfSetEdit" type="shelfSetEdit_type">
+        <xs:annotation><xs:documentation>  
+          Edits to a shelf set.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="toolshelf" type="toolshelf_type">
+        <xs:annotation><xs:documentation>  
+          Defines a shelf. That is, specifies the tools that appear on the shelf tab.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="toolshelfEdit" type="toolshelfEdit_type">
+        <xs:annotation><xs:documentation>  
+          Edits to a shelf.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="tool" type="tool_type">
+        <xs:annotation><xs:documentation>  
+          Defines a shelf tool.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+      <xs:element name="toolEdit" type="toolEdit_type">
+        <xs:annotation><xs:documentation>  
+          Edits to a tool.
+        </xs:documentation></xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:sequence>
+</xs:complexType> 
+
+<xs:element name="shelfDocument" type="shelfDocument_type">
+  <xs:annotation><xs:documentation>  
+    This is the top-level element for a shelf definition and configuration file.
+  </xs:documentation></xs:annotation>
+</xs:element>
+
+</xs:schema> 
+

@@ -1,0 +1,3464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="dop_gasgeometrydefragment" label="Gas Geometry Defragment" icon="DOP_gasgeometrydefragment">
+    <helpURL>operator:Dop/gasgeometrydefragment</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasgeometrydefragment</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasgeometrydefragment')]]></script>
+  </tool>
+
+  <tool name="dop_gasintermittentsolve" label="Gas Intermittent Solve" icon="DOP_gasintermittentsolve">
+    <helpURL>operator:Dop/gasintermittentsolve</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasintermittentsolve</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasintermittentsolve')]]></script>
+  </tool>
+
+  <tool name="dop_gasintegrator" label="Gas Integrator" icon="DOP_gasintegrator">
+    <helpURL>operator:Dop/gasintegrator</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasintegrator</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasintegrator')]]></script>
+  </tool>
+
+  <tool name="dop_gasstrainforces" label="Gas Strain Forces" icon="DOP_gasstrainforces">
+    <helpURL>operator:Dop/gasstrainforces</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasstrainforces</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasstrainforces')]]></script>
+  </tool>
+
+  <tool name="dop_vectorfieldvisualization" label="Vector Field Visualization" icon="DOP_vectorfieldvisualization">
+    <helpURL>operator:Dop/vectorfieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/vectorfieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'vectorfieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_file" label="File" icon="DOP_file">
+    <helpURL>operator:Dop/file</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/file</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'file')]]></script>
+  </tool>
+
+  <tool name="dop_gasadvect" label="Gas Advect" icon="DOP_gasadvect">
+    <helpURL>operator:Dop/gasadvect</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasadvect</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasadvect')]]></script>
+  </tool>
+
+  <tool name="dop_volume" label="SDF Representation" icon="DOP_volume">
+    <helpURL>operator:Dop/volume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/volume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'volume')]]></script>
+  </tool>
+
+  <tool name="dop_matrixfieldvisualization" label="Matrix Field Visualization" icon="DOP_matrixfieldvisualization">
+    <helpURL>operator:Dop/matrixfieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/matrixfieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'matrixfieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_multifieldvisualization" label="Multi-Field Visualization" icon="DOP_multifieldvisualization">
+    <helpURL>operator:Dop/multifieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/multifieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'multifieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_gascalculate" label="Gas Calculate" icon="DOP_gascalculate">
+    <helpURL>operator:Dop/gascalculate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gascalculate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gascalculate')]]></script>
+  </tool>
+
+  <tool name="dop_twostateconrel" label="Two State Constraint Relationship" icon="DOP_twostateconrel">
+    <helpURL>operator:Dop/twostateconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/twostateconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'twostateconrel')]]></script>
+  </tool>
+
+  <tool name="dop_uniformforce" label="Uniform Force" icon="DOP_uniformforce">
+    <helpURL>operator:Dop/uniformforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/uniformforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'uniformforce')]]></script>
+  </tool>
+
+  <tool name="dop_colliderlabel" label="Collider Label" icon="DOP_colliderlabel">
+    <helpURL>operator:Dop/colliderlabel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/colliderlabel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'colliderlabel')]]></script>
+  </tool>
+
+  <tool name="dop_applyrel" label="Apply Relationship" icon="DOP_applyrel">
+    <helpURL>operator:Dop/applyrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/applyrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'applyrel')]]></script>
+  </tool>
+
+  <tool name="dop_spherepointtree" label="Sphere Point Tree" icon="DOP_spherepointtree">
+    <helpURL>operator:Dop/spherepointtree</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/spherepointtree</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'spherepointtree')]]></script>
+  </tool>
+
+  <tool name="dop_softbodytargetproperties" label="Soft Body Target Properties" icon="DOP_softbodytargetproperties">
+    <helpURL>operator:Dop/softbodytargetproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/softbodytargetproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'softbodytargetproperties')]]></script>
+  </tool>
+
+  <tool name="dop_surfacecollisionparms" label="Surface Collision Parameters" icon="DOP_surfacecollisionparms">
+    <helpURL>operator:Dop/surfacecollisionparms</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/surfacecollisionparms</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'surfacecollisionparms')]]></script>
+  </tool>
+
+  <tool name="dop_constraintnetworkrelationship" label="Constraint Network Relationship" icon="DOP_constraintnetworkrelationship">
+    <helpURL>operator:Dop/constraintnetworkrelationship</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/constraintnetworkrelationship</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'constraintnetworkrelationship')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticlemovetoiso" label="Gas Particle Move to Iso" icon="DOP_gasparticlemovetoiso">
+    <helpURL>operator:Dop/gasparticlemovetoiso</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticlemovetoiso</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticlemovetoiso')]]></script>
+  </tool>
+
+  <tool name="dop_sopguide" label="SOP Guide" icon="DOP_sopguide">
+    <helpURL>operator:Dop/sopguide</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopguide</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopguide')]]></script>
+  </tool>
+
+  <tool name="dop_gasbuildcollisionmask" label="Gas Build Collision Mask" icon="DOP_gasbuildcollisionmask">
+    <helpURL>operator:Dop/gasbuildcollisionmask</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasbuildcollisionmask</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasbuildcollisionmask')]]></script>
+  </tool>
+
+  <tool name="dop_sopvectorfield" label="SOP Vector Field" icon="DOP_sopvectorfield">
+    <helpURL>operator:Dop/sopvectorfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopvectorfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopvectorfield')]]></script>
+  </tool>
+
+  <tool name="dop_velimpulseforce" label="Velocity Impulse Force" icon="DOP_velimpulseforce">
+    <helpURL>operator:Dop/velimpulseforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/velimpulseforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'velimpulseforce')]]></script>
+  </tool>
+
+  <tool name="dop_dragproperties" label="Drag Properties" icon="DOP_dragproperties">
+    <helpURL>operator:Dop/dragproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/dragproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'dragproperties')]]></script>
+  </tool>
+
+  <tool name="dop_onlyonce" label="Data Only Once" icon="DOP_onlyonce">
+    <helpURL>operator:Dop/onlyonce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/onlyonce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'onlyonce')]]></script>
+  </tool>
+
+  <tool name="dop_conrelationship" label="Constraint Relationship" icon="DOP_conrelationship">
+    <helpURL>operator:Dop/conrelationship</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/conrelationship</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'conrelationship')]]></script>
+  </tool>
+
+  <tool name="dop_wireelasticity" label="Wire Elasticity" icon="DOP_wireelasticity">
+    <helpURL>operator:Dop/wireelasticity</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wireelasticity</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wireelasticity')]]></script>
+  </tool>
+
+  <tool name="dop_sopsolver::2.0" label="SOP Solver" icon="DOP_sopsolver-2.0">
+    <helpURL>operator:Dop/sopsolver?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopsolver::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopsolver::2.0')]]></script>
+  </tool>
+
+  <tool name="dop_softbodyrestproperties" label="Soft Body Rest Properties" icon="DOP_softbodyrestproperties">
+    <helpURL>operator:Dop/softbodyrestproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/softbodyrestproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'softbodyrestproperties')]]></script>
+  </tool>
+
+  <tool name="dop_gascross" label="Gas Cross" icon="DOP_gascross">
+    <helpURL>operator:Dop/gascross</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gascross</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gascross')]]></script>
+  </tool>
+
+  <tool name="dop_gascorrectbymarkers" label="Gas Correct By Markers" icon="DOP_gascorrectbymarkers">
+    <helpURL>operator:Dop/gascorrectbymarkers</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gascorrectbymarkers</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gascorrectbymarkers')]]></script>
+  </tool>
+
+  <tool name="dop_noconrel" label="No Constraint Relationship" icon="DOP_noconrel">
+    <helpURL>operator:Dop/noconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/noconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'noconrel')]]></script>
+  </tool>
+
+  <tool name="dop_gasextrapolate" label="Gas Extrapolate" icon="DOP_gasextrapolate">
+    <helpURL>operator:Dop/gasextrapolate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasextrapolate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasextrapolate')]]></script>
+  </tool>
+
+  <tool name="dop_switchvalue" label="Switch Value" icon="DOP_switchvalue">
+    <helpURL>operator:Dop/switchvalue</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/switchvalue</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'switchvalue')]]></script>
+  </tool>
+
+  <tool name="dop_solidobject::2.0" label="FEM Solid Object" icon="DOP_solidobject">
+    <helpURL>operator:Dop/solidobject?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/solidobject::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'solidobject::2.0')]]></script>
+  </tool>
+
+  <tool name="dop_popvop" label="POP VOP" icon="DOP_popvop">
+    <helpURL>operator:Dop/popvop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/popvop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>POPs</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'popvop')]]></script>
+  </tool>
+
+  <tool name="dop_anchortarget" label="Anchor: Target" icon="DOP_anchortarget">
+    <helpURL>operator:Dop/anchortarget</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchortarget</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchortarget')]]></script>
+  </tool>
+
+  <tool name="dop_objpos" label="OBJ Position" icon="DOP_objpos">
+    <helpURL>operator:Dop/objpos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/objpos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'objpos')]]></script>
+  </tool>
+
+  <tool name="dop_gaslimit" label="Gas Limit" icon="DOP_gaslimit">
+    <helpURL>operator:Dop/gaslimit</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaslimit</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaslimit')]]></script>
+  </tool>
+
+  <tool name="dop_shellmodeldata" label="Shell Material Property Parameters" icon="DOP_shellmodeldata">
+    <helpURL>operator:Dop/shellmodeldata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/shellmodeldata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'shellmodeldata')]]></script>
+  </tool>
+
+  <tool name="dop_anchorworldspacerot" label="Anchor: World Space Rotation" icon="DOP_anchorworldspacerot">
+    <helpURL>operator:Dop/anchorworldspacerot</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorworldspacerot</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorworldspacerot')]]></script>
+  </tool>
+
+  <tool name="dop_affector" label="Affector" icon="DOP_affector">
+    <helpURL>operator:Dop/affector</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/affector</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'affector')]]></script>
+  </tool>
+
+  <tool name="dop_gasmatchfield" label="Gas Match Field" icon="DOP_gasmatchfield">
+    <helpURL>operator:Dop/gasmatchfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasmatchfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasmatchfield')]]></script>
+  </tool>
+
+  <tool name="dop_physparms" label="Physical Parameters" icon="DOP_physparms">
+    <helpURL>operator:Dop/physparms</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/physparms</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'physparms')]]></script>
+  </tool>
+
+  <tool name="dop_gassurfacesnap" label="Gas Surface Snap" icon="DOP_gassurfacesnap">
+    <helpURL>operator:Dop/gassurfacesnap</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gassurfacesnap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gassurfacesnap')]]></script>
+  </tool>
+
+  <tool name="dop_lopnet" label="LOP Network" icon="NETWORKS_lop">
+    <helpURL>operator:Dop/lopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/lopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'lopnet')]]></script>
+  </tool>
+
+  <tool name="dop_sliceplane" label="Slice by Plane" icon="DOP_sliceplane">
+    <helpURL>operator:Dop/sliceplane</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sliceplane</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Slice</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sliceplane')]]></script>
+  </tool>
+
+  <tool name="dop_gasdiffuse" label="Gas Diffuse" icon="DOP_gasdiffuse">
+    <helpURL>operator:Dop/gasdiffuse</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasdiffuse</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasdiffuse')]]></script>
+  </tool>
+
+  <tool name="dop_softbodyfractureproperties" label="Soft Body Fracture Properties" icon="DOP_softbodyfractureproperties">
+    <helpURL>operator:Dop/softbodyfractureproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/softbodyfractureproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'softbodyfractureproperties')]]></script>
+  </tool>
+
+  <tool name="dop_scalarfield" label="Scalar Field" icon="DOP_scalarfield">
+    <helpURL>operator:Dop/scalarfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/scalarfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'scalarfield')]]></script>
+  </tool>
+
+  <tool name="dop_rbdstate" label="RBD State" icon="DOP_rbdstate">
+    <helpURL>operator:Dop/rbdstate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rbdstate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rbdstate')]]></script>
+  </tool>
+
+  <tool name="dop_clothattachconstraint" label="FEM Surface Attach Constraint" icon="DOP_clothattachtobody">
+    <helpURL>operator:Dop/clothattachconstraint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/clothattachconstraint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'clothattachconstraint')]]></script>
+  </tool>
+
+  <tool name="dop_indexfield" label="Index Field" icon="DOP_indexfield">
+    <helpURL>operator:Dop/indexfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/indexfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'indexfield')]]></script>
+  </tool>
+
+  <tool name="dop_sopsolver" label="SOP Solver" icon="DOP_sopsolver">
+    <helpURL>operator:Dop/sopsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopsolver')]]></script>
+  </tool>
+
+  <tool name="dop_gasvorticleforces" label="Gas Vorticle Forces" icon="DOP_gasvorticleforces">
+    <helpURL>operator:Dop/gasvorticleforces</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasvorticleforces</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasvorticleforces')]]></script>
+  </tool>
+
+  <tool name="dop_pointpos" label="Point Position" icon="DOP_pointpos">
+    <helpURL>operator:Dop/pointpos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/pointpos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'pointpos')]]></script>
+  </tool>
+
+  <tool name="dop_targetconstraint" label="FEM Target Constraint" icon="SHELF_cloth_follow_animation">
+    <helpURL>operator:Dop/targetconstraint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/targetconstraint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'targetconstraint')]]></script>
+  </tool>
+
+  <tool name="dop_gasenforceboundary" label="Gas Enforce Boundary" icon="DOP_gasenforceboundary">
+    <helpURL>operator:Dop/gasenforceboundary</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasenforceboundary</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasenforceboundary')]]></script>
+  </tool>
+
+  <tool name="dop_staticsolver" label="Static Solver" icon="DOP_staticsolver">
+    <helpURL>operator:Dop/staticsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/staticsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'staticsolver')]]></script>
+  </tool>
+
+  <tool name="dop_gravity" label="Gravity Force" icon="DOP_gravity">
+    <helpURL>operator:Dop/gravity</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gravity</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+from doptoolutils import OrientInfo
+
+doptoolutils.genericTool(kwargs, 'gravity', orient=OrientInfo('force'))]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjprimpos" label="Anchor: Object Primitive Position" icon="DOP_anchorobjprimpos">
+    <helpURL>operator:Dop/anchorobjprimpos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjprimpos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjprimpos')]]></script>
+  </tool>
+
+  <tool name="dop_cop2net" label="COP2 Network" icon="NETWORKS_cop2">
+    <helpURL>operator:Dop/cop2net</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/cop2net</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'cop2net')]]></script>
+  </tool>
+
+  <tool name="dop_fetchdata" label="Fetch Data" icon="DOP_fetchdata">
+    <helpURL>operator:Dop/fetchdata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fetchdata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fetchdata')]]></script>
+  </tool>
+
+  <tool name="dop_emptydata" label="Empty Data" icon="DOP_emptydata">
+    <helpURL>operator:Dop/emptydata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/emptydata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'emptydata')]]></script>
+  </tool>
+
+  <tool name="dop_fluidobject" label="Fluid Object" icon="DOP_fluidobject">
+    <helpURL>operator:Dop/fluidobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fluidobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fluidobject')]]></script>
+  </tool>
+
+  <tool name="dop_renderparmsvolatile" label="Rendering Parameters Volatile" icon="DOP_renderparmsvolatile">
+    <helpURL>operator:Dop/renderparmsvolatile</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/renderparmsvolatile</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'renderparmsvolatile')]]></script>
+  </tool>
+
+  <tool name="dop_gasnetslicebalance" label="Gas Net Slice Balance" icon="DOP_gasnetslicebalance">
+    <helpURL>operator:Dop/gasnetslicebalance</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasnetslicebalance</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasnetslicebalance')]]></script>
+  </tool>
+
+  <tool name="dop_geometryvop" label="Geometry VOP" icon="DOP_geometryvop">
+    <helpURL>operator:Dop/geometryvop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/geometryvop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'geometryvop')]]></script>
+  </tool>
+
+  <tool name="dop_gasbuoyancy" label="Gas Buoyancy" icon="DOP_gasbuoyancy">
+    <helpURL>operator:Dop/gasbuoyancy</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasbuoyancy</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasbuoyancy')]]></script>
+  </tool>
+
+  <tool name="dop_motion" label="Motion" icon="DOP_motion">
+    <helpURL>operator:Dop/motion</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/motion</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'motion')]]></script>
+  </tool>
+
+  <tool name="dop_gasreducelocal" label="Gas Reduce Local" icon="DOP_gasreducelocal">
+    <helpURL>operator:Dop/gasreducelocal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasreducelocal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasreducelocal')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointnumpos" label="Anchor: Object Point Number Position" icon="DOP_anchorobjpointnumpos">
+    <helpURL>operator:Dop/anchorobjpointnumpos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointnumpos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointnumpos')]]></script>
+  </tool>
+
+  <tool name="dop_fluidsolver::2.0" label="Fluid Solver" icon="DOP_fluidsolver">
+    <helpURL>operator:Dop/fluidsolver?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fluidsolver::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fluidsolver::2.0')]]></script>
+  </tool>
+
+  <tool name="dop_container" label="Container" icon="DOP_container">
+    <helpURL>operator:Dop/container</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/container</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'container')]]></script>
+  </tool>
+
+  <tool name="dop_conetwistconrel" label="Cone Twist Constraint Relationship" icon="DOP_conetwistconrel">
+    <helpURL>operator:Dop/conetwistconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/conetwistconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'conetwistconrel')]]></script>
+  </tool>
+
+  <tool name="dop_blendfactor" label="Blend Factor" icon="DOP_blendfactor">
+    <helpURL>operator:Dop/blendfactor</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/blendfactor</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'blendfactor')]]></script>
+  </tool>
+
+  <tool name="dop_sphereedgetree" label="Sphere Edge Tree" icon="DOP_sphereedgetree">
+    <helpURL>operator:Dop/sphereedgetree</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sphereedgetree</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sphereedgetree')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointidrot" label="Anchor: Object Point Id Rotation" icon="DOP_anchorobjpointidrot">
+    <helpURL>operator:Dop/anchorobjpointidrot</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointidrot</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointidrot')]]></script>
+  </tool>
+
+  <tool name="dop_gasseedmarkers" label="Gas Seed Markers" icon="DOP_gasseedmarkers">
+    <helpURL>operator:Dop/gasseedmarkers</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasseedmarkers</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasseedmarkers')]]></script>
+  </tool>
+
+  <tool name="dop_seamproperties" label="Seam Properties" icon="DOP_seamproperties">
+    <helpURL>operator:Dop/seamproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/seamproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'seamproperties')]]></script>
+  </tool>
+
+  <tool name="dop_indexfieldvisualization" label="Index Field Visualization" icon="DOP_indexfieldvisualization">
+    <helpURL>operator:Dop/indexfieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/indexfieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'indexfieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_solidobject" label="Solid Object" icon="DOP_rbdfracturedobject">
+    <helpURL>operator:Dop/solidobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/solidobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'solidobject')]]></script>
+  </tool>
+
+  <tool name="dop_feoutputattributes" label="Finite Element Output Attributes" icon="DOP_feoutputattributes">
+    <helpURL>operator:Dop/feoutputattributes</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/feoutputattributes</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'feoutputattributes')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointgrouppos" label="Anchor: Object Point Group Position" icon="DOP_anchorobjpointgrouppos">
+    <helpURL>operator:Dop/anchorobjpointgrouppos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointgrouppos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointgrouppos')]]></script>
+  </tool>
+
+  <tool name="dop_anchoralignaxis" label="Anchor: Align Axis" icon="DOP_anchoralignaxis">
+    <helpURL>operator:Dop/anchoralignaxis</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchoralignaxis</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchoralignaxis')]]></script>
+  </tool>
+
+  <tool name="dop_filedata" label="File Data" icon="DOP_filedata">
+    <helpURL>operator:Dop/filedata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/filedata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'filedata')]]></script>
+  </tool>
+
+  <tool name="dop_instancedobject" label="Instanced Objects" icon="DOP_instancedobject">
+    <helpURL>operator:Dop/instancedobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/instancedobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'instancedobject')]]></script>
+  </tool>
+
+  <tool name="dop_wiresolver" label="Wire Solver" icon="DOP_wiresolver">
+    <helpURL>operator:Dop/wiresolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wiresolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wiresolver')]]></script>
+  </tool>
+
+  <tool name="dop_particlefieldvisualization" label="Particle Fluid Visualization" icon="DOP_particlefieldvisualization">
+    <helpURL>operator:Dop/particlefieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/particlefieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'particlefieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_hybridobject" label="FEM Hybrid Object" icon="DOP_hybridobject">
+    <helpURL>operator:Dop/hybridobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/hybridobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'hybridobject')]]></script>
+  </tool>
+
+  <tool name="dop_geometrycopy" label="Geometry Copy" icon="DOP_geometrycopy">
+    <helpURL>operator:Dop/geometrycopy</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/geometrycopy</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'geometrycopy')]]></script>
+  </tool>
+
+  <tool name="dop_matrixfield" label="Matrix Field" icon="DOP_matrixfield">
+    <helpURL>operator:Dop/matrixfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/matrixfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'matrixfield')]]></script>
+  </tool>
+
+  <tool name="dop_gasprojectnondivergentmultigrid" label="Gas Project Non Divergent Multigrid" icon="DOP_gasprojectnondivergentmultigrid">
+    <helpURL>operator:Dop/gasprojectnondivergentmultigrid</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasprojectnondivergentmultigrid</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasprojectnondivergentmultigrid')]]></script>
+  </tool>
+
+  <tool name="dop_gasnetsliceexchange" label="Gas Net Slice Exchange" icon="DOP_gasnetsliceexchange">
+    <helpURL>operator:Dop/gasnetsliceexchange</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasnetsliceexchange</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasnetsliceexchange')]]></script>
+  </tool>
+
+  <tool name="dop_nocollider" label="No Collider" icon="DOP_nocollider">
+    <helpURL>operator:Dop/nocollider</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/nocollider</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'nocollider')]]></script>
+  </tool>
+
+  <tool name="dop_gaseachdatasolver" label="Gas Each Data Solver" icon="DOP_gaseachdatasolver">
+    <helpURL>operator:Dop/gaseachdatasolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaseachdatasolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaseachdatasolver')]]></script>
+  </tool>
+
+  <tool name="dop_gaswavelets" label="Gas Wavelets" icon="DOP_gaswavelets">
+    <helpURL>operator:Dop/gaswavelets</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaswavelets</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaswavelets')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointnumrot" label="Anchor: Object Point Number Rotation" icon="DOP_anchorobjpointnumrot">
+    <helpURL>operator:Dop/anchorobjpointnumrot</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointnumrot</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointnumrot')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjsurfacepos" label="Anchor: Object Surface Position" icon="DOP_anchorobjsurfacepos">
+    <helpURL>operator:Dop/anchorobjsurfacepos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjsurfacepos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjsurfacepos')]]></script>
+  </tool>
+
+  <tool name="dop_objnet" label="Object Network" icon="NETWORKS_scene">
+    <helpURL>operator:Dop/objnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/objnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'objnet')]]></script>
+  </tool>
+
+  <tool name="dop_fefuseconstraint" label="FEM Fuse Constraint" icon="DOP_clothstitchconstraint">
+    <helpURL>operator:Dop/fefuseconstraint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fefuseconstraint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fefuseconstraint')]]></script>
+  </tool>
+
+  <tool name="dop_enablesolver" label="Enable Solver" icon="DOP_enablesolver">
+    <helpURL>operator:Dop/enablesolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/enablesolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'enablesolver')]]></script>
+  </tool>
+
+  <tool name="dop_wirephysparms" label="Wire Physical Parameters" icon="DOP_wirephysparms">
+    <helpURL>operator:Dop/wirephysparms</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wirephysparms</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wirephysparms')]]></script>
+  </tool>
+
+  <tool name="dop_gasvolumeramp" label="Gas Volume Ramp" icon="SOP_volumeramp">
+    <helpURL>operator:Dop/gasvolumeramp</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasvolumeramp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasvolumeramp')]]></script>
+  </tool>
+
+  <tool name="dop_modifydata" label="Modify Data" icon="DOP_modifydata">
+    <helpURL>operator:Dop/modifydata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/modifydata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'modifydata')]]></script>
+  </tool>
+
+  <tool name="dop_staticvisualization" label="Static Visualization" icon="DOP_staticvisualization">
+    <helpURL>operator:Dop/staticvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/staticvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'staticvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_gasfetchfieldstoembed" label="Gas Fetch Fields to Embed" icon="DOP_gas">
+    <helpURL>operator:Dop/gasfetchfieldstoembed</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasfetchfieldstoembed</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasfetchfieldstoembed')]]></script>
+  </tool>
+
+  <tool name="dop_gasstrainintegrate" label="Gas Strain Integrate" icon="DOP_gasstrainintegrate">
+    <helpURL>operator:Dop/gasstrainintegrate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasstrainintegrate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasstrainintegrate')]]></script>
+  </tool>
+
+  <tool name="dop_buoyancyforce" label="Buoyancy Force" icon="DOP_buoyancyforce">
+    <helpURL>operator:Dop/buoyancyforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/buoyancyforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'buoyancyforce')]]></script>
+  </tool>
+
+  <tool name="dop_finiteelementsolver::2.0" label="FEM Solver" icon="DOP_finiteelementsolver">
+    <helpURL>operator:Dop/finiteelementsolver?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/finiteelementsolver::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'finiteelementsolver::2.0')]]></script>
+  </tool>
+
+  <tool name="dop_sbdpinconstraint" label="SBD Pin Constraint" icon="DOP_sbdpinconstraint">
+    <helpURL>operator:Dop/sbdpinconstraint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sbdpinconstraint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <toolSubmenu>Constraints</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sbdpinconstraint')]]></script>
+  </tool>
+
+  <tool name="dop_smokeobject" label="Smoke Object" icon="DOP_smokeobject">
+    <helpURL>operator:Dop/smokeobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/smokeobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'smokeobject')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticletofield" label="Gas Particle to Field" icon="DOP_gasparticletofield">
+    <helpURL>operator:Dop/gasparticletofield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticletofield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticletofield')]]></script>
+  </tool>
+
+  <tool name="dop_gasseedvolume" label="Gas Seed Volume" icon="DOP_gasseedvolume">
+    <helpURL>operator:Dop/gasseedvolume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasseedvolume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasseedvolume')]]></script>
+  </tool>
+
+  <tool name="dop_gasseedparticles" label="Gas Seed Particles" icon="DOP_gasseedparticles">
+    <helpURL>operator:Dop/gasseedparticles</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasseedparticles</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasseedparticles')]]></script>
+  </tool>
+
+  <tool name="dop_emptyobject" label="Empty Object" icon="DOP_emptyobject">
+    <helpURL>operator:Dop/emptyobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/emptyobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'emptyobject')]]></script>
+  </tool>
+
+  <tool name="dop_blendsolver" label="Blend Solver" icon="DOP_blendsolver">
+    <helpURL>operator:Dop/blendsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/blendsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'blendsolver')]]></script>
+  </tool>
+
+  <tool name="dop_gasslicetoindexfield" label="Gas Slice To Index Field" icon="DOP_gasslicetoindexfield">
+    <helpURL>operator:Dop/gasslicetoindexfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasslicetoindexfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasslicetoindexfield')]]></script>
+  </tool>
+
+  <tool name="dop_gasfeatherfield" label="Gas Feather Field" icon="DOP_gas">
+    <helpURL>operator:Dop/gasfeatherfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasfeatherfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasfeatherfield')]]></script>
+  </tool>
+
+  <tool name="dop_wireplasticity" label="Wire Plasticity" icon="DOP_wireplasticity">
+    <helpURL>operator:Dop/wireplasticity</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wireplasticity</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wireplasticity')]]></script>
+  </tool>
+
+  <tool name="dop_voronoifractureparms" label="Voronoi Fracture Parameters" icon="DOP_voronoifractureparms">
+    <helpURL>operator:Dop/voronoifractureparms</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/voronoifractureparms</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'voronoifractureparms')]]></script>
+  </tool>
+
+  <tool name="dop_hardconrel" label="Hard Constraint Relationship" icon="DOP_hardconrel">
+    <helpURL>operator:Dop/hardconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/hardconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'hardconrel')]]></script>
+  </tool>
+
+  <tool name="dop_netfetchdata" label="Net Fetch Data" icon="DOP_netfetchdata">
+    <helpURL>operator:Dop/netfetchdata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/netfetchdata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'netfetchdata')]]></script>
+  </tool>
+
+  <tool name="dop_null" label="Null" icon="DOP_null">
+    <helpURL>operator:Dop/null</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/null</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'null')]]></script>
+  </tool>
+
+  <tool name="dop_gascollisiondetect" label="Gas Collision Detect" icon="DOP_gascollisiondetect">
+    <helpURL>operator:Dop/gascollisiondetect</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gascollisiondetect</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gascollisiondetect')]]></script>
+  </tool>
+
+  <tool name="dop_springconrel" label="Spring Constraint Relationship" icon="DOP_springconrel">
+    <helpURL>operator:Dop/springconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/springconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'springconrel')]]></script>
+  </tool>
+
+  <tool name="dop_gasfieldtoparticle" label="Gas Field to Particle" icon="DOP_gasfieldtoparticle">
+    <helpURL>operator:Dop/gasfieldtoparticle</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasfieldtoparticle</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasfieldtoparticle')]]></script>
+  </tool>
+
+  <tool name="dop_gasadjustparticlecoordinates" label="Gas Adjust Particle Coordinates" icon="DOP_gasadjustparticlecoordinates">
+    <helpURL>operator:Dop/gasadjustparticlecoordinates</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasadjustparticlecoordinates</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasadjustparticlecoordinates')]]></script>
+  </tool>
+
+  <tool name="dop_gasrepeatsolver" label="Gas Repeat Solver" icon="DOP_gasrepeatsolver">
+    <helpURL>operator:Dop/gasrepeatsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasrepeatsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasrepeatsolver')]]></script>
+  </tool>
+
+  <tool name="dop_particlemodeldata" label="Particle Material Property Parameters" icon="DOP_particlemodeldata">
+    <helpURL>operator:Dop/particlemodeldata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/particlemodeldata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'particlemodeldata')]]></script>
+  </tool>
+
+  <tool name="dop_vopnet" label="VOP Network" icon="NETWORKS_vop">
+    <helpURL>operator:Dop/vopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/vopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'vopnet')]]></script>
+  </tool>
+
+  <tool name="dop_bulletrbdsolver" label="Bullet Solver" icon="DOP_bulletrbdsolver">
+    <helpURL>operator:Dop/bulletrbdsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/bulletrbdsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'bulletrbdsolver')]]></script>
+  </tool>
+
+  <tool name="dop_gasgeometrytosdf" label="Gas Geometry to SDF" icon="DOP_gasgeometrytosdf">
+    <helpURL>operator:Dop/gasgeometrytosdf</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasgeometrytosdf</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasgeometrytosdf')]]></script>
+  </tool>
+
+  <tool name="dop_gaslookup" label="Gas Lookup" icon="DOP_gaslookup">
+    <helpURL>operator:Dop/gaslookup</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaslookup</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaslookup')]]></script>
+  </tool>
+
+  <tool name="dop_partition" label="Partition Objects" icon="DOP_partition">
+    <helpURL>operator:Dop/partition</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/partition</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'partition')]]></script>
+  </tool>
+
+  <tool name="dop_rbdkeyactive" label="RBD Keyframe Active" icon="DOP_rbdkeyactive">
+    <helpURL>operator:Dop/rbdkeyactive</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rbdkeyactive</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rbdkeyactive')]]></script>
+  </tool>
+
+  <tool name="dop_clothobject" label="Cloth Object" icon="DOP_clothobject">
+    <helpURL>operator:Dop/clothobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/clothobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'clothobject')]]></script>
+  </tool>
+
+  <tool name="dop_impulseforce" label="Impulse Force" icon="DOP_impulseforce">
+    <helpURL>operator:Dop/impulseforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/impulseforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'impulseforce')]]></script>
+  </tool>
+
+  <tool name="dop_solidmodeldata" label="Solid Material Property Parameters" icon="DOP_solidmodeldata">
+    <helpURL>operator:Dop/solidmodeldata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/solidmodeldata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'solidmodeldata')]]></script>
+  </tool>
+
+  <tool name="dop_gasimpacttoattributes" label="Gas Impact to Attributes" icon="DOP_gasimpacttoattributes">
+    <helpURL>operator:Dop/gasimpacttoattributes</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasimpacttoattributes</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasimpacttoattributes')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjspacepos" label="Anchor: Object Space Position" icon="DOP_anchorobjspacepos">
+    <helpURL>operator:Dop/anchorobjspacepos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjspacepos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjspacepos')]]></script>
+  </tool>
+
+  <tool name="dop_emptyrel" label="Empty Relationship" icon="DOP_emptyrel">
+    <helpURL>operator:Dop/emptyrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/emptyrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'emptyrel')]]></script>
+  </tool>
+
+  <tool name="dop_sopscalarfield" label="SOP Scalar Field" icon="DOP_sopscalarfield">
+    <helpURL>operator:Dop/sopscalarfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopscalarfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopscalarfield')]]></script>
+  </tool>
+
+  <tool name="dop_gasnetfetchdata" label="Gas Net Fetch Data" icon="DOP_gasnetfetchdata">
+    <helpURL>operator:Dop/gasnetfetchdata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasnetfetchdata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasnetfetchdata')]]></script>
+  </tool>
+
+  <tool name="dop_rop_dop" label="ROP Output Driver" icon="ROP_dop">
+    <helpURL>operator:Dop/rop_dop</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rop_dop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rop_dop')]]></script>
+  </tool>
+
+  <tool name="dop_gasupres" label="Gas Up Res" icon="DOP_gasupres">
+    <helpURL>operator:Dop/gasupres</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasupres</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasupres')]]></script>
+  </tool>
+
+  <tool name="dop_switch" label="Switch" icon="DOP_switch">
+    <helpURL>operator:Dop/switch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/switch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'switch')]]></script>
+  </tool>
+
+  <tool name="dop_gasexternalforces" label="Gas External Forces" icon="DOP_gasexternalforces">
+    <helpURL>operator:Dop/gasexternalforces</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasexternalforces</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasexternalforces')]]></script>
+  </tool>
+
+  <tool name="dop_clothobject::2.0" label="Cloth Object" icon="DOP_clothobject">
+    <helpURL>operator:Dop/clothobject?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/clothobject::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Objects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'clothobject::2.0')]]></script>
+  </tool>
+
+  <tool name="dop_gasprojectnondivergentvariational" label="Gas Project Non Divergent Variational" icon="DOP_gasprojectnondivergentvariational">
+    <helpURL>operator:Dop/gasprojectnondivergentvariational</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasprojectnondivergentvariational</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasprojectnondivergentvariational')]]></script>
+  </tool>
+
+  <tool name="dop_split" label="Split Object Stream" icon="DOP_split">
+    <helpURL>operator:Dop/split</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/split</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'split')]]></script>
+  </tool>
+
+  <tool name="dop_thinplatecollider" label="ThinPlate/ThinPlate Collider" icon="DOP_thinplatecollider">
+    <helpURL>operator:Dop/thinplatecollider</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/thinplatecollider</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'thinplatecollider')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticleforces" label="Gas Particle Forces" icon="DOP_gasparticleforces">
+    <helpURL>operator:Dop/gasparticleforces</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticleforces</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticleforces')]]></script>
+  </tool>
+
+  <tool name="dop_subnet" label="Subnetwork" icon="DOP_subnet">
+    <helpURL>operator:Dop/subnet</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/subnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'subnet')]]></script>
+  </tool>
+
+  <tool name="dop_pointcollider" label="Point Collider" icon="DOP_pointcollider">
+    <helpURL>operator:Dop/pointcollider</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/pointcollider</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'pointcollider')]]></script>
+  </tool>
+
+  <tool name="dop_intangiblevalue" label="Intangible Value" icon="DOP_intangiblevalue">
+    <helpURL>operator:Dop/intangiblevalue</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/intangiblevalue</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'intangiblevalue')]]></script>
+  </tool>
+
+  <tool name="dop_sopnet" label="SOP Network" icon="OBJ_geo">
+    <helpURL>operator:Dop/sopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopnet')]]></script>
+  </tool>
+
+  <tool name="dop_rbdvisualization" label="RBD Visualization" icon="DOP_rbdvisualization">
+    <helpURL>operator:Dop/rbdvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rbdvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rbdvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_copyobject" label="Copy Objects" icon="DOP_copyobject">
+    <helpURL>operator:Dop/copyobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/copyobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'copyobject')]]></script>
+  </tool>
+
+  <tool name="dop_position" label="Position" icon="DOP_position">
+    <helpURL>operator:Dop/position</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/position</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Position</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'position')]]></script>
+  </tool>
+
+  <tool name="dop_slicealongline" label="Slice Along Line" icon="DOP_slicealongline">
+    <helpURL>operator:Dop/slicealongline</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/slicealongline</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Slice</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'slicealongline')]]></script>
+  </tool>
+
+  <tool name="dop_gasdissipate" label="Gas Dissipate" icon="DOP_gas">
+    <helpURL>operator:Dop/gasdissipate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasdissipate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasdissipate')]]></script>
+  </tool>
+
+  <tool name="dop_multisolver" label="Multiple Solver" icon="DOP_multisolver">
+    <helpURL>operator:Dop/multisolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/multisolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'multisolver')]]></script>
+  </tool>
+
+  <tool name="dop_anchorworldspacepos" label="Anchor: World Space Position" icon="DOP_anchorworldspacepos">
+    <helpURL>operator:Dop/anchorworldspacepos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorworldspacepos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorworldspacepos')]]></script>
+  </tool>
+
+  <tool name="dop_shopnet" label="SHOP Network" icon="NETWORKS_shop">
+    <helpURL>operator:Dop/shopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/shopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'shopnet')]]></script>
+  </tool>
+
+  <tool name="dop_gasadvectcl" label="Gas Advect CL" icon="DOP_gasadvectcl">
+    <helpURL>operator:Dop/gasadvectcl</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasadvectcl</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasadvectcl')]]></script>
+  </tool>
+
+  <tool name="dop_wirevisualization" label="Wire Visualization" icon="DOP_wirevisualization">
+    <helpURL>operator:Dop/wirevisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wirevisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wirevisualization')]]></script>
+  </tool>
+
+  <tool name="dop_applydata" label="Apply Data" icon="DOP_applydata">
+    <helpURL>operator:Dop/applydata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/applydata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'applydata')]]></script>
+  </tool>
+
+  <tool name="dop_bulletdata" label="Bullet Data" icon="DOP_bulletdata">
+    <helpURL>operator:Dop/bulletdata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/bulletdata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'bulletdata')]]></script>
+  </tool>
+
+  <tool name="dop_smokeconfigureobject" label="Smoke Configure Object" icon="DOP_smokeobject">
+    <helpURL>operator:Dop/smokeconfigureobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/smokeconfigureobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'smokeconfigureobject')]]></script>
+  </tool>
+
+  <tool name="dop_gassubstep" label="Gas SubStep" icon="DOP_gassubstep">
+    <helpURL>operator:Dop/gassubstep</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gassubstep</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gassubstep')]]></script>
+  </tool>
+
+  <tool name="dop_gasvorticlerecycle" label="Gas Vorticle Recycle" icon="DOP_gasvorticlerecycle">
+    <helpURL>operator:Dop/gasvorticlerecycle</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasvorticlerecycle</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasvorticlerecycle')]]></script>
+  </tool>
+
+  <tool name="dop_softbodycollisionproperties" label="Soft Body Collision Properties" icon="DOP_softbodycollisionproperties">
+    <helpURL>operator:Dop/softbodycollisionproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/softbodycollisionproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'softbodycollisionproperties')]]></script>
+  </tool>
+
+  <tool name="dop_gasresizefield" label="Gas Resize Field" icon="DOP_gasresizefield">
+    <helpURL>operator:Dop/gasresizefield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasresizefield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasresizefield')]]></script>
+  </tool>
+
+  <tool name="dop_gasnetfieldsliceexchange" label="Gas Net Field Slice Exchange" icon="DOP_gasnetfieldsliceexchange">
+    <helpURL>operator:Dop/gasnetfieldsliceexchange</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasnetfieldsliceexchange</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasnetfieldsliceexchange')]]></script>
+  </tool>
+
+  <tool name="dop_mask" label="Mask Field" icon="DOP_mask">
+    <helpURL>operator:Dop/mask</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/mask</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'mask')]]></script>
+  </tool>
+
+  <tool name="dop_dopnet" label="DOP Network" icon="OBJ_dopnet">
+    <helpURL>operator:Dop/dopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/dopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'dopnet')]]></script>
+  </tool>
+
+  <tool name="dop_delete" label="Delete" icon="DOP_delete">
+    <helpURL>operator:Dop/delete</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/delete</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'delete')]]></script>
+  </tool>
+
+  <tool name="dop_finiteelementsolver" label="FEM Solver" icon="DOP_finiteelementsolver">
+    <helpURL>operator:Dop/finiteelementsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/finiteelementsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'finiteelementsolver')]]></script>
+  </tool>
+
+  <tool name="dop_clothconfigureobject" label="Cloth Configure Object" icon="DOP_clothobject">
+    <helpURL>operator:Dop/clothconfigureobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/clothconfigureobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'clothconfigureobject')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticleseparate" label="Gas Particle Separate" icon="DOP_gasparticleseparate">
+    <helpURL>operator:Dop/gasparticleseparate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticleseparate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticleseparate')]]></script>
+  </tool>
+
+  <tool name="dop_gaslinearcombination" label="Gas Linear Combination" icon="DOP_gaslinearcombination">
+    <helpURL>operator:Dop/gaslinearcombination</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaslinearcombination</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaslinearcombination')]]></script>
+  </tool>
+
+  <tool name="dop_glueconrel" label="Glue Constraint Relationship" icon="DOP_glueconrel">
+    <helpURL>operator:Dop/glueconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/glueconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'glueconrel')]]></script>
+  </tool>
+
+  <tool name="dop_gassandforces" label="Gas Sand Forces" icon="DOP_gassandforces">
+    <helpURL>operator:Dop/gassandforces</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gassandforces</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gassandforces')]]></script>
+  </tool>
+
+  <tool name="dop_fan" label="Fan Force" icon="DOP_fan">
+    <helpURL>operator:Dop/fan</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fan</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+from doptoolutils import OrientInfo
+
+doptoolutils.genericTool(kwargs, 'fan', orient=OrientInfo('direction'))]]></script>
+  </tool>
+
+  <tool name="dop_gasembedfluid" label="Gas Embed Fluid" icon="DOP_gas">
+    <helpURL>operator:Dop/gasembedfluid</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasembedfluid</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasembedfluid')]]></script>
+  </tool>
+
+  <tool name="dop_gasanalysis" label="Gas Analysis" icon="DOP_gasanalysis">
+    <helpURL>operator:Dop/gasanalysis</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasanalysis</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasanalysis')]]></script>
+  </tool>
+
+  <tool name="dop_referenceframeforce" label="Reference Frame Force" icon="DOP_referenceframeforce">
+    <helpURL>operator:Dop/referenceframeforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/referenceframeforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'referenceframeforce')]]></script>
+  </tool>
+
+  <tool name="dop_solidconfigureobject" label="FEM Solid Configure Object" icon="DOP_solidconfigureobject">
+    <helpURL>operator:Dop/solidconfigureobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/solidconfigureobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'solidconfigureobject')]]></script>
+  </tool>
+
+  <tool name="dop_wirevolumecollider" label="Wire/Volume Collider" icon="DOP_wirevolumecollider">
+    <helpURL>operator:Dop/wirevolumecollider</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wirevolumecollider</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wirevolumecollider')]]></script>
+  </tool>
+
+  <tool name="dop_sbdspringconstraint" label="SBD Spring Constraint" icon="DOP_sbdspringconstraint">
+    <helpURL>operator:Dop/sbdspringconstraint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sbdspringconstraint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>FEM</toolSubmenu>
+    <toolSubmenu>Constraints</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sbdspringconstraint')]]></script>
+  </tool>
+
+  <tool name="dop_pumprel" label="Pump Relationship" icon="DOP_pumprel">
+    <helpURL>operator:Dop/pumprel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/pumprel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'pumprel')]]></script>
+  </tool>
+
+  <tool name="dop_gassurfacetension" label="Gas Surface Tension" icon="DOP_gassurfacetension">
+    <helpURL>operator:Dop/gassurfacetension</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gassurfacetension</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gassurfacetension')]]></script>
+  </tool>
+
+  <tool name="dop_scriptsolver" label="Script Solver" icon="DOP_scriptsolver">
+    <helpURL>operator:Dop/scriptsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/scriptsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'scriptsolver')]]></script>
+  </tool>
+
+  <tool name="dop_pointforce" label="Point Force" icon="DOP_pointforce">
+    <helpURL>operator:Dop/pointforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/pointforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'pointforce')]]></script>
+  </tool>
+
+  <tool name="dop_gasreinitializesdf" label="Gas Reinitialize SDF" icon="DOP_gasreinitializesdf">
+    <helpURL>operator:Dop/gasreinitializesdf</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasreinitializesdf</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasreinitializesdf')]]></script>
+  </tool>
+
+  <tool name="dop_gasrest" label="Gas Rest" icon="DOP_gasrest">
+    <helpURL>operator:Dop/gasrest</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasrest</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasrest')]]></script>
+  </tool>
+
+  <tool name="dop_gasreduce" label="Gas Reduce" icon="DOP_gasreduce">
+    <helpURL>operator:Dop/gasreduce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasreduce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasreduce')]]></script>
+  </tool>
+
+  <tool name="dop_wirewirecollider" label="Wire/Wire Collider" icon="DOP_wirewirecollider">
+    <helpURL>operator:Dop/wirewirecollider</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/wirewirecollider</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Collision Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'wirewirecollider')]]></script>
+  </tool>
+
+  <tool name="dop_noise" label="Noise Field" icon="DOP_noise">
+    <helpURL>operator:Dop/noise</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/noise</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'noise')]]></script>
+  </tool>
+
+  <tool name="dop_rodmodeldata" label="Rod Material Property Parameters" icon="DOP_rodmodeldata">
+    <helpURL>operator:Dop/rodmodeldata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rodmodeldata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rodmodeldata')]]></script>
+  </tool>
+
+  <tool name="dop_ropnet" label="ROP Network" icon="NETWORKS_rop">
+    <helpURL>operator:Dop/ropnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/ropnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'ropnet')]]></script>
+  </tool>
+
+  <tool name="dop_vopforce" label="VOP Force" icon="DOP_vopforce">
+    <helpURL>operator:Dop/vopforce</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/vopforce</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'vopforce')]]></script>
+  </tool>
+
+  <tool name="dop_vectorfield" label="Vector Field" icon="DOP_vectorfield">
+    <helpURL>operator:Dop/vectorfield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/vectorfield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'vectorfield')]]></script>
+  </tool>
+
+  <tool name="dop_sliderconrel" label="Slider Constraint Relationship" icon="DOP_sliderconrel">
+    <helpURL>operator:Dop/sliderconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sliderconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sliderconrel')]]></script>
+  </tool>
+
+  <tool name="dop_gassdftofog" label="Gas SDF to Fog" icon="DOP_gassdftofog">
+    <helpURL>operator:Dop/gassdftofog</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gassdftofog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gassdftofog')]]></script>
+  </tool>
+
+  <tool name="dop_gaslimitparticles" label="Gas Limit Particles" icon="DOP_gaslimitparticles">
+    <helpURL>operator:Dop/gaslimitparticles</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gaslimitparticles</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gaslimitparticles')]]></script>
+  </tool>
+
+  <tool name="dop_clothvisualization" label="Cloth Visualization" icon="DOP_clothvisualization">
+    <helpURL>operator:Dop/clothvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/clothvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'clothvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_gasblur" label="Gas Blur" icon="DOP_gasblur">
+    <helpURL>operator:Dop/gasblur</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasblur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasblur')]]></script>
+  </tool>
+
+  <tool name="dop_gasopencl" label="Gas OpenCL" icon="DOP_gasopencl">
+    <helpURL>operator:Dop/gasopencl</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasopencl</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasopencl')]]></script>
+  </tool>
+
+  <tool name="dop_gasvelocitystretch" label="Gas Velocity Stretch" icon="DOP_gasvelocitystretch">
+    <helpURL>operator:Dop/gasvelocitystretch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasvelocitystretch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasvelocitystretch')]]></script>
+  </tool>
+
+  <tool name="dop_copysolver" label="Copy Data Solver" icon="DOP_copysolver">
+    <helpURL>operator:Dop/copysolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/copysolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'copysolver')]]></script>
+  </tool>
+
+  <tool name="dop_gasfeedback" label="Gas Feedback" icon="DOP_gasfeedback">
+    <helpURL>operator:Dop/gasfeedback</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasfeedback</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasfeedback')]]></script>
+  </tool>
+
+  <tool name="dop_merge" label="Merge" icon="DOP_merge">
+    <helpURL>operator:Dop/merge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/merge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <toolSubmenu>Object Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'merge')]]></script>
+  </tool>
+
+  <tool name="dop_drag" label="Drag Force" icon="DOP_drag">
+    <helpURL>operator:Dop/drag</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/drag</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Forces</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'drag')]]></script>
+  </tool>
+
+  <tool name="dop_bulletsoftconrel" label="Bullet Soft Constraint Relationship" icon="DOP_bulletsoftconrel">
+    <helpURL>operator:Dop/bulletsoftconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/bulletsoftconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'bulletsoftconrel')]]></script>
+  </tool>
+
+  <tool name="dop_gasfieldvop" label="Gas Field VOP" icon="DOP_gasfieldvop">
+    <helpURL>operator:Dop/gasfieldvop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasfieldvop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasfieldvop')]]></script>
+  </tool>
+
+  <tool name="dop_sinkrel" label="Sink Relationship" icon="DOP_sinkrel">
+    <helpURL>operator:Dop/sinkrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sinkrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sinkrel')]]></script>
+  </tool>
+
+  <tool name="dop_softattachconrel" label="SoftAttach Constraint Relationship" icon="DOP_softattachconrel">
+    <helpURL>operator:Dop/softattachconrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/softattachconrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'softattachconrel')]]></script>
+  </tool>
+
+  <tool name="dop_copydata" label="Copy Data" icon="DOP_copydata">
+    <helpURL>operator:Dop/copydata</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/copydata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Data Flow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'copydata')]]></script>
+  </tool>
+
+  <tool name="dop_targetrel" label="Target Relationship" icon="DOP_targetrel">
+    <helpURL>operator:Dop/targetrel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/targetrel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Relationships</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'targetrel')]]></script>
+  </tool>
+
+  <tool name="dop_fluidsolver" label="Fluid Solver" icon="DOP_fluidsolver">
+    <helpURL>operator:Dop/fluidsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fluidsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fluidsolver')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjregion" label="Anchor: Object Region" icon="DOP_anchorobjregion">
+    <helpURL>operator:Dop/anchorobjregion</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjregion</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjregion')]]></script>
+  </tool>
+
+  <tool name="dop_sopmergefield" label="SOP Merge Field" icon="DOP_sopmergefield">
+    <helpURL>operator:Dop/sopmergefield</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopmergefield</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopmergefield')]]></script>
+  </tool>
+
+  <tool name="dop_scalarfieldvisualization" label="Scalar Field Visualization" icon="DOP_scalarfieldvisualization">
+    <helpURL>operator:Dop/scalarfieldvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/scalarfieldvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <toolSubmenu>Fields</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'scalarfieldvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_switchsolver" label="Switch Solver" icon="DOP_switchsolver">
+    <helpURL>operator:Dop/switchsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/switchsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'switchsolver')]]></script>
+  </tool>
+
+  <tool name="dop_rbdsolver" label="RBD Solver" icon="DOP_rbdsolver">
+    <helpURL>operator:Dop/rbdsolver</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/rbdsolver</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'rbdsolver')]]></script>
+  </tool>
+
+  <tool name="dop_sopgeo" label="SOP Geometry" icon="DOP_sopgeo">
+    <helpURL>operator:Dop/sopgeo</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/sopgeo</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'sopgeo')]]></script>
+  </tool>
+
+  <tool name="dop_constraintnetworkvisualization" label="Constraint Network Visualization" icon="DOP_constraintnetworkvisualization">
+    <helpURL>operator:Dop/constraintnetworkvisualization</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/constraintnetworkvisualization</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Visualization</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'constraintnetworkvisualization')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticletosdf" label="Gas Particle to SDF" icon="DOP_gasparticletosdf">
+    <helpURL>operator:Dop/gasparticletosdf</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticletosdf</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticletosdf')]]></script>
+  </tool>
+
+  <tool name="dop_gasvortexconfinement" label="Gas Vortex Confinement" icon="DOP_gas">
+    <helpURL>operator:Dop/gasvortexconfinement</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasvortexconfinement</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasvortexconfinement')]]></script>
+  </tool>
+
+  <tool name="dop_gasbuildrelationshipmask" label="Gas Build Relationship Mask" icon="DOP_gasbuildrelationshipmask">
+    <helpURL>operator:Dop/gasbuildrelationshipmask</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasbuildrelationshipmask</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasbuildrelationshipmask')]]></script>
+  </tool>
+
+  <tool name="dop_activevalue" label="Active Value" icon="DOP_activevalue">
+    <helpURL>operator:Dop/activevalue</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/activevalue</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'activevalue')]]></script>
+  </tool>
+
+  <tool name="dop_gasviscosity" label="Gas Viscosity" icon="DOP_gasviscosity">
+    <helpURL>operator:Dop/gasviscosity</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasviscosity</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasviscosity')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointgrouprot" label="Anchor: Object Point Group Rotation" icon="DOP_anchorobjpointgrouprot">
+    <helpURL>operator:Dop/anchorobjpointgrouprot</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointgrouprot</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointgrouprot')]]></script>
+  </tool>
+
+  <tool name="dop_chopnet" label="CHOP Network" icon="NETWORKS_chop">
+    <helpURL>operator:Dop/chopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/chopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'chopnet')]]></script>
+  </tool>
+
+  <tool name="dop_gasnetfieldborderexchange" label="Gas Net Field Border Exchange" icon="DOP_gasnetfieldborderexchange">
+    <helpURL>operator:Dop/gasnetfieldborderexchange</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasnetfieldborderexchange</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasnetfieldborderexchange')]]></script>
+  </tool>
+
+  <tool name="dop_gasprojectnondivergent" label="Gas Project Non Divergent" icon="DOP_gasprojectnondivergent">
+    <helpURL>operator:Dop/gasprojectnondivergent</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasprojectnondivergent</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasprojectnondivergent')]]></script>
+  </tool>
+
+  <tool name="dop_embeddingproperties" label="Embedding Properties" icon="DOP_embeddingproperties">
+    <helpURL>operator:Dop/embeddingproperties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/embeddingproperties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Physical Properties</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'embeddingproperties')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjspacerot" label="Anchor: Object Space Rotation" icon="DOP_anchorobjspacerot">
+    <helpURL>operator:Dop/anchorobjspacerot</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjspacerot</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjspacerot')]]></script>
+  </tool>
+
+  <tool name="dop_matnet" label="Material Network" icon="NETWORKS_mat">
+    <helpURL>operator:Dop/matnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/matnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'matnet')]]></script>
+  </tool>
+
+  <tool name="dop_fluidconfigureobject" label="Fluid Configure Object" icon="DOP_fluidobject">
+    <helpURL>operator:Dop/fluidconfigureobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/fluidconfigureobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'fluidconfigureobject')]]></script>
+  </tool>
+
+  <tool name="dop_anchorobjpointidpos" label="Anchor: Object Point Id Position" icon="DOP_anchorobjpointidpos">
+    <helpURL>operator:Dop/anchorobjpointidpos</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/anchorobjpointidpos</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Constraint Tools</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'anchorobjpointidpos')]]></script>
+  </tool>
+
+  <tool name="dop_topnet" label="TOP Network" icon="NETWORKS_top">
+    <helpURL>operator:Dop/topnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/topnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'topnet')]]></script>
+  </tool>
+
+  <tool name="dop_gasattribswap" label="Gas Attribute Swap" icon="DOP_gasattribswap">
+    <helpURL>operator:Dop/gasattribswap</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasattribswap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasattribswap')]]></script>
+  </tool>
+
+  <tool name="dop_hybridconfigureobject" label="FEM Hybrid Configure Object" icon="DOP_hybridconfigureobject">
+    <helpURL>operator:Dop/hybridconfigureobject</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/hybridconfigureobject</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Configure Object</toolSubmenu>
+    <toolSubmenu>FEM</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'hybridconfigureobject')]]></script>
+  </tool>
+
+  <tool name="dop_gasparticlecount" label="Gas Particle Count" icon="DOP_gasparticlecount">
+    <helpURL>operator:Dop/gasparticlecount</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>DOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Dop/gasparticlecount</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Micro Solvers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import doptoolutils
+
+doptoolutils.genericTool(kwargs, 'gasparticlecount')]]></script>
+  </tool>
+</shelfDocument>

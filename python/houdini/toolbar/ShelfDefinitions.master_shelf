@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, tolbars, and tools.
+       It should not be hand-edited when it is being used by the application.
+       Note, that two definitions of the same element are not allowed in a
+       single file.
+  -->
+  <shelfSet name="shelf_set_2" label="Lights, Camera, Action">
+    <memberToolshelf name="lights_and_cameras"/>
+    <memberToolshelf name="collisions"/>
+    <memberToolshelf name="particles"/>
+    <memberToolshelf name="grains"/>
+    <memberToolshelf name="vellum"/>
+    <memberToolshelf name="rbd_dynamics"/>
+    <memberToolshelf name="liquid_dynamics"/>
+    <memberToolshelf name="melting_dynamics"/>
+    <memberToolshelf name="ocean"/>
+    <memberToolshelf name="volume_creation_dynamics"/>
+    <memberToolshelf name="volume_sourcing_dynamics"/>
+    <memberToolshelf name="volume_tools_dynamics"/>
+    <memberToolshelf name="pyro_dynamics"/>
+    <memberToolshelf name="solid_dynamics"/>
+    <memberToolshelf name="wire_dynamics"/>
+    <memberToolshelf name="crowds"/>
+    <memberToolshelf name="drive_simulation"/>
+  </shelfSet>
+  <shelfSet name="hair_3" label="Guide Brushes">
+    <memberToolshelf name="grooming"/>
+    <memberToolshelf name="drive_simulation"/>
+    <memberToolshelf name="wire_dynamics"/>
+    <memberToolshelf name="lights_and_cameras"/>
+  </shelfSet>
+  <toolshelf name="collisions" label="Collisions">
+    <memberTool name="dynamics_staticobject"/>
+    <memberTool name="dop_deformingobject"/>
+    <memberTool name="dop_surfacecollider"/>
+    <memberTool name="dop_groundplane"/>
+    <memberTool name="dop_terrainobject"/>
+  </toolshelf>
+  <toolshelf name="particles" label="Particles">
+    <memberTool name="dynamics_popfireworks"/>
+    <memberTool name="dynamics_poplocation"/>
+    <memberTool name="dynamics_popsource"/>
+    <memberTool name="dynamics_popreplicate"/>
+    <memberTool name="dynamics_popaxisforce"/>
+    <memberTool name="dynamics_popattracttopoints"/>
+    <memberTool name="dynamics_popattracttocurvepoint"/>
+    <memberTool name="dynamics_popcurveforce"/>
+    <memberTool name="dynamics_popmetaballforce"/>
+    <memberTool name="dynamics_popcolor"/>
+    <memberTool name="dynamics_popdrag"/>
+    <memberTool name="dynamics_popfan"/>
+    <memberTool name="dynamics_popflock"/>
+    <memberTool name="dynamics_popforce"/>
+    <memberTool name="dynamics_popwind"/>
+    <memberTool name="dynamics_popinteract"/>
+    <memberTool name="dynamics_popcollision"/>
+    <memberTool name="dynamics_popinstance"/>
+    <memberTool name="dynamics_popsprite"/>
+    <memberTool name="dynamics_popvortexfilaments"/>
+  </toolshelf>
+  <toolshelf name="grains" label="Grains">
+    <memberTool name="dynamics_popgrains"/>
+    <memberTool name="dynamics_popgrainswet"/>
+    <memberTool name="dynamics_sandbox"/>
+    <memberTool name="dynamics_rbdgrains"/>
+    <memberTool name="geometry_grainupres"/>
+    <memberTool name="dynamics_popgrainsolid"/>
+    <memberTool name="dynamics_popgrainsheet"/>
+    <memberTool name="dynamics_popgrainstrand"/>
+    <memberTool name="dynamics_popautofreeze"/>
+    <memberTool name="dynamics_popawaken"/>
+    <memberTool name="dynamics_slicebyplane"/>
+    <memberTool name="dynamics_slicealongline"/>
+    <memberTool name="dynamics_distribute_fluid"/>
+  </toolshelf>
+  <toolshelf name="vellum" label="Vellum">
+    <memberTool name="dop_surfacecollider"/>
+    <memberTool name="dynamics_vellumcloth"/>
+    <memberTool name="dynamics_vellumhair"/>
+    <memberTool name="dynamics_vellumsoftbody"/>
+    <memberTool name="dynamics_vellumtetsoftbody"/>
+    <memberTool name="dynamics_vellumballoon"/>
+    <memberTool name="dynamics_vellumgrains"/>
+    <memberTool name="geometry_vellumsimplecloth"/>
+  </toolshelf>
+  <toolshelf name="rbd_dynamics" label="Rigid Bodies">
+    <memberTool name="dynamics_rbdobjects"/>
+    <memberTool name="dynamics_rbdheroobject"/>
+    <memberTool name="dynamics_rbdglueobject"/>
+    <memberTool name="dynamics_rbdpointobject"/>
+    <memberTool name="dynamics_rbdragdollobject"/>
+    <memberTool name="dynamics_rbdgrains"/>
+    <memberTool name="dynamics_rbdconvexproxy"/>
+    <memberTool name="dynamics_rbdsphereproxy"/>
+    <memberTool name="dynamics_rbdfracturedobject"/>
+    <memberTool name="dynamics_makebreakable"/>
+    <memberTool name="dynamics_impactanalysis"/>
+    <memberTool name="dynamics_debris"/>
+    <memberTool name="dynamics_autofreeze"/>
+    <memberTool name="dynamics_gluenetwork"/>
+    <memberTool name="dop_rbdpinconstraint"/>
+    <memberTool name="dop_rbdconetwistconstraint"/>
+    <memberTool name="dop_rbdsliderconstraint"/>
+    <memberTool name="dop_rbdhingeconstraint"/>
+    <memberTool name="dop_rbdspringconstraint"/>
+    <memberTool name="dop_rbdangularconstraint"/>
+    <memberTool name="dop_rbdangularspringconstraint"/>
+    <memberTool name="dop_parentconstraint"/>
+  </toolshelf>
+  <toolshelf name="liquid_dynamics" label="Particle Fluids">
+    <memberTool name="dynamics_makeflip"/>
+    <memberTool name="dynamics_flipbox"/>
+    <memberTool name="dynamics_particlefluidemitter"/>
+    <memberTool name="dynamics_makesink"/>
+    <memberTool name="dynamics_sculptedparticlefluid"/>
+    <memberTool name="dynamics_crownsplashfluid"/>
+    <memberTool name="dynamics_dripparticlefluid"/>
+    <memberTool name="dynamics_suctionfluid"/>
+    <memberTool name="dynamics_popcondensation"/>
+    <memberTool name="dynamics_makeviscous"/>
+    <memberTool name="dynamics_whitewater"/>
+    <memberTool name="dynamics_slicebyplane"/>
+    <memberTool name="dynamics_slicealongline"/>
+    <memberTool name="dynamics_distribute_fluid"/>
+  </toolshelf>
+  <toolshelf name="melting_dynamics" label="Viscous Fluids">
+    <memberTool name="dynamics_meltobject"/>
+    <memberTool name="dynamics_objecttolava"/>
+    <memberTool name="dynamics_emitlava"/>
+    <memberTool name="dynamics_heatfromobject"/>
+    <memberTool name="dynamics_coolfromobject"/>
+    <memberTool name="dynamics_emitsteamoncollision"/>
+    <memberTool name="dynamics_makesink"/>
+    <memberTool name="dynamics_slicebyplane"/>
+    <memberTool name="dynamics_slicealongline"/>
+    <memberTool name="dynamics_distribute_fluid"/>
+  </toolshelf>
+  <toolshelf name="ocean" label="Oceans">
+    <memberTool name="geometry_smallocean"/>
+    <memberTool name="geometry_largeocean"/>
+    <memberTool name="dynamics_guidedoceanlayer"/>
+    <memberTool name="dynamics_wavetank"/>
+    <memberTool name="dynamics_beachtank"/>
+    <memberTool name="dynamics_flattank"/>
+    <memberTool name="dynamics_oceanflattank"/>
+    <memberTool name="dynamics_whitewater"/>
+  </toolshelf>
+  <toolshelf name="volume_creation_dynamics" label="Fluid Containers">
+    <memberTool name="dynamics_pyrobox"/>
+    <memberTool name="dynamics_smokebox"/>
+  </toolshelf>
+  <toolshelf name="volume_sourcing_dynamics" label="Populate Containers">
+    <memberTool name="dynamics_burnsource_surface"/>
+    <memberTool name="dynamics_burnsource_points"/>
+    <memberTool name="dynamics_burnsource_volumes"/>
+    <memberTool name="dynamics_makesink"/>
+    <memberTool name="dynamics_makepump"/>
+    <memberTool name="dynamics_makecollision"/>
+    <memberTool name="dynamics_makeexpand"/>
+  </toolshelf>
+  <toolshelf name="volume_tools_dynamics" label="Container Tools">
+    <memberTool name="dynamics_initvel"/>
+    <memberTool name="dynamics_gascurveforce"/>
+    <memberTool name="dynamics_resizecontainer"/>
+    <memberTool name="dynamics_upres"/>
+    <memberTool name="dynamics_embedinfluid"/>
+    <memberTool name="dynamics_seedvorticles"/>
+    <memberTool name="dynamics_paintfuel"/>
+    <memberTool name="dynamics_painttemp"/>
+    <memberTool name="dynamics_fuelfromtexture"/>
+    <memberTool name="dynamics_temperaturefromtexture"/>
+    <memberTool name="dynamics_addfield"/>
+    <memberTool name="dynamics_targetsmoke"/>
+    <memberTool name="dynamics_parentfluid"/>
+    <memberTool name="dynamics_distribute_container"/>
+  </toolshelf>
+  <toolshelf name="pyro_dynamics" label="Pyro FX">
+    <memberTool name="pyro_burn"/>
+    <memberTool name="pyro_explosion"/>
+    <memberTool name="pyro_fireball"/>
+    <memberTool name="pyro_billowysmoke"/>
+    <memberTool name="pyro_coloredsmoke"/>
+    <memberTool name="pyro_makecolored"/>
+    <memberTool name="pyro_wispy"/>
+    <memberTool name="pyro_candleflame"/>
+    <memberTool name="pyro_smokelessflame"/>
+    <memberTool name="pyro_dryice"/>
+    <memberTool name="pyro_volcano"/>
+    <memberTool name="pyro_smoketrail"/>
+    <memberTool name="pyro_clusteredsmoke"/>
+    <memberTool name="pyro_clusteredfire"/>
+  </toolshelf>
+  <toolshelf name="cloth_dynamics" label="FEM Cloth">
+    <memberTool name="dynamics_clothobject"/>
+    <memberTool name="dop_surfacecollider"/>
+    <memberTool name="dynamics_attachconstraint"/>
+    <memberTool name="dynamics_clothfollowtarget"/>
+    <memberTool name="dynamics_stitchconstraint"/>
+    <memberTool name="dynamics_clothproxy"/>
+  </toolshelf>
+  <toolshelf name="solid_dynamics" label="FEM">
+    <memberTool name="dynamics_solidobject"/>
+    <memberTool name="dynamics_hybridobject"/>
+    <memberTool name="dynamics_organicmass"/>
+    <memberTool name="dynamics_organictissue"/>
+    <memberTool name="dynamics_fracturedsolidobject"/>
+    <memberTool name="dop_surfacecollider"/>
+    <memberTool name="dop_volumecollider"/>
+    <memberTool name="dynamics_solidfollowtarget"/>
+    <memberTool name="dynamics_constrainregion"/>
+    <memberTool name="dynamics_fusepointpairs"/>
+    <memberTool name="dynamics_visualizefiniteelements"/>
+    <memberTool name="dynamics_embedhighresobject"/>
+  </toolshelf>
+  <toolshelf name="wire_dynamics" label="Wires">
+    <memberTool name="dop_wireobject"/>
+    <memberTool name="dop_wiresetinitialpose"/>
+    <memberTool name="dynamics_gluewiretoanimation"/>
+    <memberTool name="dop_wireattachmentconstraint"/>
+    <memberTool name="dop_wirepinconstraint"/>
+    <memberTool name="dop_wirespringconstraint"/>
+    <memberTool name="dop_wireangularconstraint"/>
+    <memberTool name="dop_wireangularspringconstraint"/>
+    <memberTool name="dop_wireglueconstraint"/>
+    <memberTool name="dop_sbdattachconstraintrbd"/>
+    <memberTool name="dop_sbdattachconstraintpoint"/>
+    <memberTool name="dop_sbdattachconstraintanimation"/>
+    <memberTool name="dop_sbddetachconstraint"/>
+    <memberTool name="dop_sbddeleteconstraint"/>
+    <memberTool name="dynamics_distribute_wire"/>
+  </toolshelf>
+  <toolshelf name="drive_simulation" label="Drive Simulation">
+    <memberTool name="dynamics_makeactive"/>
+    <memberTool name="dynamics_makepassive"/>
+    <memberTool name="dynamics_removeobject"/>
+    <memberTool name="dynamics_newsimulation"/>
+    <memberTool name="dop_group"/>
+    <memberTool name="dop_gravity"/>
+    <memberTool name="dop_drag"/>
+    <memberTool name="dop_uniformforce"/>
+    <memberTool name="dop_fan"/>
+    <memberTool name="dop_fluidforce"/>
+    <memberTool name="dop_windforce"/>
+    <memberTool name="dop_magnetforce"/>
+    <memberTool name="dop_vortexforce"/>
+  </toolshelf>
+  <toolshelf name="crowds" label="Crowds">
+    <memberTool name="object_crowdagent"/>
+    <memberTool name="object_crowdaddclip"/>
+    <memberTool name="object_crowdcollisionlayer"/>
+    <memberTool name="object_crowdconfigurejoints"/>
+    <memberTool name="object_crowdpopulate"/>
+    <memberTool name="object_crowdpaintdensity"/>
+    <memberTool name="object_crowdsolver"/>
+    <memberTool name="object_crowdterrain"/>
+    <memberTool name="object_crowdobstacle"/>
+    <memberTool name="object_crowdpath"/>
+    <memberTool name="object_crowdlookat"/>
+    <memberTool name="object_crowdtargetposition"/>
+    <memberTool name="object_crowdagentcam"/>
+    <memberTool name="object_stadiumcrowdsexample"/>
+    <memberTool name="object_streetcrowdsexample"/>
+    <memberTool name="object_formationcrowdsexample"/>
+    <memberTool name="object_fuzzyobstaclescrowdsexample"/>
+    <memberTool name="object_fuzzytransitioncrowdsexample"/>
+    <memberTool name="object_ragdollrunexample"/>
+  </toolshelf>
+</shelfDocument>

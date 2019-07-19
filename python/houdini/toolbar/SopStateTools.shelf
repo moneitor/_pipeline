@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="sop_sopview" label="View" icon="TOOLS_view">
+    <helpURL>operator:sop_state/sopview</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Viewing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sopview')]]></script>
+  </tool>
+
+  <tool name="sop_floor" label="Construction Plane" icon="VIEW_display_construction_plane">
+    <helpURL>operator:sop_state/floor</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'floor')]]></script>
+  </tool>
+
+  <tool name="sop_renderregion" label="Render Region" icon="TOOLS_render_region">
+    <helpURL>operator:sop_state/renderregion</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'renderregion')]]></script>
+  </tool>
+
+  <tool name="sop_select" label="Select" icon="TOOLS_select">
+    <helpURL>operator:sop_state/select</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'select')]]></script>
+  </tool>
+
+  <tool name="sop_sopchanmodify" label="Modify Channels" icon="MWS_chanmodify">
+    <helpURL>operator:sop_state/sopchanmodify</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sopchanmodify')]]></script>
+  </tool>
+
+  <tool name="sop_sopfindmaterial" label="Find Materials" icon="MWS_findmaterial">
+    <helpURL>operator:sop_state/sopfindmaterial</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sopfindmaterial')]]></script>
+  </tool>
+
+  <tool name="sop_paint" label="Paint" icon="SOP_paint">
+    <helpURL>operator:Sop/paint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/paint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Attribute</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'paint')]]></script>
+  </tool>
+
+  <tool name="sop_grouppaint" label="Group Paint" icon="SOP_grouppaint">
+    <helpURL>operator:Sop/grouppaint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/grouppaint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Group</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'grouppaint')]]></script>
+  </tool>
+
+  <tool name="sop_comb" label="Comb" icon="SOP_comb">
+    <helpURL>operator:Sop/comb</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/comb</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Attribute</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'comb')]]></script>
+  </tool>
+
+  <tool name="sop_slidemodifierpaint" label="Slide Modifier Paint" icon="SOP_slidemodifierpaint">
+    <helpURL>operator:Sop/slidemodifierpaint</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/slidemodifierpaint</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Rigging</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'slidemodifierpaint')]]></script>
+  </tool>
+
+  <tool name="sop_uvbrush" label="UV Brush" icon="SOP_uvbrush">
+    <helpURL>operator:Sop/uvbrush</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvbrush</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvbrush')]]></script>
+  </tool>
+
+  <tool name="sop_sculpt" label="Sculpt" icon="SOP_sculpt">
+    <helpURL>operator:Sop/sculpt</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/sculpt</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sculpt')]]></script>
+  </tool>
+
+  <tool name="sop_duplicate" label="Duplicate" icon="SOP_duplicate">
+    <helpURL>operator:Sop/duplicate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/duplicate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'duplicate')]]></script>
+  </tool>
+
+  <tool name="sop_edit" label="Edit" icon="SOP_edit">
+    <helpURL>operator:Sop/edit</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/edit</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'edit')]]></script>
+  </tool>
+
+  <tool name="sop_group" label="Group" icon="SOP_group">
+    <helpURL>operator:Sop/group</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/group</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Group</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'group')]]></script>
+  </tool>
+
+  <tool name="sop_measure::2.0" label="Measure" icon="SOP_measure">
+    <helpURL>operator:Sop/measure?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/measure::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Attribute</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'measure::2.0')]]></script>
+  </tool>
+
+  <tool name="sop_polybevel::2.0" label="PolyBevel" icon="SOP_polybevel">
+    <helpURL>operator:Sop/polybevel?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/polybevel::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'polybevel::2.0')]]></script>
+  </tool>
+
+  <tool name="sop_polybridge" label="PolyBridge" icon="SOP_polybridge">
+    <helpURL>operator:Sop/polybridge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/polybridge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'polybridge')]]></script>
+  </tool>
+
+  <tool name="sop_polyextrude::2.0" label="PolyExtrude" icon="SOP_polyextrude">
+    <helpURL>operator:Sop/polyextrude?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/polyextrude::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'polyextrude::2.0')]]></script>
+  </tool>
+
+  <tool name="sop_join" label="Join" icon="SOP_join">
+    <helpURL>operator:Sop/join</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/join</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>NURBS</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'join')]]></script>
+  </tool>
+
+  <tool name="sop_fillet" label="Fillet" icon="SOP_fillet">
+    <helpURL>operator:Sop/fillet</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/fillet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>NURBS</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'fillet')]]></script>
+  </tool>
+
+  <tool name="sop_stitch" label="Stitch" icon="SOP_stitch">
+    <helpURL>operator:Sop/stitch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/stitch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>NURBS</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'stitch')]]></script>
+  </tool>
+
+  <tool name="sop_lattice" label="Lattice" icon="SOP_lattice">
+    <helpURL>operator:Sop/lattice</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/lattice</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Rigging</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'lattice')]]></script>
+  </tool>
+
+  <tool name="sop_polysplit::2.0" label="PolySplit" icon="SOP_polysplit">
+    <helpURL>operator:Sop/polysplit?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/polysplit::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <toolSubmenu>Edge</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'polysplit::2.0')]]></script>
+  </tool>
+
+  <tool name="sop_edgeloop" label="Edge Loop" icon="SHELF_edgeloop">
+    <helpURL>operator:sop_state/edgeloop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'edgeloop')]]></script>
+  </tool>
+
+  <tool name="sop_stroke" label="Stroke" icon="SOP_stroke">
+    <helpURL>operator:Sop/stroke</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/stroke</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'stroke')]]></script>
+  </tool>
+
+  <tool name="sop_smooth" label="Smooth" icon="SOP_smooth">
+    <helpURL>operator:Sop/smooth</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/smooth</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'smooth')]]></script>
+  </tool>
+
+  <tool name="sop_xform" label="Transform" icon="SOP_xform">
+    <helpURL>operator:Sop/xform</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/xform</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'xform')]]></script>
+  </tool>
+
+  <tool name="sop_softxform" label="Soft Transform" icon="SOP_softxform">
+    <helpURL>operator:Sop/softxform</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/softxform</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'softxform')]]></script>
+  </tool>
+
+  <tool name="sop_triangulate2d::3.0" label="Triangulate 2D" icon="SOP_triangulate2d">
+    <helpURL>operator:Sop/triangulate2d?version=3.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/triangulate2d::3.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Polygon</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'triangulate2d::3.0')]]></script>
+  </tool>
+
+  <tool name="sop_uvflatten::3.0" label="UV Flatten" icon="SOP_uvflatten">
+    <helpURL>operator:Sop/uvflatten?version=3.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvflatten::3.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvflatten::3.0')]]></script>
+  </tool>
+
+  <tool name="sop_uvflatten" label="UV Flatten" icon="SOP_uvflatten">
+    <helpURL>operator:Sop/uvflatten</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvflatten</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvflatten')]]></script>
+  </tool>
+
+  <tool name="sop_uvflatten::2.0" label="UV Flatten" icon="SOP_uvflatten">
+    <helpURL>operator:Sop/uvflatten?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvflatten::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvflatten::2.0')]]></script>
+  </tool>
+
+  <tool name="sop_uvautoseam" label="UV Autoseam" icon="SOP_uvautoseam">
+    <helpURL>operator:Sop/uvautoseam</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvautoseam</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvautoseam')]]></script>
+  </tool>
+
+  <tool name="sop_uvlayout::3.0" label="UV Layout" icon="SOP_uvlayout">
+    <helpURL>operator:Sop/uvlayout?version=3.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvlayout::3.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvlayout::3.0')]]></script>
+  </tool>
+
+  <tool name="sop_uvpelt" label="UV Pelt" icon="SOP_uvpelt">
+    <helpURL>operator:Sop/uvpelt</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/uvpelt</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'uvpelt')]]></script>
+  </tool>
+
+  <tool name="sop_vectordeform" label="Vector Deform" icon="SOP_vectordeform">
+    <helpURL>operator:Sop/vectordeform</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Sop/vectordeform</contextOpType>
+    </toolMenuContext>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'vectordeform')]]></script>
+  </tool>
+
+  <tool name="sop_sidefx_agentprep.pystate" label="Agent Prep" icon="sidefx_agentprep.pystate">
+    <helpURL>operator:sop_state/sidefx_agentprep.pystate</helpURL>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sidefx_agentprep.pystate')]]></script>
+  </tool>
+
+  <tool name="sop_sidefx_rbdconstraintsfromlines.pystate" label="RBD Constraints from Lines" icon="sidefx_rbdconstraintsfromlines.pystate">
+    <helpURL>operator:sop_state/sidefx_rbdconstraintsfromlines.pystate</helpURL>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sidefx_rbdconstraintsfromlines.pystate')]]></script>
+  </tool>
+
+  <tool name="sop_sidefx_rbdconstraintsfromcurves.pystate" label="RBD Constraints from Curves" icon="sidefx_rbdconstraintsfromcurves.pystate">
+    <helpURL>operator:sop_state/sidefx_rbdconstraintsfromcurves.pystate</helpURL>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sidefx_rbdconstraintsfromcurves.pystate')]]></script>
+  </tool>
+
+  <tool name="sop_sidefx_rbdconstraintsfromrules.pystate" label="RBD Constraints from Rules" icon="sidefx_rbdconstraintsfromrules.pystate">
+    <helpURL>operator:sop_state/sidefx_rbdconstraintsfromrules.pystate</helpURL>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sidefx_rbdconstraintsfromrules.pystate')]]></script>
+  </tool>
+
+  <tool name="sop_sidefx_rbdpaintstroke.pystate" label="RBD Paint" icon="sidefx_rbdpaintstroke.pystate">
+    <helpURL>operator:sop_state/sidefx_rbdpaintstroke.pystate</helpURL>
+    <script scriptType="python"><![CDATA[import soptoolutils
+
+soptoolutils.customStateTool(kwargs, 'sidefx_rbdpaintstroke.pystate')]]></script>
+  </tool>
+</shelfDocument>

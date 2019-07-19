@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="object_drawhairguides" label="Draw Hair" icon="SOP_drawhair">
+    <helpURL>tool:drawhair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startDrawing(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_plantguides" label="Plant Guides" icon="FUR_plant_guides">
+    <helpURL>tool:plantguides</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.createFurAndStartGrooming(kwargs, tool="plantguides")]]></script>
+  </tool>
+
+  <tool name="object_groomhairinscreen" label="Screen Brush" icon="FUR_screen_brush">
+    <helpURL>tool:screenbrush</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="groomscreen")]]></script>
+  </tool>
+
+  <tool name="object_groomhairalongsurface" label="Surface Brush" icon="FUR_surface_brush">
+    <helpURL>tool:surfacebrush</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="groomsurface")]]></script>
+  </tool>
+  
+  <tool name="object_groomliftbrush" label="Lift Hair" icon="FUR_lift_hair">
+    <helpURL>tool:lifthair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="lift")]]></script>
+  </tool>
+
+  <tool name="object_groomclumpbrush" label="Clump Hair" icon="FUR_clump_hair">
+    <helpURL>tool:clumphair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="clump")]]></script>
+  </tool>
+
+  <tool name="object_groompartbrush" label="Part Hair" icon="FUR_part_hair">
+    <helpURL>tool:parthair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="part")]]></script>
+  </tool>
+
+  <tool name="object_groomadjustlength" label="Length Adjust" icon="FUR_adjust_length">
+    <helpURL>tool:lengthadjust</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="adjustlength")]]></script>
+  </tool>
+
+  <tool name="object_groomsmooth" label="Smooth Hair" icon="FUR_smooth">
+    <helpURL>tool:smoothhair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="smooth")]]></script>
+  </tool>
+
+  <tool name="object_groomcuthair" label="Cut Hair" icon="FUR_cut_hair">
+      <helpURL>tool:cuthair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="cut")]]></script>
+  </tool>
+
+  <tool name="object_groomextendhair" label="Extend Hair" icon="FUR_length">
+    <helpURL>tool:extendhair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.startGrooming(kwargs, tool="extend")]]></script>
+  </tool>
+
+  <tool name="object_groom_addfur" label="Add Fur" icon="FUR_add_fur">
+    <helpURL>tool:groom_addfur</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.addFurTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_guidegroom" label="Create Guides" icon="FUR_guidegroom">
+    <helpURL>tool:groom_guidegroom</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideGroomTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_groommerge" label="Merge Groom Objects" icon="FUR_groommerge">
+    <helpURL>tool:groom_groommerge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.groomMergeTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_animateguides" label="Deform Guides" icon="FUR_animate">
+    <helpURL>tool:groom_animateguides</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.animateGuidesTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_simguides" label="Simulate Guides" icon="FUR_add_dynamics">
+    <helpURL>tool:groom_simguides</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.simGuidesTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_hairgen" label="Generate Hair" icon="FUR_hairgen">
+    <helpURL>tool:groom_hairgen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.hairGenTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_haircardgen" label="Generate Hair Cards" icon="FUR_haircardgen">
+    <helpURL>tool:groom_haircardgen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.hairCardGenTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_recachestrokes" label="Recache Strokes" icon="FUR_recache_strokes">
+    <helpURL>tool:groom_recachestrokes</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.recacheStrokesTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_jumptoguidegroom" label="Jump to Guides" icon="FUR_jump_guides">
+    <helpURL>tool:groom_jumptoguidegroom</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.jumpToGuideGroomTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_jumptohairgen" label="Jump to Generate" icon="FUR_jump_generate">
+    <helpURL>tool:groom_jumptohairgen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.jumpToHairGenTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_jumpintoguidegroom" label="Jump into Guides" icon="FUR_jump_guides">
+    <helpURL>tool:groom_jumpintoguidegroom</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.jumpIntoGuideGroomTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_jumpintohairgen" label="Jump into Generate" icon="FUR_jump_generate">
+    <helpURL>tool:groom_jumpintohairgen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.jumpIntoHairGenTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_togglehairdisplay" label="Toggle Display" icon="FUR_toggle_display">
+    <helpURL>tool:groom_togglehairdisplay</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.toggleHairDisplayTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_isolateparts" label="Isolate Groom Parts" icon="FUR_isolate_parts">
+    <helpURL>tool:groom_isolateparts</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.isolateGroomParts(kwargs)]]></script>
+  </tool>
+
+  <tool name="object_groom_haircardtexture" label="Hair Card Texture"
+	icon="FUR_haircardtex">
+    <helpURL>tool:groom_haircardtexture</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.hairCardTextureTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_reguide" label="Reguide" icon="FUR_reguide">
+    <helpURL>tool:reguide</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.reguideTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_drawpartingline" label="Part Guides" icon="FUR_addparting">
+    <helpURL>tool:drawpartingline</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Grooming</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.drawPartingLineTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideinit" label="Initialize Guides" icon="FUR_initialize_guides">
+    <helpURL>tool:sop_groom_guideinit</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideInitTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_setdir" label="Set Guide Direction" icon="FUR_comb">
+    <helpURL>tool:sop_groom_guideprocess_setdir</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setdirvec')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_length" label="Set Guide Length" icon="FUR_paint_length">
+    <helpURL>tool:sop_groom_guideprocess_length</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setlength')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_lift" label="Lift Guides" icon="FUR_lift_hair">
+    <helpURL>tool:sop_groom_guideprocess_lift</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setlift')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_bend" label="Bend Guides" icon="FUR_orientation">
+    <helpURL>tool:sop_groom_guideprocess_bend</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'bend')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_straighten" label="Straighten Guides" icon="FUR_paint_straighten">
+    <helpURL>tool:sop_groom_guideprocess_straighten</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'straighten')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_smooth" label="Smooth Guides" icon="FUR_smooth">
+    <helpURL>tool:sop_groom_guideprocess_smooth</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'smooth')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_frizz" label="Frizz Guides" icon="FUR_paint_frizz">
+    <helpURL>tool:sop_groom_guideprocess_frizz</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'frizz')]]></script>
+  </tool>
+
+  <tool name="sop_groom_hairclump" label="Clump Guides" icon="FUR_paint_clumping">
+    <helpURL>tool:sop_groom_hairclump</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.clumpHairTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_setdir" label="Guide Process (Set Direction)" icon="FUR_comb">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setdirvec')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_lift" label="Guide Process (Lift)" icon="FUR_lift_hair">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setlift')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_setlength" label="Guide Process (Set Length)" icon="FUR_paint_length">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'setlength')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_straighten" label="Guide Process (Straighten)" icon="FUR_paint_straighten">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'straighten')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_smooth" label="Guide Process (Smooth)" icon="FUR_smooth">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'smooth')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_frizz" label="Guide Process (Frizz)" icon="FUR_paint_frizz">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'frizz')]]></script>
+  </tool>
+
+  <tool name="sop_groom_guideprocess_network_bend" label="Guide Process (Bend)" icon="FUR_paint_straighten">
+    <toolMenuContext name="network">
+      <contextOpType>Sop/guideprocess</contextOpType>
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.guideProcessTool(kwargs, 'bend')]]></script>
+  </tool>
+
+  <tool name="sop_groom_whitehair" label="Add White Hairs" icon="FUR_paint_white_density">
+    <helpURL>tool:sop_groom_whitehair</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.whiteHairTool(kwargs)]]></script>
+  </tool>
+
+  <tool name="sop_groom_curveadvect" label="Curve Advect" icon="SOP_guideadvect">
+    <helpURL>tool:sop_groom_curveadvect</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>OBJ</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Hair</toolSubmenu>
+    <script scriptType="python"><![CDATA[
+import furtoolutils
+furtoolutils.curveAdvectTool(kwargs)]]></script>
+  </tool>
+
+</shelfDocument>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="cop2_copview" label="View" icon="TOOLS_view">
+    <helpURL>operator:cop2_state/copview</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Viewing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'copview')]]></script>
+  </tool>
+
+  <tool name="cop2_colorcurve" label="Color Curve" icon="COP2_colorcurve">
+    <helpURL>operator:Cop2/colorcurve</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/colorcurve</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'colorcurve')]]></script>
+  </tool>
+
+  <tool name="cop2_colorreplace" label="Color Replace" icon="COP2_colorreplace">
+    <helpURL>operator:Cop2/colorreplace</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/colorreplace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'colorreplace')]]></script>
+  </tool>
+
+  <tool name="cop2_cornerramp" label="Corner Ramp" icon="COP2_cornerramp">
+    <helpURL>operator:Cop2/cornerramp</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/cornerramp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'cornerramp')]]></script>
+  </tool>
+
+  <tool name="cop2_chromakey" label="Chromakey" icon="COP2_chromakey">
+    <helpURL>operator:Cop2/chromakey</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/chromakey</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Keying</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'chromakey')]]></script>
+  </tool>
+
+  <tool name="cop2_huecurve" label="Hue Curve" icon="COP2_huecurve">
+    <helpURL>operator:Cop2/huecurve</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/huecurve</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'huecurve')]]></script>
+  </tool>
+
+  <tool name="cop2_layer" label="Layer" icon="COP2_layer">
+    <helpURL>operator:Cop2/layer</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/layer</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'layer')]]></script>
+  </tool>
+
+  <tool name="cop2_lumakey" label="Lumakey" icon="COP2_lumakey">
+    <helpURL>operator:Cop2/lumakey</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/lumakey</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Keying</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'lumakey')]]></script>
+  </tool>
+
+  <tool name="cop2_rotoshape" label="RotoShape" icon="COP2_rotoshape">
+    <helpURL>operator:Cop2/rotoshape</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/rotoshape</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'rotoshape')]]></script>
+  </tool>
+
+  <tool name="cop2_ramp" label="Ramp" icon="COP2_ramp">
+    <helpURL>operator:Cop2/ramp</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/ramp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'ramp')]]></script>
+  </tool>
+
+  <tool name="cop2_unpin" label="UnPin" icon="COP2_unpin">
+    <helpURL>operator:Cop2/unpin</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/unpin</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'unpin')]]></script>
+  </tool>
+
+  <tool name="cop2_levels" label="Levels" icon="COP2_levels">
+    <helpURL>operator:Cop2/levels</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/levels</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'levels')]]></script>
+  </tool>
+
+  <tool name="cop2_cryptomatte" label="Cryptomatte" icon="COP2_Cryptomatte">
+    <helpURL>operator:Cop2/cryptomatte</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/cryptomatte</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.customStateTool(kwargs, 'cryptomatte')]]></script>
+  </tool>
+</shelfDocument>

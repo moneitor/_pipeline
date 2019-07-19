@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="chop_chopview" label="View" icon="TOOLS_view">
+    <toolMenuContext name="viewer">
+      <contextNetType>CHOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Viewing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'chopview')]]></script>
+  </tool>
+
+  <tool name="chop_floor" label="Construction Plane" icon="VIEW_display_construction_plane">
+    <toolMenuContext name="viewer">
+      <contextNetType>CHOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'floor')]]></script>
+  </tool>
+
+  <tool name="chop_renderregion" label="Render Region" icon="TOOLS_render_region">
+    <toolMenuContext name="viewer">
+      <contextNetType>CHOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'renderregion')]]></script>
+  </tool>
+
+  <tool name="chop_select" label="Select" icon="TOOLS_select">
+    <toolMenuContext name="viewer">
+      <contextNetType>CHOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'select')]]></script>
+  </tool>
+
+  <tool name="chop_chopxform" label="Transform" icon="TOOLS_move">
+    <toolMenuContext name="viewer">
+      <contextNetType>CHOP</contextNetType>
+    </toolMenuContext>
+    <toolSubmenu>Manipulate</toolSubmenu>
+    <script scriptType="python"><![CDATA[import toolutils
+
+toolutils.genericStateTool(kwargs, 'chopxform')]]></script>
+  </tool>
+</shelfDocument>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="vopnet_rsl_imager" label="RSL Imager SHOP Type" icon="VOPNET_rsl_imager">
+    <helpURL>operator:VopNet/rsl_imager</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/rsl_imager</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>RenderMan</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'rsl_imager')]]></script>
+  </tool>
+
+  <tool name="vopnet_image3d" label="VEX Image3D SHOP Type" icon="VOPNET_image3d">
+    <helpURL>operator:VopNet/image3d</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/image3d</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'image3d')]]></script>
+  </tool>
+
+  <tool name="vopnet_fog" label="VEX Fog SHOP Type" icon="VOPNET_fog">
+    <helpURL>operator:VopNet/fog</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/fog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'fog')]]></script>
+  </tool>
+
+  <tool name="vopnet_sop" label="SOP Type" icon="VOPNET_sop">
+    <helpURL>operator:VopNet/sop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/sop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Operators</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'sop')]]></script>
+  </tool>
+
+  <tool name="vopnet_rsl_displace" label="RSL Displacement SHOP Type" icon="VOPNET_rsl_displace">
+    <helpURL>operator:VopNet/rsl_displace</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/rsl_displace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>RenderMan</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'rsl_displace')]]></script>
+  </tool>
+
+  <tool name="vopnet_light" label="VEX Light SHOP Type" icon="VOPNET_light">
+    <helpURL>operator:VopNet/light</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/light</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'light')]]></script>
+  </tool>
+
+  <tool name="vopnet_subnet" label="Subnetwork" icon="VOPNET_subnet">
+    <helpURL>operator:VopNet/subnet</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/subnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'subnet')]]></script>
+  </tool>
+
+  <tool name="vopnet_cop2filter" label="COP2 Filter Type" icon="VOPNET_cop2filter">
+    <helpURL>operator:VopNet/cop2filter</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/cop2filter</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Operators</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'cop2filter')]]></script>
+  </tool>
+
+  <tool name="vopnet_rsl_surface" label="RSL Surface SHOP Type" icon="VOPNET_rsl_surface">
+    <helpURL>operator:VopNet/rsl_surface</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/rsl_surface</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>RenderMan</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'rsl_surface')]]></script>
+  </tool>
+
+  <tool name="vopnet_shadow" label="VEX Shadow SHOP Type" icon="VOPNET_shadow">
+    <helpURL>operator:VopNet/shadow</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/shadow</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'shadow')]]></script>
+  </tool>
+
+  <tool name="vopnet_displace" label="VEX Displacement SHOP Type" icon="VOPNET_displace">
+    <helpURL>operator:VopNet/displace</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/displace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'displace')]]></script>
+  </tool>
+
+  <tool name="vopnet_rsl_light" label="RSL Light SHOP Type" icon="VOPNET_rsl_light">
+    <helpURL>operator:VopNet/rsl_light</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/rsl_light</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>RenderMan</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'rsl_light')]]></script>
+  </tool>
+
+  <tool name="vopnet_cop2gen" label="COP2 Generator Type" icon="VOPNET_cop2gen">
+    <helpURL>operator:VopNet/cop2gen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/cop2gen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Operators</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'cop2gen')]]></script>
+  </tool>
+
+  <tool name="vopnet_cvex" label="CVEX Type" icon="VOPNET_cvex">
+    <helpURL>operator:VopNet/cvex</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/cvex</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Operators</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'cvex')]]></script>
+  </tool>
+
+  <tool name="vopnet_surface" label="VEX Surface SHOP Type" icon="VOPNET_surface">
+    <helpURL>operator:VopNet/surface</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/surface</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Mantra</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'surface')]]></script>
+  </tool>
+
+  <tool name="vopnet_chop" label="CHOP Type" icon="VOPNET_chop">
+    <helpURL>operator:VopNet/chop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/chop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Operators</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'chop')]]></script>
+  </tool>
+
+  <tool name="vopnet_rsl_volume" label="RSL Volume SHOP Type" icon="VOPNET_rsl_volume">
+    <helpURL>operator:VopNet/rsl_volume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>VOPNET</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>VopNet/rsl_volume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>RenderMan</toolSubmenu>
+    <script scriptType="python"><![CDATA[import vopnettoolutils
+
+vopnettoolutils.genericTool(kwargs, 'rsl_volume')]]></script>
+  </tool>
+</shelfDocument>

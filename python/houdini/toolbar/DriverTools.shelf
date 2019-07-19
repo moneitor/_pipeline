@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="driver_dop" label="Dynamics" icon="ROP_dop">
+    <helpURL>operator:Driver/dop</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/dop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Simulation</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'dop')]]></script>
+  </tool>
+
+  <tool name="driver_framecontainer" label="Frame Container" icon="ROP_framecontainer">
+    <helpURL>operator:Driver/framecontainer</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/framecontainer</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'framecontainer')]]></script>
+  </tool>
+
+  <tool name="driver_geometry" label="Geometry" icon="ROP_geometry">
+    <helpURL>operator:Driver/geometry</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/geometry</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'geometry')]]></script>
+  </tool>
+
+  <tool name="driver_shopnet" label="SHOP Network" icon="NETWORKS_shop">
+    <helpURL>operator:Driver/shopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/shopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'shopnet')]]></script>
+  </tool>
+
+  <tool name="driver_fetch" label="Fetch" icon="ROP_fetch">
+    <helpURL>operator:Driver/fetch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/fetch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'fetch')]]></script>
+  </tool>
+
+  <tool name="driver_ris" label="RenderMan RIS" icon="ROP_rman">
+    <helpURL>operator:Driver/ris</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/ris</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'ris')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="driver_prepost" label="PrePost" icon="ROP_prepost">
+    <helpURL>operator:Driver/prepost</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/prepost</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'prepost')]]></script>
+  </tool>
+
+  <tool name="driver_dopnet" label="DOP Network" icon="OBJ_dopnet">
+    <helpURL>operator:Driver/dopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/dopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'dopnet')]]></script>
+  </tool>
+
+  <tool name="driver_comp" label="Composite" icon="ROP_comp">
+    <helpURL>operator:Driver/comp</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/comp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Image</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'comp')]]></script>
+  </tool>
+
+  <tool name="driver_framedep" label="Frame Dependency" icon="ROP_framedep">
+    <helpURL>operator:Driver/framedep</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/framedep</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'framedep')]]></script>
+  </tool>
+
+  <tool name="driver_wren" label="Wren (Wireframe)" icon="ROP_wren">
+    <helpURL>operator:Driver/wren</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/wren</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'wren')]]></script>
+  </tool>
+
+  <tool name="driver_gltf" label="GLTF" icon="OBJ_gltf_hierarchy">
+    <helpURL>operator:Driver/gltf</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/gltf</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Scene</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'gltf')]]></script>
+  </tool>
+
+  <tool name="driver_baketexture::2.0" label="Bake Texture" icon="ROP_mantra">
+    <helpURL>operator:Driver/baketexture?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/baketexture::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'baketexture::2.0')]]></script>
+  </tool>
+
+  <tool name="driver_rib" label="RenderMan" icon="ROP_rman">
+    <helpURL>operator:Driver/rib</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/rib</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'rib')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="driver_null" label="Null" icon="ROP_null">
+    <helpURL>operator:Driver/null</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/null</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'null')]]></script>
+  </tool>
+
+  <tool name="driver_baketexture::3.0" label="Bake Texture" icon="ROP_mantra">
+    <helpURL>operator:Driver/baketexture?version=3.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/baketexture::3.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'baketexture::3.0')]]></script>
+  </tool>
+
+  <tool name="driver_wedge" label="Wedge" icon="ROP_wedge">
+    <helpURL>operator:Driver/wedge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/wedge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'wedge')]]></script>
+  </tool>
+
+  <tool name="driver_shell" label="Shell" icon="ROP_shell">
+    <helpURL>operator:Driver/shell</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/shell</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'shell')]]></script>
+  </tool>
+
+  <tool name="driver_baketexture" label="Bake Texture" icon="ROP_mantra">
+    <helpURL>operator:Driver/baketexture</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/baketexture</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'baketexture')]]></script>
+  </tool>
+
+  <tool name="driver_filmboxfbx" label="Filmbox FBX" icon="ROP_fbx">
+    <helpURL>operator:Driver/filmboxfbx</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/filmboxfbx</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Scene</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'filmboxfbx')]]></script>
+  </tool>
+
+  <tool name="driver_alembic" label="Alembic" icon="ROP_alembic">
+    <helpURL>operator:Driver/alembic</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/alembic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Scene</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'alembic')]]></script>
+  </tool>
+
+  <tool name="driver_dsmmerge" label="DSM Merge" icon="ROP_dsmmerge">
+    <helpURL>operator:Driver/dsmmerge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/dsmmerge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'dsmmerge')]]></script>
+  </tool>
+
+  <tool name="driver_vopnet" label="VOP Network" icon="NETWORKS_vop">
+    <helpURL>operator:Driver/vopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/vopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'vopnet')]]></script>
+  </tool>
+
+  <tool name="driver_usd" label="USD" icon="ROP_usd">
+    <helpURL>operator:Driver/usd</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/usd</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Scene</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'usd')]]></script>
+  </tool>
+
+  <tool name="driver_subnet" label="Subnetwork" icon="ROP_subnet">
+    <helpURL>operator:Driver/subnet</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/subnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'subnet')]]></script>
+  </tool>
+
+  <tool name="driver_switch" label="Switch" icon="ROP_switch">
+    <helpURL>operator:Driver/switch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/switch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'switch')]]></script>
+  </tool>
+
+  <tool name="driver_matnet" label="Material Network" icon="NETWORKS_mat">
+    <helpURL>operator:Driver/matnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/matnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'matnet')]]></script>
+  </tool>
+
+  <tool name="driver_lopnet" label="LOP Network" icon="NETWORKS_lop">
+    <helpURL>operator:Driver/lopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/lopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'lopnet')]]></script>
+  </tool>
+
+  <tool name="driver_opengl" label="OpenGL" icon="ROP_opengl">
+    <helpURL>operator:Driver/opengl</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/opengl</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'opengl')]]></script>
+  </tool>
+
+  <tool name="driver_netbarrier" label="Net Barrier" icon="ROP_netbarrier">
+    <helpURL>operator:Driver/netbarrier</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/netbarrier</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'netbarrier')]]></script>
+  </tool>
+
+  <tool name="driver_topnet" label="TOP Network" icon="NETWORKS_top">
+    <helpURL>operator:Driver/topnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/topnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'topnet')]]></script>
+  </tool>
+
+  <tool name="driver_chopnet" label="CHOP Network" icon="NETWORKS_chop">
+    <helpURL>operator:Driver/chopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/chopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'chopnet')]]></script>
+  </tool>
+
+  <tool name="driver_sopnet" label="SOP Network" icon="OBJ_geo">
+    <helpURL>operator:Driver/sopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/sopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'sopnet')]]></script>
+  </tool>
+
+  <tool name="driver_mdd" label="MDD Point Cache" icon="ROP_mdd">
+    <helpURL>operator:Driver/mdd</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/mdd</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'mdd')]]></script>
+  </tool>
+
+  <tool name="driver_alf" label="Tractor" icon="ROP_alfred">
+    <helpURL>operator:Driver/alf</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/alf</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Farm</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'alf')]]></script>
+  </tool>
+
+  <tool name="driver_batch" label="Batch" icon="ROP_batch">
+    <helpURL>operator:Driver/batch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/batch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Dependency</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'batch')]]></script>
+  </tool>
+
+  <tool name="driver_cop2net" label="COP2 Network" icon="NETWORKS_cop2">
+    <helpURL>operator:Driver/cop2net</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/cop2net</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'cop2net')]]></script>
+  </tool>
+
+  <tool name="driver_channel" label="Channel" icon="ROP_channel">
+    <helpURL>operator:Driver/channel</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/channel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Motion</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'channel')]]></script>
+  </tool>
+
+  <tool name="driver_usdhydra" label="USD Hydra" icon="ROP_usdhydra">
+    <helpURL>operator:Driver/usdhydra</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/usdhydra</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Render</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'usdhydra')]]></script>
+  </tool>
+
+  <tool name="driver_merge" label="Merge" icon="ROP_merge">
+    <helpURL>operator:Driver/merge</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/merge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'merge')]]></script>
+  </tool>
+
+  <tool name="driver_brickmap" label="Brick Map Generator" icon="ROP_soho">
+    <helpURL>operator:Driver/brickmap</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/brickmap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'brickmap')]]></script>
+  </tool>
+
+  <tool name="driver_agent" label="Agent" icon="ROP_agent">
+    <helpURL>operator:Driver/agent</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/agent</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Scene</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'agent')]]></script>
+  </tool>
+
+  <tool name="driver_ribarchive" label="RenderMan Archive" icon="ROP_rman">
+    <helpURL>operator:Driver/ribarchive</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/ribarchive</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'ribarchive')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="driver_ifdarchive" label="Mantra Archive" icon="ROP_mantra">
+    <helpURL>operator:Driver/ifdarchive</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>ROP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/ifdarchive</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Geometry</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'ifdarchive')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="driver_objnet" label="Object Network" icon="NETWORKS_scene">
+    <helpURL>operator:Driver/objnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Driver/objnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import drivertoolutils
+
+drivertoolutils.genericTool(kwargs, 'objnet')]]></script>
+  </tool>
+</shelfDocument>

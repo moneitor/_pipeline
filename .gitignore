@@ -8,7 +8,6 @@ rename_files/__pycache__/
 python/venv/
 AppLauncher/venv/
 
-python/houdini
 python/houdini/__pycache__
 python/ui/__pycache__
 python/ui/ui_qtDesigner
@@ -16,3 +15,4 @@ python/ui/ui_qtDesigner
 
 *.pyc
 *.pyo
+*.shelf

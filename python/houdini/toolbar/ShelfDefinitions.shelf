@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+       It should not be hand-edited when it is being used by the application.
+       Note, that two definitions of the same element are not allowed in a
+       single file.
+  -->
+  <shelfSet name="shelf_set_1" label="Create and Refine">
+    <memberToolshelf name="create"/>
+    <memberToolshelf name="modify"/>
+    <memberToolshelf name="model"/>
+    <memberToolshelf name="polygon"/>
+    <memberToolshelf name="deform"/>
+    <memberToolshelf name="texture"/>
+    <memberToolshelf name="rigging"/>
+    <memberToolshelf name="muscles"/>
+    <memberToolshelf name="characters"/>
+    <memberToolshelf name="constraints"/>
+    <memberToolshelf name="groomtools"/>
+    <memberToolshelf name="guidemodify"/>
+    <memberToolshelf name="grooming"/>
+    <memberToolshelf name="terrainfx"/>
+    <memberToolshelf name="cloud"/>
+    <memberToolshelf name="volume"/>
+  </shelfSet>
+  <shelfSet name="shelf_set_character" label="Character">
+    <memberToolshelf name="rigging"/>
+    <memberToolshelf name="constraints"/>
+    <memberToolshelf name="characters"/>
+    <memberToolshelf name="deform"/>
+    <memberToolshelf name="groomtools"/>
+    <memberToolshelf name="guidemodify"/>
+    <memberToolshelf name="grooming"/>
+    <memberToolshelf name="create"/>
+    <memberToolshelf name="modify"/>
+  </shelfSet>
+  <shelfSet name="shelf_set_td" label="Technical Director">
+    <memberToolshelf name="create"/>
+    <memberToolshelf name="modify"/>
+    <memberToolshelf name="model"/>
+    <memberToolshelf name="polygon"/>
+    <memberToolshelf name="deform"/>
+    <memberToolshelf name="texture"/>
+    <memberToolshelf name="rigging"/>
+    <memberToolshelf name="characters"/>
+    <memberToolshelf name="constraints"/>
+    <memberToolshelf name="groomtools"/>
+    <memberToolshelf name="guidemodify"/>
+    <memberToolshelf name="grooming"/>
+    <memberToolshelf name="terrainfx"/>
+    <memberToolshelf name="cloud"/>
+    <memberToolshelf name="volume"/>
+    <memberToolshelf name="tdtools"/>
+  </shelfSet>
+  <shelfSet name="animation" label="Animation">
+    <memberToolshelf name="animation"/>
+    <memberToolshelf name="characters"/>
+    <memberToolshelf name="rigging"/>
+    <memberToolshelf name="deform"/>
+  </shelfSet>
+  <shelfSet name="lights_and_objects" label="Lights and Objects">
+    <memberToolshelf name="lights_and_cameras"/>
+    <memberToolshelf name="create"/>
+    <memberToolshelf name="modify"/>
+    <memberToolshelf name="polygon"/>
+  </shelfSet>
+  <shelfSet name="hair_1" label="Hair Utilities">
+    <memberToolshelf name="groomtools"/>
+  </shelfSet>
+  <shelfSet name="hair_2" label="Guide Process">
+    <memberToolshelf name="guidemodify"/>
+  </shelfSet>
+
+  <toolshelf name="create" label="Create">
+    <memberTool name="geometry_box"/>
+    <memberTool name="geometry_sphere"/>
+    <memberTool name="geometry_tube"/>
+    <memberTool name="geometry_torus"/>
+    <memberTool name="geometry_grid"/>
+    <memberTool name="object_null"/>
+    <memberTool name="geometry_line"/>
+    <memberTool name="geometry_circle"/>
+    <memberTool name="sop_curve"/>
+    <memberTool name="geometry_drawcurve"/>
+    <memberTool name="object_path"/>
+    <memberTool name="geometry_spraypaint"/>
+    <memberTool name="sop_font"/>
+    <memberTool name="geometry_platonic"/>
+    <memberTool name="sop_lsystem"/>
+    <memberTool name="sop_metaball"/>
+    <memberTool name="geometry_file"/>
+  </toolshelf>
+  <toolshelf name="modify" label="Modify">
+    <memberTool name="object_combine"/>
+    <memberTool name="geometry_extract"/>
+    <memberTool name="geometry_mirror"/>
+    <memberTool name="geometry_copy"/>
+    <memberTool name="geometry_duplicate"/>
+    <memberTool name="tool_align"/>
+    <memberTool name="object_matchtransform"/>
+    <memberTool name="object_centerpivot"/>
+    <memberTool name="object_movetopivot"/>
+    <memberTool name="object_freeze"/>
+    <memberTool name="object_bakeanimation"/>
+    <memberTool name="generic_delete"/>
+    <memberTool name="generic_hide"/>
+    <memberTool name="object_parent"/>
+  </toolshelf>
+  <toolshelf name="model" label="Model">
+    <memberTool name="sop_revolve"/>
+    <memberTool name="geometry_loft"/>
+    <memberTool name="sop_skin"/>
+    <memberTool name="sop_rails"/>
+    <memberTool name="sop_sweep"/>
+    <memberTool name="sop_creep"/>
+    <memberTool name="sop_ray"/>
+    <memberTool name="sop_boolean::2.0"/>
+    <memberTool name="geometry_voronoifracture"/>
+    <memberTool name="sop_topobuild"/>
+    <memberTool name="sop_carve"/>
+    <memberTool name="sop_convert"/>
+    <memberTool name="sop_refine"/>
+    <memberTool name="sop_reverse"/>
+    <memberTool name="sop_sculpt"/>
+    <memberTool name="sop_scatter::2.0"/>
+    <memberTool name="sop_clusterpoints"/>
+    <memberTool name="geo_group"/>
+    <memberTool name="sop_edit"/>
+    <memberTool name="sop_visibility"/>
+  </toolshelf>
+  <toolshelf name="polygon" label="Polygon">
+    <memberTool name="sop_polydraw"/>
+    <memberTool name="sop_polyextrude::2.0"/>
+    <memberTool name="sop_polybevel::2.0"/>
+    <memberTool name="sop_polybridge"/>
+    <memberTool name="sop_polysplit::2.0"/>
+    <memberTool name="sop_edgeloop"/>
+    <memberTool name="sop_polyreduce::2.0"/>
+    <memberTool name="sop_polyfill"/>
+    <memberTool name="sop_polyexpand2d"/>
+    <memberTool name="sop_edgecollapse"/>
+    <memberTool name="sop_edgecusp"/>
+    <memberTool name="sop_edgeflip"/>
+    <memberTool name="sop_edgedivide"/>
+    <memberTool name="sop_dissolve::2.0"/>
+    <memberTool name="sop_knife"/>
+    <memberTool name="sop_clip"/>
+    <memberTool name="sop_subdivide"/>
+    <memberTool name="sop_facet"/>
+    <memberTool name="sop_fuse::2.0"/>
+    <memberTool name="geometry_snap"/>
+    <memberTool name="sop_smooth::2.0"/>
+  </toolshelf>
+  <toolshelf name="deform" label="Deform">
+    <memberTool name="geometry_twist"/>
+    <memberTool name="sop_bend"/>
+    <memberTool name="geometry_lineartaper"/>
+    <memberTool name="geometry_squashstretch"/>
+    <memberTool name="sop_bulge"/>
+    <memberTool name="sop_lattice"/>
+    <memberTool name="sop_fractal"/>
+    <memberTool name="sop_mountain::2.0"/>
+    <memberTool name="geometry_waves"/>
+    <memberTool name="sop_ripple::2.0"/>
+    <memberTool name="object_morph"/>
+  </toolshelf>
+  <toolshelf name="cloud" label="Cloud FX">
+    <memberTool name="cloud_create"/>
+    <memberTool name="sop_cloud"/>
+    <memberTool name="sop_cloudnoise"/>
+    <memberTool name="cloud_light"/>
+    <memberTool name="sky_rig"/>
+  </toolshelf>
+  <toolshelf name="terrainfx" label="Terrain FX">
+    <memberTool name="terrain_hills"/>
+    <memberTool name="terrain_mountain"/>
+    <memberTool name="terrain_valley"/>
+    <memberTool name="terrain_moonscape"/>
+    <memberTool name="terrain_islands"/>
+    <memberTool name="terrain_canyon"/>
+    <memberTool name="terrain_dunes"/>
+  </toolshelf>
+  <toolshelf name="houdiniengine" label="Houdini Engine">
+    <memberTool name="hengine_plugin_installer"/>
+    <memberTool name="sop_collision_geo"/>
+    <memberTool name="sop_unity_material"/>
+    <memberTool name="sop_unreal_material"/>
+    <memberTool name="sop_maya_mayahardedge_to_attribute"/>
+    <memberTool name="sop_maya_mayahardedge_to_group"/>
+  </toolshelf>
+  <toolshelf name="volume" label="Volume">
+    <memberTool name="geometry_fogvolume"/>
+    <memberTool name="geometry_vdbfrompolygons"/>
+    <memberTool name="geometry_vdbfromparticles"/>
+    <memberTool name="geometry_paintcolorvolume"/>
+    <memberTool name="geometry_paintfogvolume"/>
+    <memberTool name="geometry_paintsdfvolume"/>
+    <memberTool name="geometry_volumerasterizepoints"/>
+    <memberTool name="geometry_volumerasterizeparticles"/>
+    <memberTool name="geometry_volumerasterizecurve"/>
+    <memberTool name="geometry_convertvdb"/>
+  </toolshelf>
+  <toolshelf name="texture" label="Texture">
+    <memberTool name="sop_uvproject"/>
+    <memberTool name="sop_uvedit"/>
+    <memberTool name="sop_uvbrush"/>
+    <memberTool name="sop_uvfuse"/>
+    <memberTool name="sop_uvflatten::2.0"/>
+    <memberTool name="sop_uvpelt::2.0"/>
+    <memberTool name="sop_texture"/>
+    <memberTool name="sop_uvtransform::2.0"/>
+    <memberTool name="sop_uvunwrap"/>
+    <memberTool name="sop_uvquickshade"/>
+    <memberTool name="generic_cleartexcache"/>
+    <memberTool name="sop_uvsmooth"/>
+  </toolshelf>
+  <toolshelf name="rigging" label="Rigging">
+    <memberTool name="object_bones"/>
+    <memberTool name="object_bonesfromcurve"/>
+    <memberTool name="object_pose"/>
+    <memberTool name="rigging_ikfromobjects"/>
+    <memberTool name="rigging_ikfrombones"/>
+    <memberTool name="object_capturegeometry"/>
+    <memberTool name="object_editcaptureregion"/>
+    <memberTool name="object_editcaptureweight"/>
+    <memberTool name="object_editcaptureblend"/>
+    <memberTool name="object_mirrorcapture"/>
+    <memberTool name="object_paintcapturelayer"/>
+    <memberTool name="object_aligncapturepose"/>
+    <memberTool name="sop_deltamush"/>
+    <memberTool name="sop_comb"/>
+    <memberTool name="object_posespacedeform"/>
+    <memberTool name="geometry_vellumsimplecloth"/>
+  </toolshelf>
+  <toolshelf name="tdtools" label="TD Tools">
+    <memberTool name="sop_add"/>
+    <memberTool name="sop_point"/>
+    <memberTool name="sop_vertex"/>
+    <memberTool name="sop_attribute"/>
+    <memberTool name="sop_attribcreate::2.0"/>
+    <memberTool name="sop_attribmirror"/>
+    <memberTool name="sop_attribpromote"/>
+    <memberTool name="sop_attribtransfer"/>
+    <memberTool name="sop_partition"/>
+    <memberTool name="sop_connectivity"/>
+    <memberTool name="sop_object_merge"/>
+    <memberTool name="sop_measure"/>
+    <memberTool name="sop_cache"/>
+    <memberTool name="sop_trail"/>
+    <memberTool name="sop_paint"/>
+  </toolshelf>
+  <toolshelf name="lights_and_cameras" label="Lights and Cameras">
+    <memberTool name="object_cam"/>
+    <memberTool name="object_pointlight"/>
+    <memberTool name="object_spotlight"/>
+    <memberTool name="object_arealight"/>
+    <memberTool name="obj_geolight"/>
+    <memberTool name="obj_volumelight"/>
+    <memberTool name="object_distantlight"/>
+    <memberTool name="object_envlight"/>
+    <memberTool name="obj_skylight"/>
+    <memberTool name="obj_gilight"/>
+    <memberTool name="obj_causticlight"/>
+    <memberTool name="obj_portallight"/>
+    <memberTool name="object_ambient"/>
+    <memberTool name="object_stereocamrig"/>
+    <memberTool name="object_vrcam"/>
+    <memberTool name="object_switcher"/>
+    <memberTool name="obj_gamepadcamera"/>
+  </toolshelf>
+  <toolshelf name="constraints" label="Constraints">
+    <memberTool name="object_constraintparentblend"/>
+    <memberTool name="object_constraintblend"/>
+    <memberTool name="object_constraintlookat"/>
+    <memberTool name="object_constraintpath"/>
+    <memberTool name="object_constraintpoints"/>
+    <memberTool name="object_constraintsurface"/>
+    <memberTool name="object_constrainttransform"/>
+    <memberTool name="object_blendpose"/>
+    <memberTool name="object_lagobject"/>
+    <memberTool name="object_jiggleobject"/>
+    <memberTool name="object_constraintgamepad"/>
+    <memberTool name="sop_constraintnetwork"/>
+    <memberTool name="object_constrainttoggle"/>
+    <memberTool name="object_constraintbake"/>
+    <memberTool name="object_constraintdelete"/>
+  </toolshelf>
+  <toolshelf name="animation" label="Animation">
+    <memberTool name="object_pose"/>
+    <memberTool name="object_blendpose"/>
+    <memberTool name="object_lagobject"/>
+    <memberTool name="object_jiggleobject"/>
+    <memberTool name="object_constraintparentblend"/>
+    <memberTool name="object_constraintblend"/>
+    <memberTool name="object_constraintlookat"/>
+    <memberTool name="object_constraintpath"/>
+    <memberTool name="object_constraintpoints"/>
+    <memberTool name="object_constraintsurface"/>
+  </toolshelf>
+</shelfDocument>

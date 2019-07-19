@@ -1,0 +1,1774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="cop2_deinterlace" label="Deinterlace" icon="COP2_deinterlace">
+    <helpURL>operator:Cop2/deinterlace</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/deinterlace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'deinterlace')]]></script>
+  </tool>
+
+  <tool name="cop2_edge" label="Edge Detect" icon="COP2_edge">
+    <helpURL>operator:Cop2/edge</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/edge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'edge')]]></script>
+  </tool>
+
+  <tool name="cop2_vopcop2gen" label="VOP COP2 Generator" icon="COP2_vopcop2gen">
+    <helpURL>operator:Cop2/vopcop2gen</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vopcop2gen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>VEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vopcop2gen')]]></script>
+  </tool>
+
+  <tool name="cop2_average" label="Average" icon="COP2_average">
+    <helpURL>operator:Cop2/average</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/average</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'average')]]></script>
+  </tool>
+
+  <tool name="cop2_expand" label="Expand" icon="COP2_expand">
+    <helpURL>operator:Cop2/expand</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/expand</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'expand')]]></script>
+  </tool>
+
+  <tool name="cop2_max" label="Max" icon="COP2_max">
+    <helpURL>operator:Cop2/max</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/max</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'max')]]></script>
+  </tool>
+
+  <tool name="cop2_velblur" label="Velocity Blur" icon="COP2_velblur">
+    <helpURL>operator:Cop2/velblur</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/velblur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'velblur')]]></script>
+  </tool>
+
+  <tool name="cop2_sopimport" label="SOP Import" icon="COP2_sopimport">
+    <helpURL>operator:Cop2/sopimport</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/sopimport</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Import</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'sopimport')]]></script>
+  </tool>
+
+  <tool name="cop2_degrain" label="Degrain" icon="COP2_degrain">
+    <helpURL>operator:Cop2/degrain</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/degrain</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'degrain')]]></script>
+  </tool>
+
+  <tool name="cop2_env" label="Environment" icon="COP2_env">
+    <helpURL>operator:Cop2/env</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/env</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'env')]]></script>
+  </tool>
+
+  <tool name="cop2_dilateerode" label="DilateErode" icon="COP2_dilateerode">
+    <helpURL>operator:Cop2/dilateerode</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/dilateerode</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'dilateerode')]]></script>
+  </tool>
+
+  <tool name="cop2_lookup" label="Lookup" icon="COP2_lookup">
+    <helpURL>operator:Cop2/lookup</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/lookup</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'lookup')]]></script>
+  </tool>
+
+  <tool name="cop2_null" label="Null" icon="COP2_null">
+    <helpURL>operator:Cop2/null</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/null</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'null')]]></script>
+  </tool>
+
+  <tool name="cop2_quantize" label="Quantize" icon="COP2_quantize">
+    <helpURL>operator:Cop2/quantize</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/quantize</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'quantize')]]></script>
+  </tool>
+
+  <tool name="cop2_switchalpha" label="Switch Alpha" icon="COP2_switchalpha">
+    <helpURL>operator:Cop2/switchalpha</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/switchalpha</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'switchalpha')]]></script>
+  </tool>
+
+  <tool name="cop2_cop2net" label="COP2 Network" icon="NETWORKS_cop2">
+    <helpURL>operator:Cop2/cop2net</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/cop2net</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'cop2net')]]></script>
+  </tool>
+
+  <tool name="cop2_pin" label="Corner Pin" icon="COP2_pin">
+    <helpURL>operator:Cop2/pin</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/pin</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'pin')]]></script>
+  </tool>
+
+  <tool name="cop2_vector" label="Vector" icon="COP2_vector">
+    <helpURL>operator:Cop2/vector</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vector</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vector')]]></script>
+  </tool>
+
+  <tool name="cop2_loop" label="Loop" icon="COP2_loop">
+    <helpURL>operator:Cop2/loop</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/loop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'loop')]]></script>
+  </tool>
+
+  <tool name="cop2_fetch" label="Fetch" icon="COP2_fetch">
+    <helpURL>operator:Cop2/fetch</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/fetch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Import</toolSubmenu>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'fetch')]]></script>
+  </tool>
+
+  <tool name="cop2_ropnet" label="ROP Network" icon="NETWORKS_rop">
+    <helpURL>operator:Cop2/ropnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/ropnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'ropnet')]]></script>
+  </tool>
+
+  <tool name="cop2_sopnet" label="SOP Network" icon="OBJ_geo">
+    <helpURL>operator:Cop2/sopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/sopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'sopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_flip" label="Flip" icon="COP2_flip">
+    <helpURL>operator:Cop2/flip</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/flip</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'flip')]]></script>
+  </tool>
+
+  <tool name="cop2_illpixel" label="Illegal Pixel" icon="COP2_illpixel">
+    <helpURL>operator:Cop2/illpixel</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/illpixel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'illpixel')]]></script>
+  </tool>
+
+  <tool name="cop2_inside" label="Inside" icon="COP2_inside">
+    <helpURL>operator:Cop2/inside</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/inside</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'inside')]]></script>
+  </tool>
+
+  <tool name="cop2_xform" label="Transform" icon="COP2_xform">
+    <helpURL>operator:Cop2/xform</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/xform</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'xform')]]></script>
+  </tool>
+
+  <tool name="cop2_warp" label="TimeWarp" icon="COP2_warp">
+    <helpURL>operator:Cop2/warp</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/warp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'warp')]]></script>
+  </tool>
+
+  <tool name="cop2_sharpen" label="Sharpen" icon="COP2_sharpen">
+    <helpURL>operator:Cop2/sharpen</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/sharpen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'sharpen')]]></script>
+  </tool>
+
+  <tool name="cop2_objnet" label="Object Network" icon="NETWORKS_scene">
+    <helpURL>operator:Cop2/objnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/objnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'objnet')]]></script>
+  </tool>
+
+  <tool name="cop2_window" label="Window" icon="COP2_window">
+    <helpURL>operator:Cop2/window</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/window</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'window')]]></script>
+  </tool>
+
+  <tool name="cop2_sequence" label="Sequence" icon="COP2_sequence">
+    <helpURL>operator:Cop2/sequence</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/sequence</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'sequence')]]></script>
+  </tool>
+
+  <tool name="cop2_shuffle" label="Shuffle" icon="COP2_shuffle">
+    <helpURL>operator:Cop2/shuffle</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/shuffle</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'shuffle')]]></script>
+  </tool>
+
+  <tool name="cop2_streak" label="Streak Blur" icon="COP2_streak">
+    <helpURL>operator:Cop2/streak</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/streak</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'streak')]]></script>
+  </tool>
+
+  <tool name="cop2_invert" label="Invert" icon="COP2_invert">
+    <helpURL>operator:Cop2/invert</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/invert</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'invert')]]></script>
+  </tool>
+
+  <tool name="cop2_mono" label="Mono" icon="COP2_mono">
+    <helpURL>operator:Cop2/mono</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/mono</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'mono')]]></script>
+  </tool>
+
+  <tool name="cop2_convert" label="Convert" icon="COP2_convert">
+    <helpURL>operator:Cop2/convert</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/convert</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'convert')]]></script>
+  </tool>
+
+  <tool name="cop2_shopnet" label="SHOP Network" icon="NETWORKS_shop">
+    <helpURL>operator:Cop2/shopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/shopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'shopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_subtract" label="Subtract" icon="COP2_subtract">
+    <helpURL>operator:Cop2/subtract</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/subtract</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'subtract')]]></script>
+  </tool>
+
+  <tool name="cop2_fieldsplit" label="Field Split" icon="COP2_fieldsplit">
+    <helpURL>operator:Cop2/fieldsplit</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/fieldsplit</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'fieldsplit')]]></script>
+  </tool>
+
+  <tool name="cop2_extend" label="Extend" icon="COP2_extend">
+    <helpURL>operator:Cop2/extend</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/extend</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'extend')]]></script>
+  </tool>
+
+  <tool name="cop2_noise" label="Noise" icon="COP2_noise">
+    <helpURL>operator:Cop2/noise</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/noise</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'noise')]]></script>
+  </tool>
+
+  <tool name="cop2_contrast" label="Contrast" icon="COP2_contrast">
+    <helpURL>operator:Cop2/contrast</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/contrast</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'contrast')]]></script>
+  </tool>
+
+  <tool name="cop2_blur" label="Blur" icon="COP2_blur">
+    <helpURL>operator:Cop2/blur</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/blur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'blur')]]></script>
+  </tool>
+
+  <tool name="cop2_outside" label="Outside" icon="COP2_outside">
+    <helpURL>operator:Cop2/outside</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/outside</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'outside')]]></script>
+  </tool>
+
+  <tool name="cop2_gradient" label="Gradient" icon="COP2_gradient">
+    <helpURL>operator:Cop2/gradient</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/gradient</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'gradient')]]></script>
+  </tool>
+
+  <tool name="cop2_scale" label="Scale" icon="COP2_scale">
+    <helpURL>operator:Cop2/scale</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/scale</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'scale')]]></script>
+  </tool>
+
+  <tool name="cop2_dof" label="Depth of Field" icon="COP2_dof">
+    <helpURL>operator:Cop2/dof</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/dof</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'dof')]]></script>
+  </tool>
+
+  <tool name="cop2_subnet" label="Subnetwork" icon="COP2_subnet">
+    <helpURL>operator:Cop2/subnet</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/subnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'subnet')]]></script>
+  </tool>
+
+  <tool name="cop2_colormap" label="Color Map" icon="COP2_colormap">
+    <helpURL>operator:Cop2/colormap</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/colormap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'colormap')]]></script>
+  </tool>
+
+  <tool name="cop2_bump" label="Bump" icon="COP2_bump">
+    <helpURL>operator:Cop2/bump</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/bump</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'bump')]]></script>
+  </tool>
+
+  <tool name="cop2_reference" label="Reference" icon="COP2_reference">
+    <helpURL>operator:Cop2/reference</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/reference</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'reference')]]></script>
+  </tool>
+
+  <tool name="cop2_rop_comp" label="ROP File Output" icon="NETWORKS_cop2">
+    <helpURL>operator:Cop2/rop_comp</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/rop_comp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <toolSubmenu>Export</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'rop_comp')]]></script>
+  </tool>
+
+  <tool name="cop2_convolve" label="Convolve" icon="COP2_convolve">
+    <helpURL>operator:Cop2/convolve</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/convolve</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'convolve')]]></script>
+  </tool>
+
+  <tool name="cop2_shape" label="Shape" icon="COP2_shape">
+    <helpURL>operator:Cop2/shape</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/shape</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'shape')]]></script>
+  </tool>
+
+  <tool name="cop2_median" label="Median" icon="COP2_median">
+    <helpURL>operator:Cop2/median</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/median</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'median')]]></script>
+  </tool>
+
+  <tool name="cop2_vopcop2filter" label="VOP COP2 Filter" icon="COP2_vopcop2filter">
+    <helpURL>operator:Cop2/vopcop2filter</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vopcop2filter</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>VEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vopcop2filter')]]></script>
+  </tool>
+
+  <tool name="cop2_edgeblur" label="Edge Blur" icon="COP2_edgeblur">
+    <helpURL>operator:Cop2/edgeblur</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/edgeblur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'edgeblur')]]></script>
+  </tool>
+
+  <tool name="cop2_timefilter" label="Time Filter" icon="COP2_timefilter">
+    <helpURL>operator:Cop2/timefilter</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/timefilter</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'timefilter')]]></script>
+  </tool>
+
+  <tool name="cop2_pixel" label="Pixel" icon="COP2_pixel">
+    <helpURL>operator:Cop2/pixel</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/pixel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'pixel')]]></script>
+  </tool>
+
+  <tool name="cop2_timescale" label="TimeScale" icon="COP2_timescale">
+    <helpURL>operator:Cop2/timescale</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/timescale</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'timescale')]]></script>
+  </tool>
+
+  <tool name="cop2_snip" label="Snip" icon="COP2_snip">
+    <helpURL>operator:Cop2/snip</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/snip</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'snip')]]></script>
+  </tool>
+
+  <tool name="cop2_over" label="Over" icon="COP2_over">
+    <helpURL>operator:Cop2/over</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/over</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'over')]]></script>
+  </tool>
+
+  <tool name="cop2_vopnet" label="VOP Network" icon="NETWORKS_vop">
+    <helpURL>operator:Cop2/vopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_erftable" label="Error Function Table Generator" icon="COP2_vexgenerate">
+    <helpURL>operator:Cop2/erftable</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/erftable</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'erftable')]]></script>
+  </tool>
+
+  <tool name="cop2_denoise" label="Denoise" icon="COP2_denoise">
+    <helpURL>operator:Cop2/denoise</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/denoise</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'denoise')]]></script>
+  </tool>
+
+  <tool name="cop2_equalize" label="Equalize" icon="COP2_equalize">
+    <helpURL>operator:Cop2/equalize</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/equalize</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'equalize')]]></script>
+  </tool>
+
+  <tool name="cop2_diff" label="Diff" icon="COP2_diff">
+    <helpURL>operator:Cop2/diff</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/diff</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'diff')]]></script>
+  </tool>
+
+  <tool name="cop2_blend" label="Blend" icon="COP2_blend">
+    <helpURL>operator:Cop2/blend</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/blend</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'blend')]]></script>
+  </tool>
+
+  <tool name="cop2_trim" label="Trim" icon="COP2_trim">
+    <helpURL>operator:Cop2/trim</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/trim</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'trim')]]></script>
+  </tool>
+
+  <tool name="cop2_limit" label="Limit" icon="COP2_limit">
+    <helpURL>operator:Cop2/limit</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/limit</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'limit')]]></script>
+  </tool>
+
+  <tool name="cop2_crop" label="Crop" icon="COP2_crop">
+    <helpURL>operator:Cop2/crop</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/crop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Transform</toolSubmenu>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'crop')]]></script>
+  </tool>
+
+  <tool name="cop2_border" label="Border" icon="COP2_border">
+    <helpURL>operator:Cop2/border</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/border</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'border')]]></script>
+  </tool>
+
+  <tool name="cop2_pushup" label="Pushup" icon="COP2_pushup">
+    <helpURL>operator:Cop2/pushup</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/pushup</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'pushup')]]></script>
+  </tool>
+
+  <tool name="cop2_vexfilter" label="VEX Filter" icon="COP2_vexfilter">
+    <helpURL>operator:Cop2/vexfilter</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vexfilter</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>VEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vexfilter')]]></script>
+  </tool>
+
+  <tool name="cop2_under" label="Under" icon="COP2_under">
+    <helpURL>operator:Cop2/under</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/under</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'under')]]></script>
+  </tool>
+
+  <tool name="cop2_composite" label="Composite" icon="COP2_composite">
+    <helpURL>operator:Cop2/composite</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/composite</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'composite')]]></script>
+  </tool>
+
+  <tool name="cop2_emboss" label="Emboss" icon="COP2_emboss">
+    <helpURL>operator:Cop2/emboss</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/emboss</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'emboss')]]></script>
+  </tool>
+
+  <tool name="cop2_lopnet" label="LOP Network" icon="NETWORKS_lop">
+    <helpURL>operator:Cop2/lopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/lopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'lopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_wipe" label="Wipe" icon="COP2_wipe">
+    <helpURL>operator:Cop2/wipe</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/wipe</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'wipe')]]></script>
+  </tool>
+
+  <tool name="cop2_hsv" label="HSV" icon="COP2_hsv">
+    <helpURL>operator:Cop2/hsv</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/hsv</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'hsv')]]></script>
+  </tool>
+
+  <tool name="cop2_bright" label="Bright" icon="COP2_bright">
+    <helpURL>operator:Cop2/bright</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/bright</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'bright')]]></script>
+  </tool>
+
+  <tool name="cop2_vexgenerate" label="VEX Generator" icon="COP2_vexgenerate">
+    <helpURL>operator:Cop2/vexgenerate</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/vexgenerate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>VEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'vexgenerate')]]></script>
+  </tool>
+
+  <tool name="cop2_pulldown" label="Pulldown" icon="COP2_pulldown">
+    <helpURL>operator:Cop2/pulldown</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/pulldown</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'pulldown')]]></script>
+  </tool>
+
+  <tool name="cop2_chopnet" label="CHOP Network" icon="NETWORKS_chop">
+    <helpURL>operator:Cop2/chopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/chopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'chopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_defocus" label="Defocus" icon="COP2_defocus">
+    <helpURL>operator:Cop2/defocus</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/defocus</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'defocus')]]></script>
+  </tool>
+
+  <tool name="cop2_color" label="Color" icon="COP2_color">
+    <helpURL>operator:Cop2/color</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/color</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'color')]]></script>
+  </tool>
+
+  <tool name="cop2_zcomp" label="Z Composite" icon="COP2_zcomp">
+    <helpURL>operator:Cop2/zcomp</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/zcomp</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'zcomp')]]></script>
+  </tool>
+
+  <tool name="cop2_premultiply" label="Premultiply" icon="COP2_premultiply">
+    <helpURL>operator:Cop2/premultiply</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/premultiply</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'premultiply')]]></script>
+  </tool>
+
+  <tool name="cop2_matnet" label="Material Network" icon="NETWORKS_mat">
+    <helpURL>operator:Cop2/matnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/matnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'matnet')]]></script>
+  </tool>
+
+  <tool name="cop2_screen" label="Screen" icon="COP2_screen">
+    <helpURL>operator:Cop2/screen</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/screen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'screen')]]></script>
+  </tool>
+
+  <tool name="cop2_dsmflatten" label="DSM Flatten" icon="COP2_dsmflatten">
+    <helpURL>operator:Cop2/dsmflatten</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/dsmflatten</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Import</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'dsmflatten')]]></script>
+  </tool>
+
+  <tool name="cop2_reverse" label="Reverse" icon="COP2_reverse">
+    <helpURL>operator:Cop2/reverse</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/reverse</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'reverse')]]></script>
+  </tool>
+
+  <tool name="cop2_dopnet" label="DOP Network" icon="OBJ_dopnet">
+    <helpURL>operator:Cop2/dopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/dopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'dopnet')]]></script>
+  </tool>
+
+  <tool name="cop2_fieldmerge" label="Field Merge" icon="COP2_fieldmerge">
+    <helpURL>operator:Cop2/fieldmerge</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/fieldmerge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'fieldmerge')]]></script>
+  </tool>
+
+  <tool name="cop2_geometry" label="Geometry" icon="COP2_geometry">
+    <helpURL>operator:Cop2/geometry</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/geometry</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <toolSubmenu>Import</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'geometry')]]></script>
+  </tool>
+
+  <tool name="cop2_topnet" label="TOP Network" icon="NETWORKS_top">
+    <helpURL>operator:Cop2/topnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/topnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'topnet')]]></script>
+  </tool>
+
+  <tool name="cop2_frontface" label="Front Face" icon="COP2_frontface">
+    <helpURL>operator:Cop2/frontface</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/frontface</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'frontface')]]></script>
+  </tool>
+
+  <tool name="cop2_switch" label="Switch" icon="COP2_switch">
+    <helpURL>operator:Cop2/switch</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/switch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'switch')]]></script>
+  </tool>
+
+  <tool name="cop2_fieldswap" label="Field Swap" icon="COP2_fieldswap">
+    <helpURL>operator:Cop2/fieldswap</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/fieldswap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'fieldswap')]]></script>
+  </tool>
+
+  <tool name="cop2_function" label="Function" icon="COP2_function">
+    <helpURL>operator:Cop2/function</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/function</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'function')]]></script>
+  </tool>
+
+  <tool name="cop2_multiply" label="Multiply" icon="COP2_multiply">
+    <helpURL>operator:Cop2/multiply</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/multiply</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'multiply')]]></script>
+  </tool>
+
+  <tool name="cop2_add" label="Add" icon="COP2_add">
+    <helpURL>operator:Cop2/add</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/add</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'add')]]></script>
+  </tool>
+
+  <tool name="cop2_light" label="Lighting" icon="COP2_light">
+    <helpURL>operator:Cop2/light</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/light</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'light')]]></script>
+  </tool>
+
+  <tool name="cop2_rename" label="Rename" icon="COP2_rename">
+    <helpURL>operator:Cop2/rename</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/rename</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'rename')]]></script>
+  </tool>
+
+  <tool name="cop2_min" label="Min" icon="COP2_min">
+    <helpURL>operator:Cop2/min</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/min</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'min')]]></script>
+  </tool>
+
+  <tool name="cop2_gamma" label="Gamma" icon="COP2_gamma">
+    <helpURL>operator:Cop2/gamma</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/gamma</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>PixelOp</toolSubmenu>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'gamma')]]></script>
+  </tool>
+
+  <tool name="cop2_shift" label="Shift" icon="COP2_shift">
+    <helpURL>operator:Cop2/shift</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/shift</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'shift')]]></script>
+  </tool>
+
+  <tool name="cop2_font" label="Font" icon="COP2_font">
+    <helpURL>operator:Cop2/font</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/font</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'font')]]></script>
+  </tool>
+
+  <tool name="cop2_colorwheel" label="Color Wheel" icon="COP2_colorwheel">
+    <helpURL>operator:Cop2/colorwheel</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/colorwheel</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'colorwheel')]]></script>
+  </tool>
+
+  <tool name="cop2_mask" label="Mask" icon="COP2_mask">
+    <helpURL>operator:Cop2/mask</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/mask</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Matte</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'mask')]]></script>
+  </tool>
+
+  <tool name="cop2_radialblur" label="Radial Blur" icon="COP2_radialblur">
+    <helpURL>operator:Cop2/radialblur</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/radialblur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'radialblur')]]></script>
+  </tool>
+
+  <tool name="cop2_uvmap" label="UV Map" icon="COP2_uvmap">
+    <helpURL>operator:Cop2/uvmap</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/uvmap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'uvmap')]]></script>
+  </tool>
+
+  <tool name="cop2_geokey" label="Geokey" icon="COP2_geokey">
+    <helpURL>operator:Cop2/geokey</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/geokey</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Keying</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'geokey')]]></script>
+  </tool>
+
+  <tool name="cop2_grain" label="Grain" icon="COP2_grain">
+    <helpURL>operator:Cop2/grain</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/grain</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'grain')]]></script>
+  </tool>
+
+  <tool name="cop2_render" label="Render" icon="COP2_render">
+    <helpURL>operator:Cop2/render</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/render</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Import</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'render')]]></script>
+  </tool>
+
+  <tool name="cop2_metadata" label="Metadata" icon="COP2_metadata">
+    <helpURL>operator:Cop2/metadata</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/metadata</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'metadata')]]></script>
+  </tool>
+
+  <tool name="cop2_colorcorrect" label="Color Correct" icon="COP2_colorcorrect">
+    <helpURL>operator:Cop2/colorcorrect</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/colorcorrect</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Color</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'colorcorrect')]]></script>
+  </tool>
+
+  <tool name="cop2_tile" label="Tile" icon="COP2_tile">
+    <helpURL>operator:Cop2/tile</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/tile</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'tile')]]></script>
+  </tool>
+
+  <tool name="cop2_mosaic" label="Mosaic" icon="COP2_mosaic">
+    <helpURL>operator:Cop2/mosaic</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/mosaic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'mosaic')]]></script>
+  </tool>
+
+  <tool name="cop2_atop" label="Atop" icon="COP2_atop">
+    <helpURL>operator:Cop2/atop</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/atop</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'atop')]]></script>
+  </tool>
+
+  <tool name="cop2_fog" label="Fog" icon="COP2_fog">
+    <helpURL>operator:Cop2/fog</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/fog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'fog')]]></script>
+  </tool>
+
+  <tool name="cop2_xor" label="Xor" icon="COP2_xor">
+    <helpURL>operator:Cop2/xor</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/xor</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Comps</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'xor')]]></script>
+  </tool>
+
+  <tool name="cop2_channelcopy" label="Channel Copy" icon="COP2_channelcopy">
+    <helpURL>operator:Cop2/channelcopy</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/channelcopy</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'channelcopy')]]></script>
+  </tool>
+
+  <tool name="cop2_tima" label="Time Machine" icon="COP2_tima">
+    <helpURL>operator:Cop2/tima</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/tima</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <toolSubmenu>Timing</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'tima')]]></script>
+  </tool>
+
+  <tool name="cop2_delete" label="Delete" icon="COP2_delete">
+    <helpURL>operator:Cop2/delete</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/delete</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'delete')]]></script>
+  </tool>
+
+  <tool name="cop2_deform" label="Deform" icon="COP2_deform">
+    <helpURL>operator:Cop2/deform</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/deform</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Effects</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'deform')]]></script>
+  </tool>
+
+  <tool name="cop2_merge" label="Merge" icon="COP2_merge">
+    <helpURL>operator:Cop2/merge</helpURL>
+    <toolMenuContext name="cop_viewer">
+      <contextNetType>COP2</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Cop2/merge</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import cop2toolutils
+
+cop2toolutils.genericTool(kwargs, 'merge')]]></script>
+  </tool>
+</shelfDocument>

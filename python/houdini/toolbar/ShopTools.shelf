@@ -1,0 +1,1785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="shop_rsl_vopimager" label="RSL Imager Shader Builder" icon="MISC_generic">
+    <helpURL>operator:Shop/rsl_vopimager</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopimager</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Output</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopimager')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_decal" label="Decal" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_decal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_decal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_decal')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_fur" label="Fur Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_fur</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_fur</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_fur')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_choppywater" label="Choppy Water" icon="SHOP_displace">
+    <helpURL>operator:Shop/v_choppywater</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_choppywater</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_choppywater')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_image3d" label="Image3D Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_image3d</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_image3d</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_image3d')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_file" label="Delayed Load Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_file</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_file</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_file')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_risnet" label="RIS Shader Network" icon="COMMON_ris">
+    <helpURL>operator:Shop/risnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/risnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'risnet')]]></script>
+  </tool>
+
+  <tool name="shop_vopcvex" label="CVEX Shader Builder" icon="VOPNET_cvex">
+    <helpURL>operator:Shop/vopcvex</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopcvex</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>CVEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopcvex')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_diffuselighting" label="Diffuse Lighting" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_diffuselighting</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_diffuselighting</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_diffuselighting')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_ptreplicate" label="Point Replicate Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_ptreplicate</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_ptreplicate</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_ptreplicate')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_topnet" label="TOP Network" icon="NETWORKS_top">
+    <helpURL>operator:Shop/topnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/topnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'topnet')]]></script>
+  </tool>
+
+  <tool name="shop_vm_geo_alembic" label="Alembic" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_alembic</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_alembic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_alembic')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ropnet" label="ROP Network" icon="NETWORKS_rop">
+    <helpURL>operator:Shop/ropnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ropnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ropnet')]]></script>
+  </tool>
+
+  <tool name="shop_sopnet" label="SOP Network" icon="OBJ_geo">
+    <helpURL>operator:Shop/sopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/sopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'sopnet')]]></script>
+  </tool>
+
+  <tool name="shop_rsl_vopshaderclass" label="RSL Shader Class Builder" icon="SHOP_material">
+    <helpURL>operator:Shop/rsl_vopshaderclass</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopshaderclass</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Co-Shader</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopshaderclass')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_cmarble" label="RSL Colored Marble" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_cmarble</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_cmarble</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_cmarble')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_gingham" label="Gingham Checks" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_gingham</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_gingham</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_gingham')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_stippled" label="RSL Stippled" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_stippled</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_stippled</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_stippled')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_voplight" label="RSL Light Shader Builder" icon="VOPNET_light">
+    <helpURL>operator:Shop/rsl_voplight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_voplight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_voplight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_metacloud" label="Meta Cloud" icon="SHOP_image3d">
+    <helpURL>operator:Shop/v_metacloud</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_metacloud</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Image 3D</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_metacloud')]]></script>
+  </tool>
+
+  <tool name="shop_v_lighttracer" label="Light Path Tracer" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_lighttracer</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_lighttracer</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_lighttracer')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_select" label="Select" icon="SHOP_select">
+    <helpURL>operator:Shop/select</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/select</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'select')]]></script>
+  </tool>
+
+  <tool name="shop_suboutput" label="Output Shaders" icon="MISC_generic">
+    <helpURL>operator:Shop/suboutput</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/suboutput</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'suboutput')]]></script>
+  </tool>
+
+  <tool name="shop_ri_runprogram" label="RSL Run Program" icon="SHOP_geometry">
+    <helpURL>operator:Shop/ri_runprogram</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_runprogram</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_runprogram')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopfog" label="Fog Shader Builder" icon="VOPNET_fog">
+    <helpURL>operator:Shop/vopfog</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopfog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopfog')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_gilight" label="Global Illumination Light" icon="SHOP_light">
+    <helpURL>operator:Shop/v_gilight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_gilight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_gilight')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_chopnet" label="CHOP Network" icon="NETWORKS_chop">
+    <helpURL>operator:Shop/chopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/chopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'chopnet')]]></script>
+  </tool>
+
+  <tool name="shop_v_rayshadow" label="ASAD Shadow" icon="SHOP_shadow">
+    <helpURL>operator:Shop/v_rayshadow</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_rayshadow</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light Shadow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_rayshadow')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_glass" label="RSL Glass" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_glass</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_glass</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_glass')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_asadlens" label="ASAD Lens" icon="SHOP_generic">
+    <helpURL>operator:Shop/v_asadlens</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_asadlens</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>CVEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_asadlens')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_paintplastic" label="RSL Painted" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_paintplastic</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_paintplastic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_paintplastic')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_vopstruct" label="RSL Struct Builder" icon="SHOP_material">
+    <helpURL>operator:Shop/rsl_vopstruct</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopstruct</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Co-Shader</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopstruct')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_metal" label="RSL Metal" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_metal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_metal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_metal')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopshadow" label="Shadow Shader Builder" icon="VOPNET_shadow">
+    <helpURL>operator:Shop/vopshadow</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopshadow</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light Shadow</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopshadow')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_lightlight" label="RSL Point Light" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_lightlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_lightlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_lightlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_delayedreadarchive" label="RSL Delayed Read Archive" icon="SHOP_geometry">
+    <helpURL>operator:Shop/ri_delayedreadarchive</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_delayedreadarchive</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_delayedreadarchive')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_stone" label="RSL Stone" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_stone</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_stone</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_stone')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_cloth" label="RSL Cloth" icon="SHOP_displace">
+    <helpURL>operator:Shop/ri_cloth</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_cloth</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_cloth')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_agent" label="Agent Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_agent</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_agent</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_agent')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_shinymetal" label="RSL Shiny Metal" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_shinymetal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_shinymetal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_shinymetal')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_program" label="Program Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_program</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_program</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_program')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_material" label="Subnetwork" icon="SHOP_subnet">
+    <helpURL>operator:Shop/material</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/material</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'material')]]></script>
+  </tool>
+
+  <tool name="shop_matnet" label="Material Network" icon="NETWORKS_mat">
+    <helpURL>operator:Shop/matnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/matnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'matnet')]]></script>
+  </tool>
+
+  <tool name="shop_ri_threads" label="RSL Threads" icon="SHOP_displace">
+    <helpURL>operator:Shop/ri_threads</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_threads</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_threads')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_vopvolume" label="RSL Volume Shader Builder" icon="VOPNET_fog">
+    <helpURL>operator:Shop/rsl_vopvolume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopvolume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopvolume')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_rmarble" label="RSL Red Marble" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_rmarble</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_rmarble</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_rmarble')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopimage3d" label="Image3D Shader Builder" icon="VOPNET_image3d">
+    <helpURL>operator:Shop/vopimage3d</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopimage3d</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Image 3D</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopimage3d')]]></script>
+  </tool>
+
+  <tool name="shop_v_fbx" label="FBX Surface Shader" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_fbx</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_fbx</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_fbx')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopdisplace" label="Displacement Shader Builder" icon="VOPNET_displace">
+    <helpURL>operator:Shop/vopdisplace</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopdisplace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopdisplace')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_shadowpointlight" label="RSL Shadow Point" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_shadowpointlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_shadowpointlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_shadowpointlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_plastic" label="RSL Plastic" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_plastic</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_plastic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_plastic')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_constant" label="Constant" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_constant</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_constant</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_constant')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_pathtracer" label="Path Tracer" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_pathtracer</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_pathtracer</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_pathtracer')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_fog" label="RSL Fog" icon="SHOP_fog">
+    <helpURL>operator:Shop/ri_fog</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_fog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_fog')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_sinknurl" label="RSL Sin Knurl" icon="SHOP_displace">
+    <helpURL>operator:Shop/ri_sinknurl</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_sinknurl</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_sinknurl')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopmaterial" label="Material Shader Builder" icon="SHOP_material">
+    <helpURL>operator:Shop/vopmaterial</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopmaterial</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopmaterial')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_voplight" label="Light Shader Builder" icon="VOPNET_light">
+    <helpURL>operator:Shop/voplight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/voplight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'voplight')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_constant" label="RSL Constant" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_constant</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_constant</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_constant')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_plastic::2.0" label="Plastic" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_plastic?version=2.0</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_plastic::2.0</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_plastic::2.0')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_enginepointgen" label="Houdini Engine: Point Generation" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_enginepointgen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_enginepointgen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_enginepointgen')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_mislighting" label="Multiple Importance Sampling Lighting" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_mislighting</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_mislighting</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_mislighting')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_dented" label="Fractal Dent" icon="SHOP_displace">
+    <helpURL>operator:Shop/v_dented</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_dented</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_dented')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vopnet" label="VOP Network" icon="NETWORKS_vop">
+    <helpURL>operator:Shop/vopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopnet')]]></script>
+  </tool>
+
+  <tool name="shop_v_fluffy" label="Fluffy Clouds" icon="SHOP_image3d">
+    <helpURL>operator:Shop/v_fluffy</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_fluffy</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Image 3D</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_fluffy')]]></script>
+  </tool>
+
+  <tool name="shop_ri_shadowspotlight" label="RSL Shadow Spot" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_shadowspotlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_shadowspotlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_shadowspotlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_bumpy" label="RSL Bumpy" icon="SHOP_displace">
+    <helpURL>operator:Shop/ri_bumpy</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_bumpy</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_bumpy')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_vexvolume" label="VEX Volume Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_vexvolume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_vexvolume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_vexvolume')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_tracer_pcphoton" label="Point Cloud Photon Map Tracer" icon="SHOP_light">
+    <helpURL>operator:Shop/v_tracer_pcphoton</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_tracer_pcphoton</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_tracer_pcphoton')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_shadowdistantlight" label="RSL Shadow Distant" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_shadowdistantlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_shadowdistantlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_shadowdistantlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_shadowmatte" label="Shadow Matte" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_shadowmatte</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_shadowmatte</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_shadowmatte')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_cop2net" label="COP2 Network" icon="NETWORKS_cop2">
+    <helpURL>operator:Shop/cop2net</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/cop2net</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'cop2net')]]></script>
+  </tool>
+
+  <tool name="shop_v_collada" label="Collada Surface Shader" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_collada</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_collada</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_collada')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_pointnofallofflight" label="RSL Point (No Attenuation)" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_pointnofallofflight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_pointnofallofflight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_pointnofallofflight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_uniform" label="Uniform Fog" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_uniform</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_uniform</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_uniform')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_plastic" label="Plastic" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_plastic</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_plastic</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_plastic')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_zdepth" label="Z-Depth Fog" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_zdepth</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_zdepth</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_zdepth')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_matte" label="RSL Matte" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_matte</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_matte</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_matte')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_photontracer" label="Photon Tracer" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_photontracer</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_photontracer</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_photontracer')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_lopnet" label="LOP Network" icon="NETWORKS_lop">
+    <helpURL>operator:Shop/lopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/lopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'lopnet')]]></script>
+  </tool>
+
+  <tool name="shop_vopsurface" label="Surface Shader Builder" icon="VOPNET_surface">
+    <helpURL>operator:Shop/vopsurface</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vopsurface</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vopsurface')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_vopmaterial" label="RSL Material Shader Builder" icon="SHOP_material">
+    <helpURL>operator:Shop/rsl_vopmaterial</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopmaterial</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Material</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopmaterial')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_fastzmap" label="Z-Map Fog" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_fastzmap</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_fastzmap</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_fastzmap')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_uvlens" label="UV Lens" icon="SHOP_light">
+    <helpURL>operator:Shop/v_uvlens</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_uvlens</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_uvlens')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_asadlight" label="ASAD Light" icon="SHOP_light">
+    <helpURL>operator:Shop/v_asadlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_asadlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_asadlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_switch" label="Switch" icon="SHOP_switch">
+    <helpURL>operator:Shop/switch</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/switch</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'switch')]]></script>
+  </tool>
+
+  <tool name="shop_objnet" label="Object Network" icon="NETWORKS_scene">
+    <helpURL>operator:Shop/objnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/objnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'objnet')]]></script>
+  </tool>
+
+  <tool name="shop_vm_geo_sprite" label="Sprite Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_sprite</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_sprite</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_sprite')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_carpet" label="RSL Carpet" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_carpet</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_carpet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_carpet')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_mergecoshader" label="RSL Merge Co-Shader" icon="SHOP_mergecoshader">
+    <helpURL>operator:Shop/mergecoshader</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/mergecoshader</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Co-Shader</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'mergecoshader')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_vopdisplace" label="RSL Displacement Shader Builder" icon="VOPNET_displace">
+    <helpURL>operator:Shop/rsl_vopdisplace</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopdisplace</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopdisplace')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_ambient" label="Ambient" icon="SHOP_light">
+    <helpURL>operator:Shop/v_ambient</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_ambient</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_ambient')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_engine" label="Houdini Engine Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_engine</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_engine</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_engine')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_dopnet" label="DOP Network" icon="OBJ_dopnet">
+    <helpURL>operator:Shop/dopnet</helpURL>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/dopnet</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Managers</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'dopnet')]]></script>
+  </tool>
+
+  <tool name="shop_properties" label="Properties" icon="MISC_generic">
+    <helpURL>operator:Shop/properties</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/properties</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Utility</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'properties')]]></script>
+  </tool>
+
+  <tool name="shop_v_volumecloud" label="Volume Cloud" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_volumecloud</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_volumecloud</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_volumecloud')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_image3dvolume" label="Image3D Volume Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_image3dvolume</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_image3dvolume</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_image3dvolume')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_matte" label="Matte" icon="SHOP_surface">
+    <helpURL>operator:Shop/v_matte</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_matte</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_matte')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_spotlight" label="RSL Spotlight" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_spotlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_spotlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_spotlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_distantlight" label="RSL Distant Light" icon="SHOP_light">
+    <helpURL>operator:Shop/ri_distantlight</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_distantlight</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Light</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_distantlight')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_depthcue" label="RSL DepthCue" icon="SHOP_fog">
+    <helpURL>operator:Shop/ri_depthcue</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_depthcue</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_depthcue')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_spatter" label="RSL Spatter" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_spatter</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_spatter</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_spatter')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_litfog" label="Lit Fog" icon="SHOP_fog">
+    <helpURL>operator:Shop/v_litfog</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_litfog</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Atmosphere</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_litfog')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_dynamicload" label="RSL Dynamic Load Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/ri_dynamicload</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_dynamicload</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_dynamicload')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_diaknurl" label="RSL Diagonal Knurl" icon="SHOP_displace">
+    <helpURL>operator:Shop/ri_diaknurl</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_diaknurl</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Displacement</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_diaknurl')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_glassbal" label="RSL Glass Ball" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_glassbal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_glassbal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_glassbal')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_rsl_vopsurface" label="RSL Surface Shader Builder" icon="VOPNET_surface">
+    <helpURL>operator:Shop/rsl_vopsurface</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/rsl_vopsurface</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'rsl_vopsurface')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_enginecurvegen" label="Houdini Engine: Curve Generation" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_enginecurvegen</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_enginecurvegen</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_enginecurvegen')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_vm_geo_ptinstance" label="Point Instance Procedural" icon="SHOP_geometry">
+    <helpURL>operator:Shop/vm_geo_ptinstance</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/vm_geo_ptinstance</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Procedural</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'vm_geo_ptinstance')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_ri_rsmetal" label="RSL Reflective Metal" icon="SHOP_surface">
+    <helpURL>operator:Shop/ri_rsmetal</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/ri_rsmetal</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>Surface</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'ri_rsmetal')]]></script>
+    <keywordList>
+      <keyword>RenderMan</keyword>
+    </keywordList>
+  </tool>
+
+  <tool name="shop_v_vrlens" label="VR Lens" icon="SHOP_vrlens">
+    <helpURL>operator:Shop/v_vrlens</helpURL>
+    <toolMenuContext name="viewer">
+      <contextNetType>SHOP</contextNetType>
+    </toolMenuContext>
+    <toolMenuContext name="network">
+      <contextOpType>Shop/v_vrlens</contextOpType>
+    </toolMenuContext>
+    <toolSubmenu>CVEX</toolSubmenu>
+    <script scriptType="python"><![CDATA[import shoptoolutils
+
+shoptoolutils.genericTool(kwargs, 'v_vrlens')]]></script>
+    <keywordList>
+      <keyword>Mantra</keyword>
+    </keywordList>
+  </tool>
+</shelfDocument>
