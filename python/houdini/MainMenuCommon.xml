@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
 <mainMenu>
     <menuBar>
         <subMenu>
@@ -10,6 +11,38 @@
                 <scriptPath>C:\_fxProjects\_pipeline\_pipeline\python\houdini\scripts\python\file_scripts\main_app_file_options.py</scriptPath>
             
             </scriptItem>
+
+            <titleItem>
+                <label> MY TEEEST <label>
+            </titleItem>
         </subMenu>    
     </menuBar>
+</mainMenu>
+-->
+
+<mainMenu>
+  <menuBar>
+    <subMenu id="pipe utilities">
+      <label>pipeline</label>
+
+      <scriptItem>
+        <label>Pipe Save</label>
+        <scriptPath>C:\_fxProjects\_pipeline\_pipeline\python\houdini\scripts\python\file_scripts\main_app_file_options.py</scriptPath>
+      </scriptItem>
+      
+      <separatorItem/>
+
+      <scriptItem id="version up">
+        <label>Version Up</label>
+        <scriptPath>C:\_fxProjects\_pipeline\_pipeline\python\houdini\scripts\python\file_scripts\increment_save.py</scriptPath>        
+      </scriptItem>
+
+      <separatorItem/>
+
+      <scriptItem id="h.third_item">
+        <label>Placeholder</label>
+        <scriptPath>C:\_fxProjects\_pipeline\_pipeline\python\houdini\scripts\python\file_scripts\main_app_file_options.py</scriptPath>        
+      </scriptItem>
+    </subMenu>
+  </menuBar>
 </mainMenu>
