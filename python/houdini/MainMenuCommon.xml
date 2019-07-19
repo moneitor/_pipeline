@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mainMenu>
+    <menuBar>
+        <subMenu>
+            <label> pipeline </label>
+            <scriptItem id="pipe utilities">
+                <label>Pipe Save</label>    
+                            
+                <scriptPath>C:\_fxProjects\_pipeline\_pipeline\python\houdini\scripts\python\file_scripts\main_app_file_options.py</scriptPath>
+            
+            </scriptItem>
+        </subMenu>    
+    </menuBar>
+</mainMenu>

@@ -13,6 +13,7 @@ def houdini_env(project_path, hou_main_path, hou_doc_path, render_path):
     e['JOB'] = project_path + "\\02_work\\fx\\01_houdini"
     e['RENDER_PATH'] = render_path
     e['HOUDINI_MAXTHREADS'] = "-1"
+    
 
 
 

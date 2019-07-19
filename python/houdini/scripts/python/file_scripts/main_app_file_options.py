@@ -1,5 +1,4 @@
 from PySide2 import QtWidgets, QtCore, QtGui
-from palette import Palette
 import hou
 import json
 
@@ -10,6 +9,19 @@ import sys
 tempName = "ASCENSOR"
 parentHou = hou.ui.mainQtWindow()
 
+def Palette(palette):
+    palette.setColor(QtGui.QPalette.Window, QtGui.QColor(60,60,60))
+    palette.setColor(QtGui.QPalette.WindowText, QtGui.QColor(208,208,208))
+    palette.setColor(QtGui.QPalette.Base , QtGui.QColor(25,25,25))
+    palette.setColor(QtGui.QPalette.AlternateBase, QtGui.QColor(208,208,208))
+    palette.setColor(QtGui.QPalette.ToolTipBase, QtGui.QColor(208,208,208))
+    palette.setColor(QtGui.QPalette.Text, QtGui.QColor(208,208,208))
+    palette.setColor(QtGui.QPalette.Button, QtGui.QColor(45,45,45))
+    palette.setColor(QtGui.QPalette.ButtonText, QtGui.QColor(208,208,208))
+    palette.setColor(QtGui.QPalette.BrightText, QtCore.Qt.red)
+    palette.setColor(QtGui.QPalette.Link, QtGui.QColor(42,130,218))
+    palette.setColor(QtGui.QPalette.Highlight, QtGui.QColor(42,130,218))
+    palette.setColor(QtGui.QPalette.Highlight, QtCore.Qt.black)
 
 class FileHandling:
     """
@@ -42,7 +54,7 @@ class FileSave(QtWidgets.QDialog):
     """
     def __init__(self, parent=parentHou):
         super(FileSave, self).__init__()
-
+        self.setWindowTitle("Pipeline Save")
         self.project_name = ""        
         self.full_path = ""
         self.shot_value = 0
@@ -69,11 +81,14 @@ class FileSave(QtWidgets.QDialog):
         Widget creation for the interface
         """
         self.folder_edit = QtWidgets.QLineEdit()
+        self.folder_edit.setReadOnly(True)
+        self.folder_edit.setPlaceholderText("C:/FILE/PATH......")
+
         self.folder_lookup = QtWidgets.QPushButton("Search")
 
         self.save_file = QtWidgets.QPushButton("Save")
         self.save_file.setMaximumSize(100,50)
-        self.setWindowTitle("Pipeline Save")
+        
 
         self.shot = QtWidgets.QSpinBox()
         self.shot.setMaximumSize(70,20)
@@ -85,6 +100,7 @@ class FileSave(QtWidgets.QDialog):
 
         self.name = QtWidgets.QLineEdit()
         self.name.setFrame(True)
+        self.name.setPlaceholderText("Write the name of the file without spaces")
 
         self.cancel = QtWidgets.QPushButton("Cancel")
         self.cancel.setMaximumSize(100, 50)
@@ -99,6 +115,8 @@ class FileSave(QtWidgets.QDialog):
         self.folder_lookup.clicked.connect(self.get_folder)
         self.folder_lookup.clicked.connect(self.changed_path)
         self.folder_lookup.clicked.connect(lambda: self.return_project_name(self.full_path))
+        self.folder_lookup.clicked.connect(self.changed_shot)
+        self.folder_lookup.clicked.connect(self.changed_name)
 
         self.name.textChanged.connect(self.changed_name)
         self.name.textChanged.connect(self.changed_shot)
@@ -213,3 +231,6 @@ def run_app():
     app.setPalette(dark_palette)
 
     app.exec_()
+
+
+run_app()
