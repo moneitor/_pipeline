@@ -6,6 +6,56 @@
  a single file. -->
 
   <toolshelf name="pipeline" label="Pipeline">
+    <memberTool name="save"/>
+    <memberTool name="up_version"/>
     <memberTool name="Extract_fbx"/>
   </toolshelf>
+
+  <tool name="Extract_fbx" label="Extract FBX" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[import hou
+
+
+def return_null_children():
+    """RETURN A LIST WITH ALL MERGEABLE NODES"""
+    nodesList = []
+    for node in hou.selectedNodes():  
+        childrens = node.allSubChildren()
+        if len(childrens) > 0:
+            for child in childrens:
+                if child.type().name() == "geo":
+                    for newChild in child.allSubChildren():
+                        if not len(newChild.outputs()):
+                            if newChild.type().name() != "subnet":    
+                                nodesList.append(newChild)
+                              
+    return nodesList
+
+    
+def create_merge(objects_to_merge):
+    """CREATE A MERGE NODE WITH ALL THE OUPUT FROM FBX"""
+    num = len(objects_to_merge)
+    name = hou.selectedNodes()[0]
+    name = name.name()
+    merge_node = hou.node("/obj").createNode("geo" , name + "_merge")
+    
+    merge = merge_node.createNode("object_merge" , name + "_merge")
+    merge.parm("numobj").set(num)
+    
+    for i in range(1 , num+1):
+        path = objects_to_merge[i-1].path()
+        merge.parm('objpath%d' %i).set(path)
+                              
+
+    
+create_merge(return_null_children())
+
+]]></script>
+  </tool>
+
+  <tool name="save" label="SAVE" icon="SOP_heightfield_file">
+    <script scriptType="python"><![CDATA[from file_scripts import main_app_file_options as main
+reload (main)
+
+main.run_app()]]></script>
+  </tool>
 </shelfDocument>
