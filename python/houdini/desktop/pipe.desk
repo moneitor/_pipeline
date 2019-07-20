@@ -11,7 +11,7 @@ root {
             tabs 0 1 {
                 pane panetab14 -a 0 -l 10 -H /obj/ -T OBJ -m treecontrol
             }
-            split 0.5 V {
+            split 0.277778 V {
                 tabs 0 1 {
                     pane panetab1 -a 0 -l 10 -H /obj/ -T OBJ -m sceneview
                     pane panetab2 -a 0 -l 10 -H /obj/ -T OBJ -m chaneditor

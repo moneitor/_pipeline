@@ -184,7 +184,7 @@ class FileSave(QtWidgets.QDialog):
         project_file = FileHandling(name, path).complete_path(self.shot_value)[0]
         self.fx_folder_path = FileHandling(name, path).complete_path(self.shot_value)[1]
         self.full_name_for_save = project_file
-        print(self.fx_folder_path)
+        #print(self.fx_folder_path)
         return project_file
 
     def changed_path(self):

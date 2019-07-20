@@ -6,6 +6,7 @@
  a single file. -->
 
   <toolshelf name="pipeline" label="Pipeline">
+    <memberTool name="openFile"/>
     <memberTool name="save"/>
     <memberTool name="up_version"/>
     <memberTool name="Extract_fbx"/>
