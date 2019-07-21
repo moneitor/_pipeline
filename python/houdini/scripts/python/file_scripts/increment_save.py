@@ -7,6 +7,10 @@ path = hou.hipFile.path()
 
 
 def check_equal_name(name, nameFile):
+    """
+    Check if the name of the current file and the names in the list of files
+    are the same so we check the version of the correct files
+    """
     start_name = name.split("_")[:2]
     start_nameFile = nameFile.split("_")[:2]
 
@@ -15,6 +19,7 @@ def check_equal_name(name, nameFile):
 
 def return_list_files():
     """
+    Uses the function check_equal_name to work
     Return a list of all the files contained in the project folder
     """
     correct_name_list = []
@@ -28,6 +33,7 @@ def return_list_files():
 
 def return_version():
     """
+    Uses the return_list_files function to work
     Return the maximum version contained in the folder
     """
     max_version = 0
@@ -42,6 +48,11 @@ def return_version():
     return max_version
 
 def change_name():
+    """
+    Update the VER part to have the newer version number for 
+    example if VER1 is the current version then the 
+    next version is gonna be VER2
+    """
     current_version_str = return_version()
     current_version_int = int(current_version_str) 
     new_version_int = current_version_int + 1
@@ -67,6 +78,11 @@ def change_name():
     return new_basename
 
 def save_increment():
+    """
+    Saves the file using the new name
+    based on the increased version
+    """
+
     file_path = return_list_files()[1]
     new_name = change_name()
 

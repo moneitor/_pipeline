@@ -6,7 +6,6 @@ import os
 import sys
 
 
-tempName = "ASCENSOR"
 parentHou = hou.ui.mainQtWindow()
 
 def Palette(palette):
