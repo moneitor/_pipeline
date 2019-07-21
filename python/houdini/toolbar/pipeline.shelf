@@ -59,4 +59,21 @@ reload (main)
 
 main.run_app()]]></script>
   </tool>
+
+  <tool name="openFile" label="OPEN" icon="OBJ_fetch">
+    <script scriptType="python"><![CDATA[from file_scripts import open_file as op
+from file_scripts import files_handling_class as fil
+reload(fil)
+reload(op)
+
+op.run_open()]]></script>
+  </tool>
+
+  <tool name="up_version" label="UP Version" icon="VOP_add">
+    <script scriptType="python"><![CDATA[from file_scripts import increment_save as inc
+reload (inc)
+
+inc.save_increment()
+reload (inc)]]></script>
+  </tool>
 </shelfDocument>
