@@ -18,6 +18,7 @@ from ui._pipe_main_project import Ui_ui_main_project
 from ui._pipe_new_project import Ui_ui_new_project_dialog
 from ui._pipe_open_project import Ui_Dialog
 
+#TODO Clean tree widget when OpenProject or NewProject
 
 class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):    
 
@@ -33,7 +34,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
     
 
     def connections(self):  
-        self.btn_newProject.clicked.connect(self.new_project_instance)  
+        self.btn_newProject.clicked.connect(self.new_project_instance)          
         self.btn_goProject.clicked.connect(self.show_folder_select) 
         self.btn_houdini.clicked.connect(self.launch_houdini)  
         self.btn_Nuke.clicked.connect(self.launch_nuke)
@@ -42,6 +43,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
 
 
     def update_projects_list(self):
+        """Update the json file that contains the projects info """
         info_path = "C:/_fxProjects/_projects/projects_info.json"
         project_list = []
         projects = ""
@@ -54,6 +56,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         return project_list, projects
 
     def update_project_widget(self):
+        """Add new items to the projects list widget"""
         self.list_project_widget.clear()
         list_projects = self.update_projects_list()[0]
         for project in list_projects:            
@@ -80,6 +83,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         if result == QtWidgets.QDialog.Accepted:                        
             self.label_project_folder.setText(new_project.path)
             self.path = new_project.path
+            self.update_project_widget()
             
 
     def show_folder_select(self):        

@@ -2,6 +2,8 @@ import os
 import sys
 from increment_save import check_equal_name, return_list_files, return_version
 
+root = r'C:\_fxProjects\_projects'
+
 
 class Files_Handling():
     def __init__(self, name="", path=""):
@@ -48,5 +50,20 @@ class Files_Handling():
                 correct_name_list.append(file_element)
 
         return correct_name_list
+
+    def return_project_folders(self):
+        """Return the list of the projects that are currently in the _fxProjectsFolder"""
+        projects = []
+        for project in os.listdir(root):
+            if not project.endswith(".json"):
+                projects.append(project)
+                print(project)
+                
+        return projects
+
+ 
+    def return_shots_in_projects(self):
+        pass
+
 
 

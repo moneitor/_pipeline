@@ -9,6 +9,8 @@ hou_name = hou.hipFile.basename()
 hou_path = hou.hipFile.path()
 
 
+root = r'C:\_fxProjects\_projects'
+
 class OpenDialog(QtWidgets.QDialog):
     def __init__(self):
         super(OpenDialog,self).__init__()
@@ -28,17 +30,27 @@ class OpenDialog(QtWidgets.QDialog):
         self.return_path(hou_path)
 
         self.clear_tree()
+        self.get_project_folders()
         self.append_files_to_listWidget(hou_name, hou_path)
+
 
     def widgedts(self):
         self.path_line = QtWidgets.QLineEdit()
         self.path_line.setReadOnly(True)
         self.path_line.setPlaceholderText("Please select the SHOT folder")
+
         self.btn_search = QtWidgets.QPushButton("Search")
-        self.tree_files = QtWidgets.QTreeWidget()
-        self.tree_files.setMinimumSize(200,450)
-        tree_header = self.tree_files.headerItem()
-        tree_header.setText(0, "Files")
+
+        #Projects tree
+        self.projects_model = QtWidgets.QFileSystemModule()
+        self.tree_projects = QtWidgets.QTreeView()
+        #self.tree_projects.setModel
+        header = self.tree_projects.headerItem()        
+        #self.tree_projects.setMinimumSize(200,450)
+        tree_header = self.tree_projects.headerItem()
+        tree_header.setText(0, "Projects")
+
+
 
 
     def connections(self):
@@ -46,7 +58,7 @@ class OpenDialog(QtWidgets.QDialog):
         self.btn_search.clicked.connect(self.clear_tree)
         self.btn_search.clicked.connect(lambda: self.append_files_to_listWidget(hou_name, self.path_folder + "/work/fx"))
 
-        self.tree_files.itemDoubleClicked.connect(self.open_hip_scene)
+        self.tree_projects.itemDoubleClicked.connect(self.open_hip_scene)
 
 
     def layout(self):
@@ -55,7 +67,7 @@ class OpenDialog(QtWidgets.QDialog):
         path_layout.addWidget(self.btn_search)
 
         tree_layout = QtWidgets.QHBoxLayout()
-        tree_layout.addWidget(self.tree_files)
+        tree_layout.addWidget(self.tree_projects)
         tree_layout.addStretch()
 
         organize_layout = QtWidgets.QFormLayout()
@@ -66,6 +78,12 @@ class OpenDialog(QtWidgets.QDialog):
         main_layout = QtWidgets.QHBoxLayout(self)
         main_layout.setContentsMargins(2,2,2,2)
         main_layout.addLayout(organize_layout)
+
+    def get_project_folders(self):
+        projects = Files_Handling("", root)
+        projects.return_project_folders()
+
+        return 
 
 
     def update_path_text(self):
@@ -91,7 +109,7 @@ class OpenDialog(QtWidgets.QDialog):
 
 
     def clear_tree(self):
-        self.tree_files.clear()
+        self.tree_projects.clear()
 
 
     def open_hip_scene(self, element_name):

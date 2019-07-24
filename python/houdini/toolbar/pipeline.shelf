@@ -61,7 +61,8 @@ main.run_app()]]></script>
   </tool>
 
   <tool name="openFile" label="OPEN" icon="OBJ_fetch">
-    <script scriptType="python"><![CDATA[from file_scripts import open_file as op
+    <script scriptType="python"><![CDATA[#from file_scripts import open_file as op
+from file_scripts import open_dialog as op
 from file_scripts import files_handling_class as fil
 reload(fil)
 reload(op)
