@@ -7,6 +7,7 @@ import sys
 
 
 parentHou = hou.ui.mainQtWindow()
+project_name_env = os.environ.get("PROJECT_NAME")
 
 def Palette(palette):
     palette.setColor(QtGui.QPalette.Window, QtGui.QColor(60,60,60))
@@ -69,6 +70,8 @@ class FileSave(QtWidgets.QDialog):
         self.create_connections()
         self.create_layout()
 
+        self.set_folder()
+
         self.changed_name()
         self.changed_shot()
         self.changed_version()
@@ -83,7 +86,7 @@ class FileSave(QtWidgets.QDialog):
         self.folder_edit.setReadOnly(True)
         self.folder_edit.setPlaceholderText("C:/FILE/PATH......")
 
-        self.folder_lookup = QtWidgets.QPushButton("Search")
+        #self.folder_lookup = QtWidgets.QPushButton("Search")
 
         self.save_file = QtWidgets.QPushButton("Save")
         self.save_file.setMaximumSize(100,50)
@@ -104,18 +107,18 @@ class FileSave(QtWidgets.QDialog):
         self.cancel = QtWidgets.QPushButton("Cancel")
         self.cancel.setMaximumSize(100, 50)
 
-        self.full_name_display = QtWidgets.QLabel(self.return_name("TEST", "NAME", "SHOT", "VERSION"))
+        self.full_name_display = QtWidgets.QLabel(self.return_name(project_name_env, "NAME", "SHOT", "VERSION"))
         self.complete_path = QtWidgets.QLabel(self.return_path(self.full_path, self.project_name))
 
     def create_connections(self):
         """
         Connections between the widgets and the functions
         """
-        self.folder_lookup.clicked.connect(self.get_folder)
-        self.folder_lookup.clicked.connect(self.changed_path)
-        self.folder_lookup.clicked.connect(lambda: self.return_project_name(self.full_path))
-        self.folder_lookup.clicked.connect(self.changed_shot)
-        self.folder_lookup.clicked.connect(self.changed_name)
+        #self.folder_lookup.clicked.connect(self.get_folder)
+        #self.folder_lookup.clicked.connect(self.changed_path)
+        #self.folder_lookup.clicked.connect(lambda: self.return_project_name(self.full_path))
+        #self.folder_lookup.clicked.connect(self.changed_shot)
+        #self.folder_lookup.clicked.connect(self.changed_name)
 
         self.name.textChanged.connect(self.changed_name)
         self.name.textChanged.connect(self.changed_shot)
@@ -144,7 +147,7 @@ class FileSave(QtWidgets.QDialog):
         """
         folder_layout = QtWidgets.QHBoxLayout()
         folder_layout.addWidget(self.folder_edit)
-        folder_layout.addWidget(self.folder_lookup)
+        #folder_layout.addWidget(self.folder_lookup)
 
         form_layout_parms = QtWidgets.QFormLayout()
         form_layout_parms.addRow("Name: ", self.name)
@@ -179,6 +182,13 @@ class FileSave(QtWidgets.QDialog):
         self.full_path = get_folder_path
         self.folder_edit.setText(get_folder_path)
 
+    def set_folder(self):
+        environment = os.environ.get("PROJECT_PATH")
+        self.full_path = environment
+        self.folder_edit.setText(environment)
+
+        return environment
+
     def return_path(self, path, name):
         project_file = FileHandling(name, path).complete_path(self.shot_value)[0]
         self.fx_folder_path = FileHandling(name, path).complete_path(self.shot_value)[1]
@@ -207,12 +217,12 @@ class FileSave(QtWidgets.QDialog):
     def changed_name(self):
         name = self.name.text()
         self.project_name = name
-        full_name = self.return_name(self.project_main_name, self.project_name, "SH{}".format(self.shot_value), "VER{}".format(self.version_value))        
+        full_name = self.return_name(project_name_env, self.project_name, "SH{}".format(self.shot_value), "VER{}".format(self.version_value))        
         self.full_name_display.setText(full_name)
         return full_name   
 
     def save_file_ui(self, path):
-        if(os.path.isdir(self.fx_folder_path)):
+        if(os.path.isdir(self.fx_folder_path)) and len(self.name.text())>0:
             hou.hipFile.save(path, True)
         else:
             msgBox = QtWidgets.QMessageBox(self)

@@ -61,6 +61,15 @@ def read_projects_info(path):
     return info
 
 
+def read_shot_info(path):
+    info = ""
+    with open(path, "r") as file:
+        info = json.load(file)
+
+    return info
+
+
+
 
     
 

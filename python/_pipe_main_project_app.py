@@ -4,7 +4,7 @@ from apps_path import return_app_path
 
 from palette import Palette
 
-from store_shot_data import store_data, save_project_info, read_projects_info
+from store_shot_data import store_data, save_project_info, read_projects_info, read_shot_info
 
 from PySide2 import QtWidgets
 from PySide2 import QtCore
@@ -26,6 +26,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         super(MainWindow, self).__init__()
 
         self.path = ""
+        self.project_name = ""   
+        self.fps = ""
+        self.resx = ""
+        self.resy = ""     
 
         self.setupUi(self)
         self.update_projects_list()
@@ -70,9 +74,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         for project in list_projects:
             if item_list.data() == project["folder"]:
                 project_path = project["project_path"]
+                project_name = project["folder"]
         
         self.path = project_path
-        self.label_project_folder.setText(self.path)               
+        self.project_name = project_name
+        self.label_project_folder.setText(self.path)  
+
+        return project_path             
                 
 
     def new_project_instance(self):        
@@ -83,6 +91,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         if result == QtWidgets.QDialog.Accepted:                        
             self.label_project_folder.setText(new_project.path)
             self.path = new_project.path
+            self.fps = new_project.FPS
+            self.resx = new_project.resolution_x
+            self.resy = new_project.resolution_y
+            self.project_name = new_project.project_name
             self.update_project_widget()
             
 
@@ -93,14 +105,33 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
             self.label_project_folder.setText(self.path)
             os.chdir(self.path)           
 
-        return self.path
+        return self.path 
+
+
+    def read_project_info(self):
+        """Read the project info from the project_info.json stored in the project folder"""
+        project_json = read_shot_info(self.path + r"\project_Info.json") 
+        self.fps = project_json["FPS"]
+        self.resx = project_json["resolution"][0]
+        self.resy = project_json["resolution"][1]
             
 
     def launch_houdini(self):    
         if len(self.path) > 0 :  
+            self.read_project_info()
             go_folder(self.path, 1, 1)
-            houdini_env(self.path, return_app_path()[1], return_app_path()[2], self.path)
+            houdini_env(self.path, return_app_path()[1], return_app_path()[2], self.path, self.project_name, self.fps, self.resx, self.resy)
             run_app(return_app_path()[0])
+            print("\n =============================\n")
+            print("The project name is: " + self.project_name)
+            print("\n =============================\n")
+            print("The project path is: " + self.path)
+            print("\n =============================\n")
+            print("The FPS are: " + self.fps)
+            print("\n =============================\n")
+            print("The Resolution is: " + self.resx + " , " + self.resy)
+            print("\n =============================\n")
+
         else:
             msg = QtWidgets.QMessageBox()
             msg.setText("Please open or create a new project first.")
