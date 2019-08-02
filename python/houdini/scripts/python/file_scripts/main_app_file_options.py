@@ -113,13 +113,7 @@ class FileSave(QtWidgets.QDialog):
     def create_connections(self):
         """
         Connections between the widgets and the functions
-        """
-        #self.folder_lookup.clicked.connect(self.get_folder)
-        #self.folder_lookup.clicked.connect(self.changed_path)
-        #self.folder_lookup.clicked.connect(lambda: self.return_project_name(self.full_path))
-        #self.folder_lookup.clicked.connect(self.changed_shot)
-        #self.folder_lookup.clicked.connect(self.changed_name)
-
+        """       
         self.name.textChanged.connect(self.changed_name)
         self.name.textChanged.connect(self.changed_shot)
         self.name.textChanged.connect(self.changed_version)

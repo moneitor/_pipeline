@@ -16,3 +16,6 @@ python/ui/ui_qtDesigner
 *.pyc
 *.pyo
 *.shelf
+
+*.hda
+*.otl
