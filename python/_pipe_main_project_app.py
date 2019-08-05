@@ -222,6 +222,13 @@ class NewProjectWindow(Ui_ui_new_project_dialog):
 
 
 def Main():
+
+    try:
+        app.close()
+        app.deleteLater()
+    except:
+        pass
+
     app = QtWidgets.QApplication(sys.argv)
 
     app.setStyle(QtWidgets.QStyleFactory.create("fusion"))

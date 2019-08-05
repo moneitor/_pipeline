@@ -83,7 +83,7 @@ class FileSave(QtWidgets.QDialog):
         Widget creation for the interface
         """
         self.folder_edit = QtWidgets.QLineEdit()
-        self.folder_edit.setReadOnly(True)
+        self.folder_edit.setDisabled(True)
         self.folder_edit.setPlaceholderText("C:/FILE/PATH......")
 
         #self.folder_lookup = QtWidgets.QPushButton("Search")
@@ -227,6 +227,12 @@ class FileSave(QtWidgets.QDialog):
     #####################################################################################
 
 def run_app():
+    try:
+        app.close()
+        app.deleteLater()
+    except:
+        pass
+    
     app = FileSave()
     app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
     dark_palette = QtGui.QPalette()

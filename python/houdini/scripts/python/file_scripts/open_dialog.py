@@ -198,6 +198,12 @@ class OpenDialog(QtWidgets.QDialog):
 
 
 def run_open():
+    try:
+        open_app.close()
+        open_app.deleteLater()
+    except:
+        pass
+
     open_app = OpenDialog()
 
     open_app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
