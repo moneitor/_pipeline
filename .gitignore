@@ -19,3 +19,9 @@ python/ui/ui_qtDesigner
 
 *.hda
 *.otl
+
+*/otl*
+*/geo*
+*/otls*
+*/vex*
+
