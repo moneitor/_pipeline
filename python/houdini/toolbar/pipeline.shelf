@@ -10,9 +10,10 @@
     <memberTool name="save"/>
     <memberTool name="up_version"/>
     <memberTool name="Extract_fbx"/>
+    <memberTool name="MantraControls"/>
   </toolshelf>
 
-  <tool name="Extract_fbx" label="Extract FBX" icon="PLASMA_App">
+  <tool name="Extract_fbx" label="Extract FBX" icon="OBJ_geo">
     <script scriptType="python"><![CDATA[import hou
 
 
@@ -53,7 +54,7 @@ create_merge(return_null_children())
 ]]></script>
   </tool>
 
-  <tool name="save" label="SAVE" icon="SOP_heightfield_file">
+  <tool name="save" label="SAVE NEW" icon="SOP_heightfield_file">
     <script scriptType="python"><![CDATA[from file_scripts import main_app_file_options as main
 reload (main)
 
@@ -76,5 +77,13 @@ reload (inc)
 
 inc.save_increment()
 reload (inc)]]></script>
+  </tool>
+
+  <tool name="MantraControls" label="Mantra Ctrl" icon="ROP_mantra">
+    <script scriptType="python"><![CDATA[from qtDialogs import Rop_controls as r
+reload(r)
+
+r.run_app()
+]]></script>
   </tool>
 </shelfDocument>

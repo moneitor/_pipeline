@@ -16,7 +16,7 @@ project_path_env = os.environ.get("PROJECT_PATH")
 
 root = r'C:\_fxProjects\_projects'
 
-class OpenDialog(QtWidgets.QDialog):
+class OpenDialog(QtWidgets.QWidget):
     def __init__(self, parent=parentHou ):
         super(OpenDialog, self).__init__()
         self.setWindowTitle("Open File")
@@ -205,10 +205,11 @@ def run_open():
         pass
 
     open_app = OpenDialog()
+    open_app.setParent(parentHou, QtCore.Qt.Window)
 
     open_app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
     dark_palette = QtGui.QPalette()
     Palette(dark_palette)
     open_app.setPalette(dark_palette)
 
-    open_app.exec_()
+    open_app.show()

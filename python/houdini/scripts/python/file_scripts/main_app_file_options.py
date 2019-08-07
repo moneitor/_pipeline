@@ -48,7 +48,7 @@ class FileHandling:
 
 
 
-class FileSave(QtWidgets.QDialog):
+class FileSave(QtWidgets.QWidget):
     """
     File Saving dialog
     """
@@ -234,12 +234,13 @@ def run_app():
         pass
     
     app = FileSave()
+    app.setParent(parentHou, QtCore.Qt.Window)
     app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
     dark_palette = QtGui.QPalette()
     Palette(dark_palette)
     app.setPalette(dark_palette)
 
-    app.exec_()
+    app.show()
 
 
 
