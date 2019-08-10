@@ -11,6 +11,7 @@ AppLauncher/venv/
 python/houdini/__pycache__
 python/ui/__pycache__
 python/ui/ui_qtDesigner
+python/houdini/otls
 */__pycache__*
 
 *.pyc
@@ -24,4 +25,3 @@ python/ui/ui_qtDesigner
 */geo*
 */otls*
 */vex*
-
