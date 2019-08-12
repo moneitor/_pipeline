@@ -4,7 +4,10 @@ Hi!!
 
 I am learning Python on my free time, and to do it I decided to 
 create some simple tools that should help me speed up my workflow and
-scene creation inside Houdini, and hopefully with time I will be able to
+scene creation inside Houdini, doing things like enforcing name convention, 
+setting and loading tools at running time, create all the needed Environment variables,
+store information of the shots inside Json files so then I can query information or create
+a database, and hopefully with time I will be able to
 integrate more softwares like Nuke, Maya and PFtrack.
 
 The scripts might not be elegant and this is because I am fairly new to the 
