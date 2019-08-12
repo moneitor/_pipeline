@@ -1,4 +1,4 @@
-## Writing a simple pipeline
+## Simple pipeline and Houdini Python tools
 I am trying to learn Python on my free time, and to do it I decided to 
 create some simple tools that should help me speed up my workflow and
 scene creation inside Houdini, and hopefully with time I will be able to
