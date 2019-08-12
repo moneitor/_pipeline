@@ -13,4 +13,7 @@ language, but with time they will get better.
 All the .py files included here are used to create the project, all the metadata
 and the folders related to your project, when you create a project it will create
 a json file in the _projects folder containing the information of your project
-like this:
+and also will append the information of your shot to the projects_info_json in 
+the _fxProjects folder, this is the ui:
+
+![](images/project_manager.JPG)
