@@ -7,7 +7,7 @@ integrate more softwares withing it like Nuke and Maya.
 The scripts might not be elegant and this is because I am fairly new to the 
 language, but with time they will get better.
 
-### Main elements 
+### Main elements and Folders:
 
 
 ### _pipeline/python/
