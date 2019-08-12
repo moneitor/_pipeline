@@ -6,7 +6,7 @@ from PySide2 import QtCore, QtWidgets, QtGui
 
 parentHou = hou.ui.mainQtWindow()
 
-class SimpleDialog(QtWidgets.QDialog):
+class SimpleDialog(QtWidgets.QWidget):
     def __init__(self, parent=parentHou):
         super(SimpleDialog, self).__init__()
         
@@ -60,9 +60,10 @@ def run_app():
         pass
 
     app = SimpleDialog()
+    app.setParent(parentHou, QtCore.Qt.Window)
     app.setStyle(QtWidgets.QStyleFactory.create("fusion"))
     dark_palette = QtGui.QPalette()
     palette.Palette(dark_palette)
 
     app.setPalette(dark_palette)
-    app.exec_()
+    app.show()
