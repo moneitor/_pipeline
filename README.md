@@ -1,5 +1,8 @@
 ## Simple pipeline and Houdini Python tools
-I learning Python on my free time, and to do it I decided to 
+
+Hi!!
+
+I am learning Python on my free time, and to do it I decided to 
 create some simple tools that should help me speed up my workflow and
 scene creation inside Houdini, and hopefully with time I will be able to
 integrate more softwares like Nuke, Maya and PFtrack.
