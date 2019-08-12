@@ -24,8 +24,11 @@ the _fxProjects folder, this is the ui:
 
 All the Python files that will be loaded from Houdini will be included here, inside **file_scripts**
 you will find tools to open and create new scenes, increase version, control all the mantra nodes at once
-and I will be adding new tools weekly, this are some of them.
+and I will be adding new tools weekly, this are some of them:
 
+![](images/OpenDialog.JPG)
+![](images/Save_dialog.jpg)
+![](images/Rop_controls.JPG)
 
 
 
