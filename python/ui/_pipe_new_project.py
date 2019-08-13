@@ -128,7 +128,7 @@ class Ui_ui_new_project_dialog(QtWidgets.QDialog):
         QtCore.QMetaObject.connectSlotsByName(ui_new_project_dialog)
 
     def retranslateUi(self, ui_new_project_dialog):
-        ui_new_project_dialog.setWindowTitle(QtWidgets.QApplication.translate("ui_new_project_dialog", "Dialog", None, -1))
+        ui_new_project_dialog.setWindowTitle(QtWidgets.QApplication.translate("ui_new_project_dialog", "New Project Specs", None, -1))
         self.le_projectPath_2.setPlaceholderText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Project path...", None, -1))
         self.btn_folder_lookup_2.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "...", None, -1))
         self.label_7.setText(QtWidgets.QApplication.translate("ui_new_project_dialog", "Mandatory fields", None, -1))
