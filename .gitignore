@@ -16,7 +16,6 @@ python/houdini/otls
 
 *.pyc
 *.pyo
-*.shelf
 
 *.hda
 *.otl
