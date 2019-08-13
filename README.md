@@ -38,7 +38,7 @@ the _fxProjects folder, this is the ui:
 
 ####      Project manager window
 ![](images/project_manager.JPG)
-
+####      New Project window
 ![](images/NewProject.jpg)
 
 
@@ -47,6 +47,10 @@ the _fxProjects folder, this is the ui:
 All the Python files that will be loaded from Houdini will be included here, inside **file_scripts**
 you will find tools to open and create new scenes, increase version, control all the mantra nodes at once
 and I will be adding new tools weekly, this are some of them:
+
+
+####      Pipeline Shelf
+![](images/pipeline_shelf.jpg)
 
 ####      Open Houdini files Dialog
 ![](images/OpenDialog.JPG)
