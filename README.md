@@ -63,5 +63,8 @@ and I will be adding new tools weekly, this are some of them:
 ####      Mantra parameters control
 ![](images/Rop_controls.JPG)
 
+####      QT Boilerplate code examples
+![](images/qt_templates.JPG)
+
 
 
