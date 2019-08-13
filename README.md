@@ -15,18 +15,17 @@ language, and for now they are not very software Agnostic, the more I learn
 the more I realize that I should be splitting and encapsulating things in a
 smarter way, but with time they will get better.
 
-For this to work you need two folders in your C drive:
+For this to work you need two folders in your **C** drive:
 
 C:/_pipeline
 
-
 C:/_fxProjects
 
-Clone this repository into the _pipeline folder, also make sure that inside _pipeline/python/apps_path.py you set the 
+Clone this repository into the **_pipeline** folder, also make sure that inside **_pipeline/python/apps_path.py** you set the 
 path to your Houdini version.
 
 All the projects and metadata will be created in _fxProjects and all the pipeline tools and scripts will be updated 
-inside _pipeline.
+inside **_pipeline**
 
 
 ### Main elements and Folders:
@@ -36,8 +35,8 @@ inside _pipeline.
 All the .py files included here are used to create the project, all the metadata
 and the folders related to your project, when you create a project it will create
 a json file in the _projects folder containing the information of your project
-and also will append the information of your shot to the projects_info_json in 
-the _fxProjects folder, this is the ui:
+and also will append the information of your shot to the **projects_info_json.json** in 
+the **_fxProjects** folder, this is the ui:
 
 ####      Project manager window
 ![](images/project_manager.JPG)
