@@ -15,6 +15,14 @@ language, and for now they are not very software Agnostic, the more I learn
 the more I realize that I should be splitting and encapsulating things in a
 smarter way, but with time they will get better.
 
+For this to work you need two folders in your C drivE:
+
+C:/_pipeline
+C:/_fxProjects
+
+All the projects and metadata will be created in _fxProjects and all the pipeline tools and scripts will be updated 
+inside _pipeline.
+
 
 ### Main elements and Folders:
 
