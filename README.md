@@ -39,6 +39,9 @@ the _fxProjects folder, this is the ui:
 ####      Project manager window
 ![](images/project_manager.JPG)
 
+![](images/NewProject.jpg)
+
+
 ### _pipeline/python/houdini/scripts/python/
 
 All the Python files that will be loaded from Houdini will be included here, inside **file_scripts**
