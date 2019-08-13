@@ -36,6 +36,7 @@ a json file in the _projects folder containing the information of your project
 and also will append the information of your shot to the projects_info_json in 
 the _fxProjects folder, this is the ui:
 
+####      Project manager window
 ![](images/project_manager.JPG)
 
 ### _pipeline/python/houdini/scripts/python/
@@ -44,8 +45,13 @@ All the Python files that will be loaded from Houdini will be included here, ins
 you will find tools to open and create new scenes, increase version, control all the mantra nodes at once
 and I will be adding new tools weekly, this are some of them:
 
+####      Open Houdini files Dialog
 ![](images/OpenDialog.JPG)
+
+####      Save Houdini files Dialog
 ![](images/Save_dialog.jpg)
+
+####      Mantra parameters control
 ![](images/Rop_controls.JPG)
 
 
