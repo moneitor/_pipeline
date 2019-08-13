@@ -41,7 +41,7 @@ the **_fxProjects** folder, this is the ui:
 ####      Project manager window
 ![](images/project_manager.JPG)
 ####      New Project window
-![](images/NewProject.jpg)
+![](images/NewProjectCopy.jpg)
 
 
 ### _pipeline/python/houdini/scripts/python/
