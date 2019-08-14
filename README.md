@@ -10,11 +10,6 @@ store information of the shots inside Json files so then I can query information
 a database, and hopefully with time I will be able to
 integrate more softwares like Nuke, Maya and PFtrack.
 
-The scripts might not be elegant and this is because I am fairly new to the 
-language, and for now they are not very software Agnostic, the more I learn
-the more I realize that I should be splitting and encapsulating things in a
-smarter way, but with time they will get better.
-
 For this to work you need two folders in your **C** drive:
 
 C:/_pipeline
