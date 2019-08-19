@@ -209,15 +209,21 @@ class FileSave(QtWidgets.QWidget):
         self.project_main_name = info["Project name"]
 
     def changed_name(self):
-        name = self.name.text()
-        self.project_name = name
+        name = self.name.text().upper()
+        name.replace(" ", "_")
+        self.project_name = name.replace(" ", "_")
         full_name = self.return_name(project_name_env, self.project_name, "SH{}".format(self.shot_value), "VER{}".format(self.version_value))        
         self.full_name_display.setText(full_name)
         return full_name   
 
     def save_file_ui(self, path):
         if(os.path.isdir(self.fx_folder_path)) and len(self.name.text())>0:
-            hou.hipFile.save(path, True)
+            if not hou.hipFile.hasUnsavedChanges():
+                hou.hipFile.save(path, True)
+            else:
+                msgBoxSave = QtWidgets.QMessageBox(self)
+                msgBoxSave.setText("Save your changes first")
+                msgBoxSave.exec_()
         else:
             msgBox = QtWidgets.QMessageBox(self)
             msgBox.setText("The shot folder doesn't exist")

@@ -42,6 +42,7 @@ def create_merge(objects_to_merge):
     
     merge = merge_node.createNode("object_merge" , name + "_merge")
     merge.parm("numobj").set(num)
+    merge.parm("xformpath").set(".")
     
     for i in range(1 , num+1):
         path = objects_to_merge[i-1].path()

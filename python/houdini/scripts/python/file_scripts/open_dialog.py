@@ -184,10 +184,15 @@ class OpenDialog(QtWidgets.QWidget):
 
     def open_file(self):
         if len(self.file_absolute_path) > 0:
-            hou.hipFile.load(self.file_absolute_path)
-            print("\n =============================\n")
-            print ("Opening file at: " + self.file_absolute_path)
-            print("\n =============================\n")
+            if not hou.hipFile.hasUnsavedChanges():
+                hou.hipFile.load(self.file_absolute_path)
+                print("\n =============================\n")
+                print ("Opening file at: " + self.file_absolute_path)
+                print("\n =============================\n")
+            else:
+                msgBoxSave = QtWidgets.QMessageBox(self)
+                msgBoxSave.setText("Save your changes first")
+                msgBoxSave.exec_()
 
         else:
             print("Please select a file")
