@@ -4,4 +4,8 @@
  It should not be hand-edited when it is being used by the application.
  Note, that two definitions of the same element are not allowed in
  a single file. -->
+
+  <shelfSetEdit name="shelf_set_1" fileLocation="C:/Program Files/Side Effects Software/Houdini 17.5.258/houdini/toolbar/ShelfDefinitions.shelf">
+    <addMemberToolshelf name="viewerStates" inPosition="16"/>
+  </shelfSetEdit>
 </shelfDocument>

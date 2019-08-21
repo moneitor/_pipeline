@@ -218,12 +218,8 @@ class FileSave(QtWidgets.QWidget):
 
     def save_file_ui(self, path):
         if(os.path.isdir(self.fx_folder_path)) and len(self.name.text())>0:
-            if not hou.hipFile.hasUnsavedChanges():
-                hou.hipFile.save(path, True)
-            else:
-                msgBoxSave = QtWidgets.QMessageBox(self)
-                msgBoxSave.setText("Save your changes first")
-                msgBoxSave.exec_()
+            hou.hipFile.save(path, True)
+           
         else:
             msgBox = QtWidgets.QMessageBox(self)
             msgBox.setText("The shot folder doesn't exist")
