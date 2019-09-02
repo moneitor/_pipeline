@@ -93,10 +93,71 @@ setpointattrib(0 , "eigenA" , @ptnum , eigenA );
 setpointattrib(0 , "eigenB" , @ptnum , eigenB );
 
             
+       
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Creates an array containing all the half edges and an integer with the amount of them//
+//////////////////////////////////////////////////////////////////////////////////////////  
             
             
             
+int count = 0;
+
+int hedge = pointhedge(0, @ptnum);
+int hedges[];
+
+while(hedge != -1) {
+    append(hedges, hedge);
+    int nextHedge = pointhedgenext(0, hedge);
+    count++;
+    
+    hedge = nextHedge;
+}
+
+i[]@hedges = hedges;
+i@count = count;
             
-            
-            
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Return a lot of useful information from the half edges connected to the current point//
+//////////////////////////////////////////////////////////////////////////////////////////  
+
+int count = 0;
+
+int hedge = pointhedge(0, @ptnum);
+int hedges[];
+int connectedPoints[]; 
+float distances[];
+float avgDistance;
+float maxDistance;
+float minDistance;
+
+
+while(hedge != -1) {
+    append(hedges, hedge);
+    int connectedPoint = hedge_dstpoint(0, hedge);       
+    append(connectedPoints, connectedPoint);
+    
+        
+    float dist = length(v@P - point(0, "P", connectedPoint));
+    append(distances, dist);    
+   
+    
+    int nextHedge = pointhedgenext(0, hedge);
+    
+    
+    hedge = nextHedge;
+}
+
+i[]@hedges = hedges;
+i[]@connectedPoints = connectedPoints;
+f[]@distances = distances;
+
+
+f@avgDistance = avg(distances);
+f@maxDistance = max(distances);
+f@minDistance = min(distances);
+
           
