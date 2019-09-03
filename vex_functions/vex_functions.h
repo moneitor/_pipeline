@@ -160,4 +160,29 @@ f@avgDistance = avg(distances);
 f@maxDistance = max(distances);
 f@minDistance = min(distances);
 
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Forces a vector MyVector to be orthogonal to vector Norm//
+//////////////////////////////////////////////////////////////////////////////////////////  
+
+vector G = v@v;
+vector N = v@N;
+
+vector ForceTangent(vector Norm; vector MyVector){
+/*This function takes vector MyVector and forces it to be orthogonal to the vector 
+Norm, so it is tangent to the surface from which Norm is created, Norm should be the Normal 
+of the surface*/
+    vector Perpendicular = (dot(MyVector , Norm) / dot(Norm, Norm)) * Norm ;
+    Perpendicular = MyVector - Perpendicular;
+    float mag = length(MyVector);
+    Perpendicular = normalize(Perpendicular);
+    
+    return Perpendicular * mag;
+    
+}
+
+//New gradient vector tangent to the surface
+v@v = ForceTangent(N , G);
           
