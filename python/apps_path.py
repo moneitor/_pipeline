@@ -3,15 +3,15 @@ import os
 def return_app_path():
     # TODO apply this to the hou_set_env.py
     temp_hou_main_path1 = r'C:\Program Files\Side Effects Software\Houdini 17.5.258'
-    temp_hou_main_path2 = r'C:\Program Files\Side Effects Software\Houdini 17.0.352'
+    temp_hou_main_path2 = r'C:\Program Files\Side Effects Software\Houdini 17.5.173'
     hou_main_path = ""
 
     temp_hou_doc_path1 = r'~\Documents\houdini17.5'
-    temp_hou_doc_path1 = r'~\Documents\houdini17.0'
+    temp_hou_doc_path1 = r'~\Documents\houdini17.5'
     hou_doc_path = ""
 
     temp_hou_path1 = r'C:\Program Files\Side Effects Software\Houdini 17.5.258\bin'
-    temp_hou_path2 = r'C:\Program Files\Side Effects Software\Houdini 17.0.352\bin'
+    temp_hou_path2 = r'C:\Program Files\Side Effects Software\Houdini 17.5.173\bin'
     hou_path = ""
 
     if os.path.exists(temp_hou_path1):

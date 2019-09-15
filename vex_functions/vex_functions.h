@@ -186,3 +186,73 @@ of the surface*/
 //New gradient vector tangent to the surface
 v@v = ForceTangent(N , G);
           
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Creates an FK dependency between the points, where each points inherit the TM of its
+// Previous point//
+////////////////////////////////////////////////////////////////////////////////////////// 
+
+
+
+matrix oldMat = ident();
+float totalPoints = float(@numpt);
+
+
+
+for(int point = 0 ; point < @numpt ; point++) {
+    vector pos0 = point(0 , "P" , 0);
+    float noiseFreq = chf("noise_Freq") * 0.1;
+    float noiseSpeed = chf("Noise_speed");
+    float noiseAmp = chf("noise_Amp") * 0.1;
+    float noiseM = snoise(point* (noiseFreq) + @Time* noiseSpeed + (pos0 * 100)) * noiseAmp;
+    
+    
+    matrix myMat = ident();
+    //get the normalized value along the entire curve
+    float bias = float(point)/totalPoints;
+    //calculate one vector that points tangent to the line
+    vector tangent = (point(0,"P", point) - point(0,"P" , point -1));
+    
+    //if the point is not zero, then the matrix is gonna be translated
+    //in the direction of the tangent by the magnitud of the same vector
+    if(point!=0){
+        translate(myMat , (normalize(tangent) * length(tangent)));  
+    }
+    //this curve modifies the bias of the angle along the curve
+    float curl = chramp("bias" , bias);
+    
+    matrix3 rotAlong= maketransform( set(0,0,1) , set(0,1,0) );
+    float sineAlong = sin(bias);
+    
+    //in here we rotate the current matrix  
+    //rotate(myMat , radians(chf("angle") * curl) , set(1,0,0));
+    rotate(myMat , noiseM * curl , set(1,0,0));
+    rotate(rotAlong , radians(chf("rotate_along_axis") * sineAlong)  , normalize(tangent));
+    
+    //in here we multiply the current matrix times the previous matrix, since in
+    //point 0 the matrix was the identity, point 0 is gonna still the same
+    myMat*= rotAlong;
+    myMat *= oldMat;
+    
+    //we store the position in this variable, multipling an empty vector * my mat
+    vector newPos = pos0 * myMat;
+    
+    //we set old mat to be the current matrix, so in the next iteration we have access
+    //to the previous matrix
+    oldMat = myMat;
+    
+    addattrib(0 , "point" , "myMat" , myMat);
+    addattrib(0 , "point" , "tangent" , tangent);
+        
+    setpointattrib(0 , "tangent" , point , tangent , "set");
+    setpointattrib(0, "P" , point , newPos , "set");
+    setpointattrib(0, "noise" , point , noiseM , "set");
+    
+    
+    
+    
+}
+
