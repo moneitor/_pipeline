@@ -10,14 +10,14 @@ def houdini_env(project_path, hou_main_path, hou_doc_path, render_path, project_
     e['HH'] = os.pathsep.join([os.path.join(hfs, 'houdini'), os.path.expanduser(hou_doc_path)])
     e['HOUDINI_PATH'] = ';'.join([os.path.join(pwd, 'houdini'), e['HH'], e.get('HOUDINI_PATH', '')])
     e['HOUDINI_TOOLBAR_PATH'] = ';'.join([e.get('HOUDINI_PATH', ''), e['HH'], os.path.join(pwd, 'houdini')])
-    e['JOB'] = project_path + "\\02_work\\fx\\01_houdini"     
-    #e['HOUDINI_USER_PREF_DIR'] =  ';'.join(os.path.join(pwd, 'houdini'))
+    e['JOB'] = project_path + "\\02_work\\fx\\01_houdini"      
     e['HOUDINI_USER_PREF_DIR'] =  ';'.join(os.path.join(pwd, 'houdini__HVER__'))
     e['PROJECT_NAME'] = project_name
     e['PROJECT_PATH'] = project_path
     e['FPS'] = fps
     e['RESOLUTION_X'] = resx
     e['RESOLUTION_Y'] = resy
+    e['solidangle_LICENSE'] = "5053@localhost"
 
 
 
