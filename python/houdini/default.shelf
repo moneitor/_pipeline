@@ -5,7 +5,7 @@
  Note, that two definitions of the same element are not allowed in
  a single file. -->
 
-  <shelfSetEdit name="shelf_set_1" fileLocation="C:/Program Files/Side Effects Software/Houdini 17.5.258/houdini/toolbar/ShelfDefinitions.shelf">
+  <shelfSetEdit name="shelf_set_1" fileLocation="C:/Program Files/Side Effects Software/Houdini 17.5.173/houdini/toolbar/ShelfDefinitions.shelf">
     <addMemberToolshelf name="pipeline" inPosition="16"/>
   </shelfSetEdit>
 </shelfDocument>
