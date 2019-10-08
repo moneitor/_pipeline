@@ -203,3 +203,38 @@ def solveForObjects(solver_data, new_dop_objects, existing_dop_objects, time, ti
 
 
 
+
+###############################################################################################
+
+###############################################################################################
+
+# LOGGIN EXAMPLE
+
+import logging
+# Basic template for logging
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Basic template for logging but this one will save to a file in disk
+logging.basicConfig(filename="testLoggin.txt", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
+
+#This line is to disable any logging
+logging.disable(logging.CRITICAL)
+
+
+logging.debug("Start of program")
+
+
+def factorial(n):
+    logging.debug("Start of factorial")
+    total = 1
+    for i in range(1, n+1):
+        total *= i
+        logging.critical("i is {} and total is {}".format(i, total))
+    return total
+
+
+print(factorial(5))
+
+
+logging.debug("End of program")
+
