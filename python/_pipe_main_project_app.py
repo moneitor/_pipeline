@@ -13,6 +13,8 @@ from PySide2 import QtGui
 import sys
 import os
 import json
+import shutil
+from pathlib import Path
 
 from ui._pipe_main_project import Ui_ui_main_project
 from ui._pipe_new_project import Ui_ui_new_project_dialog
@@ -44,6 +46,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
         self.btn_Nuke.clicked.connect(self.launch_nuke)
 
         self.list_project_widget.doubleClicked.connect(self.look_for_path_from_list)
+
+        self.btn_remove_project.clicked.connect(self.remove_project)
 
 
     def update_projects_list(self):
@@ -144,6 +148,43 @@ class MainWindow(QtWidgets.QMainWindow, Ui_ui_main_project):
             run_app(return_app_path()[5])
         else:
             create_project_message()
+            
+
+
+    def remove_project(self):        
+        
+        jsonPath = str(Path(os.path.dirname(os.path.abspath(__file__))).parent.parent.parent)
+        jsonPath = os.path.join(jsonPath, "_projects", "projects_info.json")
+
+
+        # Returns the name of the project
+        project_name = os.path.basename(self.path)
+        projects = []
+        project_path = ""
+
+        with  open (jsonPath, "r") as project_info:
+            projects = json.load(project_info)            
+            for project in projects:
+                if project_name == project["folder"]:     
+                    project_path = project["project_path"]           
+                    projects.remove(project)
+
+        with open(jsonPath, "w") as project_info:
+            projects = json.dump(projects, project_info, indent=4)
+
+        if os.path.isdir(project_path):
+            print ("Project in: (" + project_path + ") is going to be removed")
+            shutil.rmtree(project_path, ignore_errors=True)
+
+        self.update_project_widget()
+
+                   
+
+
+        
+
+
+       
 
 
 

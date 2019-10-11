@@ -92,6 +92,10 @@ class Ui_ui_main_project(object):
         self.statusbar.setObjectName("statusbar")
         ui_main_project.setStatusBar(self.statusbar)
 
+        
+        self.btn_remove_project = QtWidgets.QPushButton(self.frame_2)
+        self.gridLayout_3.addWidget(self.btn_remove_project)
+
         self.retranslateUi(ui_main_project)
         QtCore.QMetaObject.connectSlotsByName(ui_main_project)
 
@@ -111,6 +115,7 @@ class Ui_ui_main_project(object):
         self.label_project_folder.setText(QtWidgets.QApplication.translate("ui_main_project", "project folder", None, -1))
         self.btn_maya.setText(QtWidgets.QApplication.translate("ui_main_project", "Maya", None, -1))
         self.btn_pftrack.setText(QtWidgets.QApplication.translate("ui_main_project", "Pftrack", None, -1))
+        self.btn_remove_project.setText(QtWidgets.QApplication.translate("ui_main_project", "Remove Project", None, -1))
 
 
 if __name__ == "__main__":

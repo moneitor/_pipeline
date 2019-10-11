@@ -54,6 +54,10 @@ def save_project_info(name="Project", path=""):
 
 
 def read_projects_info(path):
+    """
+    Reads the json file containing the information of all the projects
+    """
+
     info = ""
     with open(path, "r") as file:
         info = json.load(file)
@@ -62,6 +66,10 @@ def read_projects_info(path):
 
 
 def read_shot_info(path):
+    """
+    Reads the json file containing information related to the specific project
+    """
+
     info = ""
     with open(path, "r") as file:
         info = json.load(file)
@@ -70,6 +78,8 @@ def read_shot_info(path):
 
 
 
+    
+    
 
     
 

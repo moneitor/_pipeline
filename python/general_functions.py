@@ -25,7 +25,8 @@ def design_folders():
 
 def reference():
     folders = {"03_reference": {"client": None,
-                                "personal": None}}
+                                "personal": None,
+                                "template_file": None}}
 
     return folders
 
