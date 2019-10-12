@@ -11,6 +11,7 @@
     <memberTool name="up_version"/>
     <memberTool name="Extract_fbx"/>
     <memberTool name="MantraControls"/>
+    <memberTool name="batcher"/>
   </toolshelf>
 
   <tool name="Extract_fbx" label="Extract FBX" icon="OBJ_geo">
@@ -63,6 +64,9 @@ main.run_app()]]></script>
   </tool>
 
   <tool name="openFile" label="OPEN" icon="OBJ_fetch">
+    <helpText><![CDATA[This load a Qt menu that allows you to pick any scene in a shot inside of the project.
+
+Double click the scene you want to open, and then press the Open button.]]></helpText>
     <script scriptType="python"><![CDATA[#from file_scripts import open_file as op
 from file_scripts import open_dialog as op
 from file_scripts import files_handling_class as fil
@@ -86,5 +90,15 @@ reload(r)
 
 r.run_app()
 ]]></script>
+  </tool>
+
+  <tool name="batcher" label="Batcher" icon="ROP_batch">
+    <script scriptType="python"><![CDATA[import hou
+
+selection = hou.ui.readMultiInput("Select the CFX Geometry", ["Creature Name"], buttons=("OK", "Cancel"))
+
+if selection[0] == 0:
+    geoCreate = hou.node("/obj").createNode("geo", selection[1][0])
+    geoCreate.createNode("RBD_Rigg::01", "test")]]></script>
   </tool>
 </shelfDocument>
