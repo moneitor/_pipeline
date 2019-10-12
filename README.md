@@ -19,6 +19,8 @@ C:/_fxProjects
 Clone this repository into the **_pipeline** folder, also make sure that inside **_pipeline/python/apps_path.py** you set the 
 path to your Houdini version.
 
+Make sure you have installed PySide2.
+
 All the projects and metadata will be created in _fxProjects and all the pipeline tools and scripts will be updated 
 inside **_pipeline**
 
