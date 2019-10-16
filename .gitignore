@@ -26,4 +26,9 @@ python/houdini/otls
 */vex
 *arnold*
 *soho*
+<<<<<<< HEAD
 */default.shelf
+=======
+
+*default.shelf
+>>>>>>> 7aa7a4254fc2f5ba8959ca1e16668b9ba037b8ea
