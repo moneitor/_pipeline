@@ -16,8 +16,10 @@ def read_and_store_data(folder):
 	"""
 	Extract the exposure time and the brigthness value of the
 	pictures stored inside the folder argument.
-	Returns a dictionary with the path to the files as keys
-	and the exposure time as values
+	Returns two lists with the path to the files and 
+	the exposure time as seconds, 
+	:images: list of images
+	:exposures:  list of exposure of each picture in seconds
 
 	"""
 
@@ -52,15 +54,24 @@ def main(folder):
 	"""
 	images, times = read_and_store_data(folder)
 	
+	"""
+	Align the pictures using the brightest spots, it 
+	doesn't matter the exposures are different
+	"""
 	logging.debug("Aligning pictures")
 	alignMTB = cv2.createAlignMTB()
 	alignMTB.process(images, images)
-
+	
+	"""
+	Finds the camera response function
+	"""
 	logging.debug("Calculating Camera response function")
 	calibrate = cv2.createCalibrateDebevec()
 	response = calibrate.process(images, times)
 
-
+	"""
+	
+	"""
 	logging.debug("Merging images...")
 	merge = cv2.createMergeDebevec()
 	hdr = merge.process(images, times, response)
