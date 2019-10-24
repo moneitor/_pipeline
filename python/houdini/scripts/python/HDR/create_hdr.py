@@ -70,12 +70,15 @@ def main(folder):
 	response = calibrate.process(images, times)
 
 	"""
-	
+	Putting everything together into a single hdr image
 	"""
 	logging.debug("Merging images...")
 	merge = cv2.createMergeDebevec()
 	hdr = merge.process(images, times, response)
-
+	
+	"""
+	Saving the hdr file into the specified folder
+	"""
 	hdr_folder = os.path.join(cwd, "HDR")
 	logging.debug("Saving HDR at {}....".format(hdr_folder))
 	cv2.imwrite(hdr_folder + "/file.hdr", hdr)
