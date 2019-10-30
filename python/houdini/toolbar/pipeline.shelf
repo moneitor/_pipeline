@@ -12,6 +12,7 @@
     <memberTool name="Extract_fbx"/>
     <memberTool name="MantraControls"/>
     <memberTool name="batcher"/>
+    <memberTool name="mergeHDR"/>
   </toolshelf>
 
   <tool name="Extract_fbx" label="Extract FBX" icon="OBJ_geo">
@@ -100,5 +101,14 @@ selection = hou.ui.readMultiInput("Select the CFX Geometry", ["Creature Name"], 
 if selection[0] == 0:
     geoCreate = hou.node("/obj").createNode("geo", selection[1][0])
     geoCreate.createNode("RBD_Rigg::01", "test")]]></script>
+  </tool>
+
+  <tool name="mergeHDR" label="Merge HDR" icon="OBJ_light_gi">
+    <script scriptType="python"><![CDATA[import sys
+sys.path.append(r"C:\Users\mo_no\AppData\Local\Programs\Python\Python37-32\lib\site-packages\exif")
+
+from HDR import create_hdr as hdr
+
+reload(hdr)]]></script>
   </tool>
 </shelfDocument>

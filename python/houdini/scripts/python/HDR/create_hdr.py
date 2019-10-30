@@ -1,5 +1,3 @@
-
-
 from exif import Image
 import cv2
 import os
@@ -12,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 
 cwd = os.path.dirname(os.path.realpath(__file__))
-hdr_folder = os.path.join(cwd, "JPGS")
+hdr_folder = os.path.join(cwd, "JPGS2")
 
 def read_and_store_data(folder):
 	"""
@@ -83,7 +81,7 @@ def main(folder):
 	"""
 	hdr_folder = os.path.join(cwd, "HDR")
 	logging.debug("Saving HDR at {}....".format(hdr_folder))
-	cv2.imwrite(hdr_folder + "/file.hdr", hdr)
+	cv2.imwrite(hdr_folder + "/file2.hdr", hdr)
 	logging.debug("Saved file")
 
 
