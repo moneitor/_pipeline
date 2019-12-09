@@ -21,4 +21,8 @@ def rename(name , old_string=" ", new_string=""):
         return new_name
 
 
+def addPrefix(name, prefix=""):
+    pass
+
+
 
