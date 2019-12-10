@@ -49,7 +49,6 @@ matrix3 newMat = transpose(3@mat) * (3@mat);
 //////////////////////////////////////////////////////////////////////////////////
 // Creates a orthogonal matrix using the covariance matrix created by the previous function.
 //////////////////////////////////////////////////////////////////////////////////
-
 matrix3 myTM = 3@mat;
 
 matrix3 invMyTM = invert(myTM);                   
@@ -94,13 +93,79 @@ setpointattrib(0 , "eigenB" , @ptnum , eigenB );
 
             
        
+//////////////////////////////////////////////////////////////////////////////////////////
+// Carves a line based on the carveLine1 and carveline2 float arguments                 //
+//////////////////////////////////////////////////////////////////////////////////////////      
+
+void 
+carveLine( float carveLine1, carveLine2; int primnum)
+{
+    vector pos1 = primuv(0, "P", primnum, set(carveLine1, 0));
+    vector pos2 = primuv(0, "P", primnum, set(carveLine2, 0));
+    
+    int start[], medium[], end[];
+    
+    foreach(int pt; primpoints(0, primnum))
+    {
+        float u = point(0, "u", pt);
+        if(u < carveLine2)
+        {
+            append(start, pt);
+            setpointattrib(0, "Cd", pt, set(1,0,0));
+        }
+        if(u > carveLine1)
+        {
+            append(end, pt);
+            setpointattrib(0, "Cd", pt, set(0,1,0));
+        }   
+        if(u >= carveLine2 && u <= carveLine1)
+        {
+            append(medium, pt);
+            setpointattrib(0, "Cd", pt, set(0,0,1));
+        }
+    }
+    
+    foreach(int pt; medium)
+    {
+        if (pt == medium[-1] )
+        {   
+            removepoint(0, pt);
+        }
+    }
+    
+    foreach (int pt; end)
+    {
+        if (pt != end[0]){
+            removepoint(0, pt);
+        }
+        
+        if (pt == end[0])
+        {
+            setpointattrib(0, "P", pt, pos1);
+        }
+    }
+    
+    foreach (int pt; start)
+    {
+        if (pt != start[-1])
+        {
+            removepoint(0, pt);
+        }
+        if (pt == start[-1])
+        {
+            setpointattrib(0, "P", pt, pos2);
+        }
+    }
+}
+
+
+carveLine(carve1, carve2, i@primnum);
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // Creates an array containing all the half edges and an integer with the amount of them//
-//////////////////////////////////////////////////////////////////////////////////////////  
-            
-            
+//////////////////////////////////////////////////////////////////////////////////////////                       
             
 int count = 0;
 
@@ -200,8 +265,6 @@ v@v = ForceTangent(N , G);
 matrix oldMat = ident();
 float totalPoints = float(@numpt);
 
-
-
 for(int point = 0 ; point < @numpt ; point++) {
     vector pos0 = point(0 , "P" , 0);
     float noiseFreq = chf("noise_Freq") * 0.1;
@@ -249,10 +312,7 @@ for(int point = 0 ; point < @numpt ; point++) {
         
     setpointattrib(0 , "tangent" , point , tangent , "set");
     setpointattrib(0, "P" , point , newPos , "set");
-    setpointattrib(0, "noise" , point , noiseM , "set");
-    
-    
-    
-    
+    setpointattrib(0, "noise" , point , noiseM , "set");  
+
 }
 
