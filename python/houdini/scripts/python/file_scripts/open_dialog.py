@@ -155,7 +155,7 @@ class OpenDialog(QtWidgets.QWidget):
         files_list = []
         files_path = project_path_env + "/" + self.current_shot + "/work/fx"        
         for file in os.listdir(files_path):
-            if file.endswith(".hip"):
+            if file.endswith(".hip") or file.endswith(".hipnc"):
                 files_list.append(file)
 
         return files_list
